@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { PrimeNGConfig } from 'primeng/api';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'birthday-greetings';
+  constructor(private primengConfig: PrimeNGConfig) {
+
+  }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
 }
