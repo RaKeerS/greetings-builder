@@ -1,8 +1,14 @@
-<p-splitter [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [panelSizes]="[10, 80]" layout="horizontal">
-  <ng-template pTemplate>
-    Panel 1
-  </ng-template>
-  <ng-template pTemplate>
-    Panel 2
-  </ng-template>
-</p-splitter>
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col-sm-12">
+      <p-splitter [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [panelSizes]="[10, 80]" layout="horizontal">
+        <ng-template pTemplate>
+          Panel 1
+        </ng-template>
+        <ng-template pTemplate>
+          Panel 2
+        </ng-template>
+      </p-splitter>
+    </div>
+  </div>
+</div>
