@@ -1,3 +1,27 @@
 .main-container .row .col-sm-12 {
   padding: 0px !important;
 }
+
+::ng-deep .p-menubar.p-component,
+::ng-deep .p-splitter.p-component {
+  border-radius: 0px !important;
+}
+
+::ng-deep .p-panelmenu .p-panelmenu-panel:first-child .p-panelmenu-header > a {
+  border-radius: 0px;
+}
+
+::ng-deep
+  .p-panelmenu
+  .p-panelmenu-panel:last-child
+  .p-panelmenu-header:not(.p-highlight)
+  > a {
+  border-radius: 0px;
+}
+
+/* ::ng-deep
+  .p-panelmenu
+  .p-panelmenu-header:not(.p-highlight):not(.p-disabled)
+  > a:hover {
+  color: black;
+} */

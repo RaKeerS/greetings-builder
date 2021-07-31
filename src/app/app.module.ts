@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PrimeNGModules } from './prime-ng-modules';
+import { PrimeNGModules } from './prime-ng/prime-ng-modules';
+import { MenubarModule } from 'primeng/menubar';
 
 import { AppComponent } from './app.component';
 
@@ -18,6 +19,8 @@ import { AppComponent } from './app.component';
 
 
     PrimeNGModules,
+    MenubarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

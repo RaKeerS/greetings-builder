@@ -1,14 +1,25 @@
 <div class="container-fluid main-container">
   <div class="row">
     <div class="col-sm-12">
-      <p-splitter [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [panelSizes]="[10, 80]" layout="horizontal">
-        <ng-template pTemplate>
-          Panel 1
+      <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <img src="assets/showcase/images/primeng.svg" height="40" class="p-mr-2">
         </ng-template>
-        <ng-template pTemplate>
-          Panel 2
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search">
         </ng-template>
-      </p-splitter>
+      </p-menubar>
+      <div class="d-flex">
+        <p-panelMenu [style.width]="'20%'" [model]="items" [style]="{ 'height': '100vh', 'background-color': '#2a323d' }"></p-panelMenu>
+        <p-splitter [style.width]="'80%'" [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
+          <!-- <ng-template pTemplate>
+            <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
+          </ng-template> -->
+          <ng-template pTemplate>
+            Panel 2
+          </ng-template>
+        </p-splitter>
+      </div>
     </div>
   </div>
 </div>
