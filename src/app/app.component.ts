@@ -4,6 +4,12 @@ import { PrimeNGConfig } from 'primeng/api';
 
 import {MenubarModule} from 'primeng/menubar';
 import {MenuItem} from 'primeng/api';
+
+import { Select, Store } from '@ngxs/store';
+
+import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,8 +19,13 @@ export class AppComponent {
   title = 'birthday-greetings';
 
   items: MenuItem[];
+  tempLabel!: any;
+  tempNumber!: number;
 
-  constructor(private primengConfig: PrimeNGConfig) {
+  @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<number>;
+
+  constructor(private primengConfig: PrimeNGConfig, private store: Store) {
     this.items = [
       {
         label: 'Menu Item 1',
@@ -33,6 +44,9 @@ export class AppComponent {
         icon:'pi pi-fw pi-power-off'
       }
     ];
+
+    this.tempLabel = this.store.select(state => state.global.currentTemplateLabel);
+    this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
   }
 
   ngOnInit() {
