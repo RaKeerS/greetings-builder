@@ -1,4 +1,5 @@
 import { Selector, State } from "@ngxs/store";
+import { BirthdayGreetingsActionsModel } from "../model/birthday-greetings-actions-model";
 import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
 
 @State<BirthdayGreetingsModel>({
@@ -10,7 +11,7 @@ import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
     isSaved: false
   }
 })
-export class BirthdayGreetingsState {
+export class BirthdayGreetingsState extends BirthdayGreetingsActionsModel {
 
   @Selector()
   static getCurrentTemplateLabel(state: BirthdayGreetingsModel): string {
@@ -21,5 +22,15 @@ export class BirthdayGreetingsState {
   static getCurrentTemplateNumber(state: BirthdayGreetingsModel): number {
     return state.currentTemplateNumber;
   }
+
+  // @Action(SelectTemplate)
+  // public selectTemplate(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectTemplate) {
+  //   const state = ctx.getState();
+  //   ctx.setState({
+  //     ...state,
+  //     currentTemplateLabel: payload.selectedTemplateLabel,
+  //     currentTemplateNumber: payload.selectedTemplateNumber
+  //   });
+  // }
 
 }

@@ -10,6 +10,7 @@ import { Select, Store } from '@ngxs/store';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 
 import { Observable } from 'rxjs';
+import { SelectTemplate } from './actions/birthday-greetings-actions';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -45,11 +46,23 @@ export class AppComponent {
       }
     ];
 
-    this.tempLabel = this.store.select(state => state.global.currentTemplateLabel);
-    this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
+    // this.tempLabel = this.store.select(state => state.global.currentTemplateLabel);
+    // this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
+  }
+
+  public get currentTemplateLabel(): string {
+    return this.store.selectSnapshot(state => state.global.currentTemplateLabel);
+  }
+
+  public get currentTemplateNumber(): string {
+    return this.store.selectSnapshot(state => state.global.currentTemplateNumber);
   }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+  }
+
+  public doThis() {
+    this.store.dispatch(new SelectTemplate('changed', 1));
   }
 }

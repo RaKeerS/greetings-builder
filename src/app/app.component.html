@@ -16,10 +16,14 @@
             <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
           </ng-template> -->
           <ng-template pTemplate>
-            Panel 2
-            <p>{{currentTemplateLabel$}}</p>
-            <p>{{currentTemplateNumber$}}</p>
-            <p>{{tempLabel}}</p>
+            <!-- Panel 2 -->
+            <p>{{currentTemplateLabel}}</p>
+            &nbsp;
+            <p>{{currentTemplateNumber}}</p>
+            <br>
+            <p>
+              <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
+            </p>
           </ng-template>
         </p-splitter>
       </div>
