@@ -17,16 +17,40 @@
           </ng-template> -->
           <ng-template pTemplate>
             <!-- Panel 2 -->
-            <p>{{currentTemplateLabel}}</p>
+            <!-- <p>{{currentTemplateLabel}}</p>
             &nbsp;
             <p>{{currentTemplateNumber}}</p>
             <br>
             <p>
               <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
-            </p>
+            </p> -->
+            <ng-container>
+              <div class="container" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
+                <ng-template *ngTemplateOutlet="Cards"></ng-template>
+              </div>
+            </ng-container>
+
+
           </ng-template>
         </p-splitter>
       </div>
     </div>
   </div>
 </div>
+
+
+<ng-template #Cards>
+  <p-card header="Simple Template" [style]="{'width': '15rem', 'height': '15rem', 'overflow': 'auto', 'margin-bottom': '2em'}">
+    <ng-template pTemplate="header">
+      <img alt="Obito Uchiha" src="https://dailyanimeart.files.wordpress.com/2013/12/obito-is-tobi1.jpg?w=1200">
+    </ng-template>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+    </p>
+    <ng-template pTemplate="footer">
+      <p-button pStyleClass="custom-button" label="Save" icon="pi pi-check" styleClass="custom-button"></p-button>
+      <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button>
+    </ng-template>
+</p-card>
+</ng-template>
