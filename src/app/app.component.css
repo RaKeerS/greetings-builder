@@ -25,3 +25,16 @@
   > a:hover {
   color: black;
 } */
+
+::ng-deep .custom-button {
+  width: 5rem;
+  font-size: small;
+}
+
+::ng-deep .pi {
+  font-size: 0.8rem;
+}
+
+::ng-deep .p-button .p-button-icon-left {
+  margin-right: 0.2rem !important;
+}
