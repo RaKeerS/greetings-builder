@@ -12,10 +12,12 @@ import { MenubarModule } from 'primeng/menubar';
 
 import { AppComponent } from './app.component';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GreetingsTemplateComponent
   ],
   imports: [
     BrowserModule,

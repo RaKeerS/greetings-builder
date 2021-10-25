@@ -5,7 +5,7 @@ import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
 @State<BirthdayGreetingsModel>({
   name: 'global',
   defaults: {
-    currentTemplateLabel: 'initial',
+    currentTemplateLabel: 'initial ',
     currentTemplateNumber: 0,
     isEdit: false,
     isSaved: false
