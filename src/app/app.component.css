@@ -1,5 +1,8 @@
-.main-container .row .col-sm-12 {
-  padding: 0px !important;
+/***************** Predefined CSS ******************/
+
+::ng-deep.p-splitter-panel-nested {
+  padding: 10px;
+  overflow: auto;
 }
 
 ::ng-deep .p-menubar.p-component,
@@ -37,4 +40,23 @@
 
 ::ng-deep .p-button .p-button-icon-left {
   margin-right: 0.2rem !important;
+}
+
+::ng-deep .p-splitter-panel-nested {
+  width: 100%;
+}
+
+/***************** Custom CSS *****************/
+
+.main-container .row .col-sm-12 {
+  padding: 0px !important;
+}
+
+.custom-container-1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+  margin: 0px;
+  overflow: unset;
 }

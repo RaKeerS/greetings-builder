@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
 
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -11,6 +11,9 @@ import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 
 import { Observable } from 'rxjs';
 import { SelectTemplate } from './actions/birthday-greetings-actions';
+
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,6 +28,10 @@ export class AppComponent {
 
   @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
   @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<number>;
+
+  @ViewChild('customcontainer1') customcontainer1!: ElementRef;
+  @ViewChild('customcard1') customcard1!: ElementRef;
+  @ViewChild('Cards') Cards!: ElementRef;
 
   constructor(private primengConfig: PrimeNGConfig, private store: Store) {
     this.items = [
@@ -48,6 +55,18 @@ export class AppComponent {
 
     // this.tempLabel = this.store.select(state => state.global.currentTemplateLabel);
     // this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
+  }
+
+  ngAfterViewInit() {
+    // let abc = Math.floor(this.customcontainer1.nativeElement.clientWidth / this.customcard1.nativeElement.clientWidth);
+    // let bbc = this.Cards;
+  }
+
+  public get containerWidth(): number {
+    // return 0;
+    // return Math.floor(this.customcontainer1?.nativeElement.clientWidth / this.customcard1?.nativeElement.clientWidth);
+    return Math.floor(this.customcontainer1?.nativeElement.clientWidth / 100);
+    // return Math.floor(($('#custom-container-1')).clientWidth / (<any>$('#custom-card-1')).clientWidth);
   }
 
   public get currentTemplateLabel(): string {
