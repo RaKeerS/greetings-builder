@@ -10,26 +10,28 @@
         </ng-template>
       </p-menubar>
       <div class="d-flex">
-        <p-panelMenu [style.width]="'20%'" [model]="items" [style]="{ 'height': '100vh', 'background-color': '#2a323d' }"></p-panelMenu>
-        <p-splitter [style.width]="'80%'" [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
+        <p-panelMenu [style.width]="'10%'" [model]="items" [style]="{ 'height': '100vh', 'background-color': '#2a323d' }"></p-panelMenu>
+        <p-splitter [style.width]="'90%'" [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
           <!-- <ng-template pTemplate>
             <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
           </ng-template> -->
           <ng-template pTemplate>
+            <!-- <div class="d-flex">
+              <p>{{currentTemplateLabel}}</p>
+              &nbsp;
+              <p>{{currentTemplateNumber}}</p>
+              <br>
+              <p>
+                <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
+              </p>
+            </div> -->
             <!-- Panel 2 -->
-            <p>{{currentTemplateLabel}}</p>
-            &nbsp;
-            <p>{{currentTemplateNumber}}</p>
-            <br>
-            <p>
-              <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
-            </p>
-              <div #customcontainer1 class="container custom-container-1 d-flex" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
-                <!-- <ng-container *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0  : containerWidth" [ngTemplateOutlet]="Cards"> -->
-                <div class="" *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0: 4">
-                  <app-greetings-template></app-greetings-template>
-                </div>
+            <div #customcontainer1 class="custom-container-1 d-flex" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
+              <!-- <ng-container *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0  : containerWidth" [ngTemplateOutlet]="Cards"> -->
+              <div class="d-flex" *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0: 4">
+                <app-greetings-template></app-greetings-template>
               </div>
+            </div>
           </ng-template>
         </p-splitter>
       </div>

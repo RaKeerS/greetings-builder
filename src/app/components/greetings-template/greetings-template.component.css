@@ -1,0 +1,10 @@
+.img-style {
+    height: 250px;
+}
+
+.card-style {
+    width: 22rem;
+    height: 40rem;
+    overflow: auto; 
+    margin-bottom: 2em;
+}

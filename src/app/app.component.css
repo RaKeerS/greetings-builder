@@ -57,6 +57,6 @@
   display: flex;
   overflow: auto;
   justify-content: center;
-  margin: 0px;
+  margin: 0px auto;
   overflow: unset;
 }
