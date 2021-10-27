@@ -1,13 +1,23 @@
 <p-card #customcard1 header="Simple Template" class="card-style">
     <ng-template pTemplate="header">
-    <img alt="Obito Uchiha" src="https://dailyanimeart.files.wordpress.com/2013/12/obito-is-tobi1.jpg?w=1200" class="img-style">
-    </ng-template>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-    </p>
-    <ng-template pTemplate="footer">
-    <p-button pStyleClass="custom-button" label="Save" icon="pi pi-check" styleClass="custom-button"></p-button>
-    <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button>
+        <img alt="Obito Uchiha" src="https://dailyanimeart.files.wordpress.com/2013/12/obito-is-tobi1.jpg?w=1200" class="img-style">
+        </ng-template>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+        </p>
+        <ng-template pTemplate="footer">
+        <p-button pStyleClass="custom-button" label="Save" icon="pi pi-check" styleClass="custom-button"></p-button>
+        <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button>
     </ng-template>
 </p-card>
+
+<div class="d-flex">
+    <p>{{currentTemplateLabel}}</p>
+    &nbsp;
+    <p>{{currentTemplateNumber}}</p>
+    <br>
+    <p>
+      <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
+    </p>
+  </div>

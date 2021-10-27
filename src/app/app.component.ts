@@ -33,7 +33,7 @@ export class AppComponent {
   @ViewChild('customcard1') customcard1!: ElementRef;
   @ViewChild('Cards') Cards!: ElementRef;
 
-  constructor(private primengConfig: PrimeNGConfig, private store: Store) {
+  constructor(private primengConfig: PrimeNGConfig) {
     this.items = [
       {
         label: 'Menu Item 1',
@@ -69,19 +69,8 @@ export class AppComponent {
     // return Math.floor(($('#custom-container-1')).clientWidth / (<any>$('#custom-card-1')).clientWidth);
   }
 
-  public get currentTemplateLabel(): string {
-    return this.store.selectSnapshot(state => state.global.currentTemplateLabel);
-  }
-
-  public get currentTemplateNumber(): string {
-    return this.store.selectSnapshot(state => state.global.currentTemplateNumber);
-  }
-
   ngOnInit() {
     this.primengConfig.ripple = true;
   }
 
-  public doThis() {
-    this.store.dispatch(new SelectTemplate('changed', 1));
-  }
 }
