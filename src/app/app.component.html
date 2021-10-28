@@ -19,8 +19,10 @@
             <!-- Panel 2 -->
             <div #customcontainer1 class="custom-container-1 d-flex" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
               <!-- <ng-container *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0  : containerWidth" [ngTemplateOutlet]="Cards"> -->
-              <div class="d-flex" *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0: 4">
-                <app-greetings-template></app-greetings-template>
+              <div class="d-flex flex-column" *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0: 4">
+                <div class="d-flex" *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0: 4">
+                  <app-greetings-template></app-greetings-template>
+                </div>
               </div>
             </div>
           </ng-template>
