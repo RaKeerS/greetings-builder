@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { CardModule } from 'primeng/card';
 import { StyleClassModule } from 'primeng/styleclass';
+import {DialogModule} from 'primeng/dialog';
 
 export const PrimeNGModules = [
   SplitterModule,
@@ -14,4 +15,5 @@ export const PrimeNGModules = [
   PanelMenuModule,
   CardModule,
   StyleClassModule,
+  DialogModule,
 ]

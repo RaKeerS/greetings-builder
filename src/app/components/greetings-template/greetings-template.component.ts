@@ -9,7 +9,11 @@ import { SelectTemplate } from 'src/app/actions/birthday-greetings-actions';
 })
 export class GreetingsTemplateComponent implements OnInit {
 
-  constructor(private store: Store) { }
+  public displayDialog: boolean;
+
+  constructor(private store: Store) {
+    this.displayDialog = false;
+   }
 
   ngOnInit(): void {
   }
@@ -24,6 +28,10 @@ export class GreetingsTemplateComponent implements OnInit {
 
   public doThis() {
     this.store.dispatch(new SelectTemplate('changed', 1));
+  }
+
+  public showTemplate() {
+    this.displayDialog = true;
   }
 
 }
