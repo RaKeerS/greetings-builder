@@ -6,6 +6,7 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { CardModule } from 'primeng/card';
 import { StyleClassModule } from 'primeng/styleclass';
 import {DialogModule} from 'primeng/dialog';
+import {CarouselModule} from 'primeng/carousel';
 
 export const PrimeNGModules = [
   SplitterModule,
@@ -16,4 +17,5 @@ export const PrimeNGModules = [
   CardModule,
   StyleClassModule,
   DialogModule,
+  CarouselModule,
 ]

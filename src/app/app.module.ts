@@ -13,6 +13,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { AppComponent } from './app.component';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
+import { ModalTemplateService } from './services/modal-template.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { GreetingsTemplateComponent } from './components/greetings-template/gree
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     NgxsModule.forRoot([BirthdayGreetingsState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
@@ -31,7 +34,7 @@ import { GreetingsTemplateComponent } from './components/greetings-template/gree
     MenubarModule
 
   ],
-  providers: [],
+  providers: [ModalTemplateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

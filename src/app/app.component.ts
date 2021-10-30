@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 import { SelectTemplate } from './actions/birthday-greetings-actions';
 
 import * as $ from 'jquery';
+import { ModalTemplateService } from './services/modal-template.service';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,11 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'birthday-greetings';
 
-  items: MenuItem[];
-  tempLabel!: any;
-  tempNumber!: number;
+  public items: MenuItem[];
+  public tempLabel!: any;
+  public tempNumber!: number;
+
+  public templateData: any = [];
 
   @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
   @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<number>;
@@ -33,7 +36,7 @@ export class AppComponent {
   @ViewChild('customcard1') customcard1!: ElementRef;
   @ViewChild('Cards') Cards!: ElementRef;
 
-  constructor(private primengConfig: PrimeNGConfig) {
+  constructor(private primengConfig: PrimeNGConfig, private modalSvc: ModalTemplateService) {
     this.items = [
       {
         label: 'Menu Item 1',
@@ -71,6 +74,11 @@ export class AppComponent {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+    this.getTemplateData();
+  }
+
+  private getTemplateData(): any {
+    this.modalSvc.getTemplateData().then(data => { this.templateData = data; console.log('data: ', data); });
   }
 
 }
