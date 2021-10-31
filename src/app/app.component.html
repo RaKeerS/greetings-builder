@@ -11,18 +11,19 @@
       </p-menubar>
       <div class="d-flex">
         <p-panelMenu [style.width]="'10%'" [model]="items" [style]="{ 'height': '100vh', 'background-color': '#2a323d' }"></p-panelMenu>
-        <p-splitter [style.width]="'90%'" [style]="{ 'height': '100vh' }" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
+        <p-splitter [style.width]="'90%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
           <!-- <ng-template pTemplate>
             <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
           </ng-template> -->
           <ng-template pTemplate>
             <!-- Panel 2 -->
-            <div #customcontainer1 class="custom-container-1 d-flex" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
+            <div #customcontainer1 class="custom-container-1 d-flex flex-column" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
               <!-- <ng-container *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0  : containerWidth" [ngTemplateOutlet]="Cards"> -->
-              <div class="d-flex flex-column" *ngFor="let item of [1,2,3,4]">
-                <div class="d-flex custom-margin" *ngFor="let template of [templateData] | slice: 0: 4">
-                  <div>Hi {{templateData}}</div>
-                  <div>hi {{templateData.name}}</div>
+              <div class="d-flex flex-row" *ngFor="let item of templateData | slice: 0 : getRows(templateData.length); let i = index">
+                <div class="d-flex custom-margin w-40 flex-column" *ngFor="let template of templateData | slice: i * 4 : (i * 4) + 4; let j = index">
+                  Index {{i}}
+                  <!-- <div>Hi {{templateData}}</div>
+                  <div>hi {{templateData.name}}</div> -->
                   <app-greetings-template [templateInfo]="template"></app-greetings-template>
                 </div>
               </div>

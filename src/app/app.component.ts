@@ -81,4 +81,10 @@ export class AppComponent {
     this.modalSvc.getTemplateData().then(data => { this.templateData = data; console.log('data: ', data); });
   }
 
+  public getRows(totalLength: number) {
+    let count = totalLength / 4;
+    count += totalLength % 4 > 0 ? 1 : 0;
+    return Math.floor(count);
+  }
+
 }

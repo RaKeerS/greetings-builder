@@ -1,14 +1,11 @@
-<p-card #customcard1 header="Simple Template" class="card-style">
+<p-card #customcard1 header="{{templateInfo.label}}" class="card-style">
     <ng-template pTemplate="header">
-        <img alt="Obito Uchiha" src="https://dailyanimeart.files.wordpress.com/2013/12/obito-is-tobi1.jpg?w=1200" class="img-style">
+        <img [alt]="templateInfo.label" [src]="templateInfo.images[0]" class="img-style">
         </ng-template>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-        </p>
+        <p> {{templateInfo.description}} </p>
         <ng-template pTemplate="footer">
         <p-button pStyleClass="custom-button" label="Save" icon="pi pi-check" styleClass="custom-button"></p-button>
-        <p-button pStyleClass="custom-button" [style]="{'margin-left': '.5em', 'line-height': '19.5px'}" (click)="showTemplate()" icon="pi pi-external-link" label="Long Content"></p-button>
+        <p-button pStyleClass="custom-button" [style]="{'margin-left': '.5em', 'line-height': '19.5px'}" (click)="showTemplate()" icon="pi pi-external-link" label="See Images"></p-button>
 
         <!-- <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button> -->
     </ng-template>
@@ -25,11 +22,11 @@
 </div>
 
 
-<p-dialog header="Long Content" [(visible)]="displayDialog" [style]="{width: '50vw'}">
-  <p-carousel [value]="templateInfo" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
-    <ng-template let-product pTemplate="item">
-      <div class="d-flex container">
-        <img src="https://dailyanimeart.files.wordpress.com/2013/12/obito-is-tobi1.jpg?w=1200" [style]="{ 'max-height': '100%', 'max-width': '100%' }">
+<p-dialog header="{{templateInfo.label}}" [(visible)]="displayDialog" [style]="{width: '50vw'}">
+  <p-carousel [value]="templateInfo.images" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template let-template pTemplate="item">
+      <div class="d-flex container h-100 align-items-center justify-content-center">
+        <img alt="{{templateInfo.label}}" src="{{template}}" [style]="{ 'max-height': '100%', 'max-width': '100%' }">
       </div>
     </ng-template>
   </p-carousel>
