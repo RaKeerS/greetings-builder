@@ -1,3 +1,13 @@
+/************** Predefined CSS ***************/
+
+
+::ng-deep.p-card-content {
+  height: 216px;
+  overflow: auto;
+}
+
+/************** Custom CSS ***************/
+
 .img-style {
     height: 250px;
 }
@@ -5,6 +15,6 @@
 .card-style {
     width: 22rem;
     height: 40rem;
-    overflow: auto; 
+    overflow: auto;
     margin-bottom: 2em;
 }

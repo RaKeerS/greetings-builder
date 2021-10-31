@@ -8,6 +8,7 @@
 ::ng-deep .p-menubar.p-component,
 ::ng-deep .p-splitter.p-component {
   border-radius: 0px !important;
+  height: auto !important;
 }
 
 ::ng-deep .p-panelmenu .p-panelmenu-panel:first-child .p-panelmenu-header > a {
@@ -64,4 +65,9 @@
 .custom-margin {
   margin-right: 2px;
   margin-left: 2px;
+}
+
+.w-40 {
+  width: 40%;
+  max-width: 25%;
 }

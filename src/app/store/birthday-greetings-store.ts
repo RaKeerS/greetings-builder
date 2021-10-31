@@ -1,3 +1,4 @@
+import { Injectable } from "@angular/core";
 import { Selector, State } from "@ngxs/store";
 import { BirthdayGreetingsActionsModel } from "../model/birthday-greetings-actions-model";
 import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
@@ -11,6 +12,7 @@ import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
     isSaved: false
   }
 })
+@Injectable() // 'BirthdayGreetingsState' class should be decorated with @Injectable() right after the @State() decorator
 export class BirthdayGreetingsState extends BirthdayGreetingsActionsModel {
 
   @Selector()

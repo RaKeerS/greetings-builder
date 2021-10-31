@@ -15,6 +15,7 @@ import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
 import { ModalTemplateService } from './services/modal-template.service';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
 
-    NgxsModule.forRoot([BirthdayGreetingsState]),
+    NgxsModule.forRoot([BirthdayGreetingsState], { developmentMode: !environment.production }), // RECOMMENDATION: Set developmentMode to true on the NgxsModule when Angular is running in development mode. NgxsModule.forRoot(states, { developmentMode: !environment.production })
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
 
