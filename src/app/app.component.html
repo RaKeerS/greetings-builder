@@ -16,18 +16,8 @@
             <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
           </ng-template> -->
           <ng-template pTemplate>
-            <!-- Panel 2 -->
-            <div #customcontainer1 class="custom-container-1 d-flex flex-column" [style]="{ 'padding-top': '.75rem', 'padding-bottom': '.75rem' }">
-              <!-- <ng-container *ngFor="let i of [1, 2, 3, 4, 5] | slice: 0  : containerWidth" [ngTemplateOutlet]="Cards"> -->
-              <div class="d-flex flex-row" *ngFor="let item of templateData | slice: 0 : getRows(templateData.length); let i = index">
-                <div class="d-flex custom-margin w-40 flex-column" *ngFor="let template of templateData | slice: i * 4 : (i * 4) + 4; let j = index">
-                  Index {{i}}
-                  <!-- <div>Hi {{templateData}}</div>
-                  <div>hi {{templateData.name}}</div> -->
-                  <app-greetings-template [templateInfo]="template"></app-greetings-template>
-                </div>
-              </div>
-            </div>
+            <router-outlet></router-outlet>
+            <!-- <a routerLink="/greetings">Click</a> -->
           </ng-template>
         </p-splitter>
       </div>

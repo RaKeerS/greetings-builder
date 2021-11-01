@@ -1,19 +1,10 @@
-import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
-
-import { PrimeNGConfig } from 'primeng/api';
-
-import {MenubarModule} from 'primeng/menubar';
-import {MenuItem} from 'primeng/api';
-
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-
-import { BirthdayGreetingsState } from './store/birthday-greetings-store';
-
+import { MenuItem, PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
-import { SelectTemplate } from './actions/birthday-greetings-actions';
 
-import * as $ from 'jquery';
-import { ModalTemplateService } from './services/modal-template.service';
+import { SelectRouterOutlet } from './actions/birthday-greetings-actions';
+import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 
 @Component({
   selector: 'app-root',
@@ -24,19 +15,17 @@ export class AppComponent {
   title = 'birthday-greetings';
 
   public items: MenuItem[];
-  public tempLabel!: any;
-  public tempNumber!: number;
 
-  public templateData: any = [];
-
+  // Currently the 3 declarations below have no intended purpose or use in the code.
   @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
   @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<number>;
+  @Select(BirthdayGreetingsState.getCurrentRouterOutletName) currentRouterOutletName$!: Observable<string>;
 
   @ViewChild('customcontainer1') customcontainer1!: ElementRef;
   @ViewChild('customcard1') customcard1!: ElementRef;
   @ViewChild('Cards') Cards!: ElementRef;
 
-  constructor(private primengConfig: PrimeNGConfig, private modalSvc: ModalTemplateService) {
+  constructor(private primengConfig: PrimeNGConfig, private store: Store) {
     this.items = [
       {
         label: 'Menu Item 1',
@@ -60,9 +49,18 @@ export class AppComponent {
     // this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
   }
 
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+    this.store.dispatch(new SelectRouterOutlet('greetings'));
+  }
+
   ngAfterViewInit() {
     // let abc = Math.floor(this.customcontainer1.nativeElement.clientWidth / this.customcard1.nativeElement.clientWidth);
     // let bbc = this.Cards;
+  }
+
+  get routerName(): string {
+    return this.store.selectSnapshot(state => state.global.currentRouterOutletName);
   }
 
   public get containerWidth(): number {
@@ -70,21 +68,6 @@ export class AppComponent {
     // return Math.floor(this.customcontainer1?.nativeElement.clientWidth / this.customcard1?.nativeElement.clientWidth);
     return Math.floor(this.customcontainer1?.nativeElement.clientWidth / 100);
     // return Math.floor(($('#custom-container-1')).clientWidth / (<any>$('#custom-card-1')).clientWidth);
-  }
-
-  ngOnInit() {
-    this.primengConfig.ripple = true;
-    this.getTemplateData();
-  }
-
-  private getTemplateData(): any {
-    this.modalSvc.getTemplateData().then(data => { this.templateData = data; console.log('data: ', data); });
-  }
-
-  public getRows(totalLength: number) {
-    let count = totalLength / 4;
-    count += totalLength % 4 > 0 ? 1 : 0;
-    return Math.floor(count);
   }
 
 }
