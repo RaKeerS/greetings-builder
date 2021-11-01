@@ -41,7 +41,7 @@ export class GreetingsTemplateComponent implements OnInit {
           numVisible: 1,
           numScroll: 1
       }
-  ];
+    ];
   }
 
   public get currentTemplateLabel(): string {

@@ -4,8 +4,8 @@
         </ng-template>
         <p> {{templateInfo.description}} </p>
         <ng-template pTemplate="footer">
-        <p-button pStyleClass="custom-button" label="Save" icon="pi pi-check" styleClass="custom-button"></p-button>
-        <p-button pStyleClass="custom-button" [style]="{'margin-left': '.5em', 'line-height': '19.5px'}" (click)="showTemplate()" icon="pi pi-external-link" label="See Images"></p-button>
+        <p-button pStyleClass="custom-button" label="Select" icon="pi pi-check" styleClass="custom-button"></p-button>
+        <p-button pStyleClass="custom-button" label="See Images" icon="pi pi-external-link" styleClass="custom-button" [style]="{'margin-left': '.5em', 'line-height': '19.5px'}" (click)="showTemplate()"></p-button>
 
         <!-- <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button> -->
     </ng-template>
@@ -22,7 +22,7 @@
 </div>
 
 
-<p-dialog header="{{templateInfo.label}}" [(visible)]="displayDialog" [style]="{width: '50vw'}">
+<p-dialog header="{{templateInfo.label}}" [(visible)]="displayDialog" [style]="{width: '50vw'}" [dismissableMask]="true" [modal]="true">
   <p-carousel [value]="templateInfo.images" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
     <ng-template let-template pTemplate="item">
       <div class="d-flex container h-100 align-items-center justify-content-center">

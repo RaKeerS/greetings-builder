@@ -31,7 +31,7 @@
 } */
 
 ::ng-deep .custom-button {
-  width: 5rem;
+  /* width: 5rem; */
   font-size: small;
 }
 

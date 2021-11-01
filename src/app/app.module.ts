@@ -16,11 +16,14 @@ import { GreetingsTemplateComponent } from './components/greetings-template/gree
 import { ModalTemplateService } from './services/modal-template.service';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreetingsTemplateComponent
+    GreetingsTemplateComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { environment } from 'src/environments/environment';
     NgxsLoggerPluginModule.forRoot(),
 
     PrimeNGModules,
-    MenubarModule
+    MenubarModule,
+    AppRoutingModule
 
   ],
   providers: [ModalTemplateService],

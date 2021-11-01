@@ -1,13 +1,15 @@
-import { Injectable } from "@angular/core";
-import { Selector, State } from "@ngxs/store";
-import { BirthdayGreetingsActionsModel } from "../model/birthday-greetings-actions-model";
-import { BirthdayGreetingsModel } from "../model/birthday-greetings-model";
+import { Injectable } from '@angular/core';
+import { Selector, State } from '@ngxs/store';
+
+import { BirthdayGreetingsActionsModel } from '../model/birthday-greetings-actions-model';
+import { BirthdayGreetingsModel } from '../model/birthday-greetings-model';
 
 @State<BirthdayGreetingsModel>({
   name: 'global',
   defaults: {
     currentTemplateLabel: 'initial ',
     currentTemplateNumber: 0,
+    currentRouterOutletName: ' ',
     isEdit: false,
     isSaved: false
   }
@@ -23,6 +25,11 @@ export class BirthdayGreetingsState extends BirthdayGreetingsActionsModel {
   @Selector()
   static getCurrentTemplateNumber(state: BirthdayGreetingsModel): number {
     return state.currentTemplateNumber;
+  }
+
+  @Selector()
+  static getCurrentRouterOutletName(state: BirthdayGreetingsModel): string {
+    return state.currentRouterOutletName;
   }
 
   // @Action(SelectTemplate)
