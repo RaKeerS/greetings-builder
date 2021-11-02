@@ -18,12 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { GreetingCardComponent } from './components/greeting-card/greeting-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GreetingsTemplateComponent,
-    HomeComponent
+    HomeComponent,
+    GreetingCardComponent
   ],
   imports: [
     BrowserModule,
