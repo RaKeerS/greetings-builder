@@ -1,1 +1,20 @@
-<p>greeting-card works!</p>
+<div class="d-flex vw-100">
+  <p-splitter [style.width]="'100%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[15, 30]"
+    [gutterSize]="5" [panelSizes]="[15, 85]" layout="horizontal">
+    <ng-template pTemplate>
+      <div class="d-flex">
+        <form class="" #greetingCardForm="ngForm">
+          <div class="form-group">
+            <label for="recipientName">Recipient's Name</label>
+            <input type="text" class="form-control" id="recipientName" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="customMessage">Enter Custom Message</label>
+            <textarea class="form-control" id="customMessage" placeholder="Enter Message"></textarea>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+    <ng-template pTemplate>Panel 2</ng-template>
+  </p-splitter>
+</div>

@@ -1,24 +1,22 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsModule } from '@ngxs/store';
-import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-
-import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { MenubarModule } from 'primeng/menubar';
-
-import { AppComponent } from './app.component';
-import { BirthdayGreetingsState } from './store/birthday-greetings-store';
-import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
-import { ModalTemplateService } from './services/modal-template.service';
-import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './components/home/home.component';
+import { AppComponent } from './app.component';
 import { GreetingCardComponent } from './components/greeting-card/greeting-card.component';
+import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
+import { HomeComponent } from './components/home/home.component';
+import { PrimeNGModules } from './prime-ng/prime-ng-modules';
+import { ModalTemplateService } from './services/modal-template.service';
+import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 
 @NgModule({
   declarations: [
@@ -38,6 +36,7 @@ import { GreetingCardComponent } from './components/greeting-card/greeting-card.
 
     PrimeNGModules,
     MenubarModule,
+    FormsModule,
     AppRoutingModule
 
   ],
