@@ -1,16 +1,31 @@
-<div class="d-flex vw-100">
-  <p-splitter [style.width]="'100%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[15, 30]"
-    [gutterSize]="5" [panelSizes]="[15, 85]" layout="horizontal">
+<div class="d-flex vw-85">
+  <p-splitter [style.width]="'100%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[24, 50]"
+    [gutterSize]="5" [panelSizes]="[24, 76]" layout="horizontal">
     <ng-template pTemplate>
-      <div class="d-flex">
+      <div class="d-flex flex-column">
+        <div class="header">
+          <h3><u>Email Details</u></h3>
+        </div>
         <form class="" #greetingCardForm="ngForm">
-          <div class="form-group">
-            <label for="recipientName">Recipient's Name</label>
+          <div class="form-group row p-3">
+            <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
             <input type="text" class="form-control" id="recipientName" placeholder="Enter Name">
           </div>
-          <div class="form-group">
-            <label for="customMessage">Enter Custom Message</label>
+          <div class="form-group row p-3">
+            <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
             <textarea class="form-control" id="customMessage" placeholder="Enter Message"></textarea>
+          </div>
+          <div class="form-group row p-3">
+            <label for="recipientAddress" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (CC) </label>
+            <textarea class="form-control" id="recipientAddress" placeholder="Enter Email Address(es) separated by ';'"></textarea>
+          </div>
+          <div class="form-group row p-3">
+            <label for="recipientAddress" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (BCC) </label>
+            <textarea class="form-control" id="recipientAddress" placeholder="Enter Email Address(es) separated by ';'"></textarea>
+          </div>
+          <div class="form-group row p-3">
+            <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
+            <input type="text" class="form-control" id="senderName" placeholder="Enter Sender's Name">
           </div>
         </form>
       </div>
