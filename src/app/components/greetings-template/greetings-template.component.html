@@ -4,7 +4,7 @@
         </ng-template>
         <p> {{templateInfo.description}} </p>
         <ng-template pTemplate="footer">
-        <p-button pStyleClass="custom-button" label="Select" icon="pi pi-check" styleClass="custom-button" [routerLink]="['/greeting', templateInfo.id]"></p-button>
+        <p-button pStyleClass="custom-button" label="Select" icon="pi pi-check" styleClass="custom-button" [routerLink]="['/greeting', templateInfo.id]" (click)="selectTemplate()"></p-button>
         <p-button pStyleClass="custom-button" label="See Images" icon="pi pi-external-link" styleClass="custom-button" [style]="{'margin-left': '.5em', 'line-height': '19.5px'}" (click)="showTemplate()"></p-button>
 
         <!-- <p-button pStyleClass="custom-button" label="Cancel" icon="pi pi-times" styleClass="p-button-secondary custom-button" [style]="{'margin-left': '.5em'}"></p-button> -->
