@@ -30,6 +30,8 @@
         </form>
       </div>
     </ng-template>
-    <ng-template pTemplate>Panel 2</ng-template>
+    <ng-template pTemplate>Panel 2 &nbsp;
+      <ng-container *ngComponentOutlet="componentLabel; injector: componentInjector"></ng-container>
+    </ng-template>
   </p-splitter>
 </div>

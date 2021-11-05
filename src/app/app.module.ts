@@ -17,13 +17,15 @@ import { HomeComponent } from './components/home/home.component';
 import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { ModalTemplateService } from './services/modal-template.service';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GreetingsTemplateComponent,
     HomeComponent,
-    GreetingCardComponent
+    GreetingCardComponent,
+    TemplatedummyComponent
   ],
   imports: [
     BrowserModule,

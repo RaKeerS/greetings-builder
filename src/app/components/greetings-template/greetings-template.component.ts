@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { SelectTemplate } from 'src/app/actions/birthday-greetings-actions';
+import { ModalTypes } from 'src/app/types/modal-types';
 
 @Component({
   selector: 'app-greetings-template',
@@ -13,7 +14,7 @@ export class GreetingsTemplateComponent implements OnInit {
 
   public responsiveOptions: any;
 
-  @Input('templateInfo') templateInfo: any;
+  @Input('templateInfo') templateInfo!: ModalTypes;
 
   constructor(private store: Store) {
     this.displayDialog = false;
@@ -58,6 +59,10 @@ export class GreetingsTemplateComponent implements OnInit {
 
   public showTemplate() {
     this.displayDialog = true;
+  }
+
+  public selectTemplate() {
+    this.store.dispatch(new SelectTemplate(this.templateInfo.type, this.templateInfo.id))
   }
 
 }

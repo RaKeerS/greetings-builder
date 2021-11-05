@@ -2,6 +2,8 @@
   "data": [
     {
       "id": "001",
+      "category": "anime",
+      "type": "dummy",
       "label": "Obito Uchiha",
       "description": "The leader of Akatsuki, also known as Tobi. \n Obito Uchiha, also known by his alias Tobi, is a character in Masashi Kishimoto's manga Naruto. \n He is first introduced in a \"Kakashi Chronicle\" side story as a young ninja who sacrifices himself to save his friends from a rival group of ninjas",
       "abilities": "Kamui, Fire Style, Genjutsu, Taijutsu, Ninjutsu",
@@ -15,6 +17,8 @@
     },
     {
       "id": "002",
+      "category": "anime",
+      "type": "dummy",
       "label": "Pain",
       "description": "The known leader of Akatsuki, controlled by Nagato. Nagato (Japanese: 長門), known primarily under the alias of Pain (ペイン, Pein), is a fictional character in the manga and anime series Naruto created by Masashi Kishimoto. Nagato is the figurehead leader of the Akatsuki who wishes to capture the tailed beasts sealed into various people around the shinobi world.",
       "abilities": "Six Paths of Pain",
@@ -29,6 +33,8 @@
     },
     {
       "id": "003",
+      "category": "anime",
+      "type": "dummy",
       "label": "Itachi Uchiha",
       "description": "Known as the Rogue Ninja who committed a genocide of his own clan. Itachi Uchiha is a fictional character in the Naruto manga and anime series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.",
       "abilities": "Fire Style, Genjutsu, Taijutsu, Ninjutsu",
@@ -42,6 +48,8 @@
     },
     {
       "id": "004",
+      "category": "anime",
+      "type": "dummy",
       "label": "Kisame Hoshigaki",
       "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
       "abilities": "Water Style, Weapon User",
@@ -55,6 +63,8 @@
     },
     {
       "id": "005",
+      "category": "anime",
+      "type": "dummy",
       "label": "Sasori",
       "description": "The rogue ninja of Hidden Sand Village. Sasori, known as Sasori of the Red Sand, was an S-rank Missing-nin from Sunagakure, and the grandson of Chiyo, one of the elders, who trained him as a puppeteer. He was the partner of Orochimaru in the criminal organization Akatsuki until the later left, and then the partner of Deidara until he was killed.",
       "abilities": "Puppetry, Taijutsu",
@@ -68,6 +78,8 @@
     },
     {
       "id": "006",
+      "category": "anime",
+      "type": "dummy",
       "label": "Deidara",
       "description": "Another reogue Ninja obsessed with his explosive art. Deidara (デイダラ, Deidara) was an S-rank missing-nin from Iwagakure. During his time in the village, he was a member of the Explosion Corps.",
       "abilities": "Clay explosives, Strategist",
@@ -81,6 +93,8 @@
     },
     {
       "id": "007",
+      "category": "anime",
+      "type": "dummy",
       "label": "Kakuzu",
       "description": "Another rogue ninja who strives for funding for the organization. Kakuzu is a rogue ninja from the Village Hidden in the Waterfall who became a member of the Akatsuki, serving as their treasurer, and an antagonist in the manga/anime series Naruto. He steals hearts from his victims in order to remain alive and achieve a near-immortal lifespan.",
       "abilities": "5 element style and has multiple lives",
@@ -94,6 +108,8 @@
     },
     {
       "id": "008",
+      "category": "anime",
+      "type": "dummy",
       "label": "Hidan",
       "description": "An immortal rogue ninja that follows the way of Jashin. Hidan is a villain from the anime and manga Naruto and is a member of the Akatsuki. He is partnered with Kakuzu and is known throughout the Akatsuki as being an immortal duo. He is foul-mouthed and incredibly impulsive. He enjoys praying to his god, Jashin, and enjoys fighting.",
       "abilities": "Taijutsu, Jashin's secret ritual technique",
@@ -107,6 +123,8 @@
     },
     {
       "id": "009",
+      "category": "anime",
+      "type": "dummy",
       "label": "Oorochimaru",
       "description": "A rogue ninja of the Hidden Leaf village also known as one of the Legendary Sanin. Orochimaru is a fictional character from Naruto, a manga series created by Masashi Kishimoto. In the anime and manga, Orochimaru is a former ninja from the village of Konohagakure who is well known for his abilities. He is one of the three Legendary Sannin and a former member of the terrorist organization Akatsuki.",
       "abilities": "Genjutsu, Snake summoning, Ninjutsu",
@@ -120,6 +138,8 @@
     },
     {
       "id": "010",
+      "category": "anime",
+      "type": "dummy",
       "label": "Zetsu",
       "description": "An entity whose information is unknown. When Madara had seemingly created White Zetsu and its clone siblings, it was actually Black Zetsu pulling the transformed humans from Kaguya's Infinite Tsukuyomi out of the Demonic Statue of the Outer Path, merging them with the essence of the Hashirama plant clone Madara created to give them a diluted Wood Release.",
       "abilities": "Wood style, fast healing and cloning",

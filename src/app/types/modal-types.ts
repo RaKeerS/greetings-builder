@@ -1,7 +1,9 @@
 export interface ModalTypes {
-  id?: number,
-  label?: string,
-  description?: string,
-  abilities?: string,
-  image?: []
+  id: number,
+  category: string,
+  type: string,
+  label: string,
+  description: string,
+  abilities: string,
+  images: Array<string>
 }
