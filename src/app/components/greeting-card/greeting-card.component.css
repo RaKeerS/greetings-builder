@@ -1,11 +1,11 @@
-/************** Predefined CSS ****************/
+/**************** Predefined CSS ****************/
 
 ::ng-deep .p-splitter-panel.p-splitter-panel-nested {
   overflow-x: hidden;
 }
 
 
-/************** Custom CSS ****************/
+/**************** Custom CSS ****************/
 
 .pl-0 {
   padding-left: 0px;
