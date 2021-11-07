@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectTemplate } from 'src/app/actions/birthday-greetings-actions';
+import { SelectRouterOutlet, SelectTemplate } from 'src/app/actions/birthday-greetings-actions';
 import { ModalTypes } from 'src/app/types/modal-types';
 
 @Component({
@@ -62,7 +62,9 @@ export class GreetingsTemplateComponent implements OnInit {
   }
 
   public selectTemplate() {
-    this.store.dispatch(new SelectTemplate(this.templateInfo.type, this.templateInfo.id))
+    this.store.dispatch(new SelectTemplate(this.templateInfo.type, this.templateInfo.id));
+    // this.store.dispatch(new SelectRouterOutlet('birthday-greetings', this.templateInfo.id));
+    this.store.dispatch(new SelectRouterOutlet('greeting', this.templateInfo.id));
   }
 
 }

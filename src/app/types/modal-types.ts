@@ -7,3 +7,13 @@ export interface ModalTypes {
   abilities: string,
   images: Array<string>
 }
+
+export class ModalData<T> {
+  inputData?: T;
+}
+
+export class GreetingData {
+  name!: string;
+  message!: string;
+  sender?: string
+}
