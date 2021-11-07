@@ -17,7 +17,6 @@ const routes: Routes = [
     ]
   },
   { path: 'temp', component: GreetingCardComponent }
-
 ]
 
 

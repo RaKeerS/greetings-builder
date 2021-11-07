@@ -1,9 +1,9 @@
 {
   "data": [
     {
-      "id": "001",
+      "id": "1",
       "category": "anime",
-      "type": "dummy",
+      "type": "birthday-greetings",
       "label": "Obito Uchiha",
       "description": "The leader of Akatsuki, also known as Tobi. \n Obito Uchiha, also known by his alias Tobi, is a character in Masashi Kishimoto's manga Naruto. \n He is first introduced in a \"Kakashi Chronicle\" side story as a young ninja who sacrifices himself to save his friends from a rival group of ninjas",
       "abilities": "Kamui, Fire Style, Genjutsu, Taijutsu, Ninjutsu",
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "id": "002",
+      "id": "2",
       "category": "anime",
       "type": "dummy",
       "label": "Pain",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "id": "003",
+      "id": "3",
       "category": "anime",
       "type": "dummy",
       "label": "Itachi Uchiha",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "id": "004",
+      "id": "4",
       "category": "anime",
       "type": "dummy",
       "label": "Kisame Hoshigaki",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "id": "005",
+      "id": "5",
       "category": "anime",
       "type": "dummy",
       "label": "Sasori",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "id": "006",
+      "id": "6",
       "category": "anime",
       "type": "dummy",
       "label": "Deidara",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "id": "007",
+      "id": "7",
       "category": "anime",
       "type": "dummy",
       "label": "Kakuzu",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "id": "008",
+      "id": "8",
       "category": "anime",
       "type": "dummy",
       "label": "Hidan",
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "id": "009",
+      "id": "9",
       "category": "anime",
       "type": "dummy",
       "label": "Oorochimaru",
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "id": "010",
+      "id": "10",
       "category": "anime",
       "type": "dummy",
       "label": "Zetsu",
