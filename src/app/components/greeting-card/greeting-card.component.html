@@ -7,25 +7,43 @@
           <h3><u>Email Details</u></h3>
         </div>
         <form class="" #greetingCardForm="ngForm">
-          <div class="form-group row p-3">
+          <div class="form-group p-field row p-3">
             <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
-            <input type="text" class="form-control" id="recipientName" placeholder="Enter Name">
+            <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
+              name="recipientName" placeholder="Enter Name"
+              aria-describedby="recipientName-help" [(ngModel)]="recipientName">
+              <small id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
           </div>
           <div class="form-group row p-3">
             <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
-            <textarea class="form-control" id="customMessage" placeholder="Enter Message"></textarea>
+            <textarea rows="5" cols="30" class="p-inputtextarea p-inputtext resize-none p-component p-element form-control"
+            id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
           </div>
           <div class="form-group row p-3">
-            <label for="recipientAddress" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (CC) </label>
-            <textarea class="form-control" id="recipientAddress" placeholder="Enter Email Address(es) separated by ';'"></textarea>
+            <label for="recipientAddressCC" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (CC) </label>
+            <p-chips class="p-0" id="recipientAddressCC" name="recipientAddressCC" aria-describedby="recipientAddressBCC-help"
+              placeholder="Enter Email Address(es) separated by ';'" [(ngModel)]="recipientAddressCC">
+              <ng-template let-item pTemplate="item">
+                  {{item}} &nbsp; <i class="pi pi-user p-ml-2"></i>
+              </ng-template>
+            </p-chips>
+            <small id="recipientAddressCC-help" class="p-error"> Recipient(s)'s Email Address cannot be empty! </small>
+            <!-- <textarea class="form-control" id="recipientAddressCC" placeholder="Enter Email Address(es) separated by ';'"></textarea> -->
           </div>
           <div class="form-group row p-3">
-            <label for="recipientAddress" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (BCC) </label>
-            <textarea class="form-control" id="recipientAddress" placeholder="Enter Email Address(es) separated by ';'"></textarea>
+            <label for="recipientAddressBCC" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address (BCC) </label>
+            <p-chips class="p-0" id="recipientAddressBCC" name="recipientAddressBCC"
+              placeholder="Enter Email Address(es) separated by ';'" [(ngModel)]="recipientAddressBCC">
+              <ng-template let-item pTemplate="item">
+                  {{item}} &nbsp; <i class="pi pi-user p-ml-2"></i>
+              </ng-template>
+            </p-chips>
+            <!-- <textarea class="form-control" id="recipientAddressBCC" placeholder="Enter Email Address(es) separated by ';'"></textarea> -->
           </div>
-          <div class="form-group row p-3">
+          <div class="form-group p-field row p-3">
             <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
-            <input type="text" class="form-control" id="senderName" placeholder="Enter Sender's Name">
+            <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
+              placeholder="Enter Sender's Name" [(ngModel)]="recipientName">
           </div>
         </form>
       </div>
