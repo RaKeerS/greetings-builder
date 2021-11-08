@@ -28,8 +28,14 @@ export class GreetingCardComponent implements OnInit {
 
   private componentData: unknown;
 
+  public recipientName!: string;
+  public customMessage!: string;
+  public recipientAddressCC!: string;
+  public recipientAddressBCC: string = '';
+  public senderName: string = '';
+
   constructor(private injector: Injector, private actions$: Actions, private router: ActivatedRoute) {
-   }
+  }
 
   ngOnInit(): void {
     this.subscribe();
@@ -55,9 +61,11 @@ export class GreetingCardComponent implements OnInit {
       case '1' : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
-            name: 'Sree',
-            message: 'Test Message',
-            sender: 'Srikar'
+            recipientName: 'Sree',
+            customMessage: 'Test Message',
+            recipientAddressCC: 'n.srikar@',
+            recipientAddressBCC: 'n.srikar@',
+            senderName: 'Srikar'
           }
         };
         return BirthdayGreetingsComponent;

@@ -4,6 +4,18 @@
   overflow-x: hidden;
 }
 
+::ng-deep .p-chips.p-component {
+  width: 100%;
+}
+
+::ng-deep .p-inputtext.p-chips-multiple-container {
+  width: 100%;
+  padding: 10px 0px;
+}
+
+::ng-deep .p-chips-input-token > input[type="text"] {
+  padding: 0px 12px !important;
+}
 
 /**************** Custom CSS ****************/
 
@@ -15,3 +27,6 @@
   width: 85vw !important;
 }
 
+.resize-none {
+  resize: unset;
+}
