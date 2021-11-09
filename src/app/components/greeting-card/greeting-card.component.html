@@ -43,13 +43,13 @@
           <div class="form-group p-field row p-3">
             <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
             <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
-              placeholder="Enter Sender's Name" [(ngModel)]="recipientName">
+              placeholder="Enter Sender's Name" [(ngModel)]="senderName">
           </div>
         </form>
       </div>
     </ng-template>
     <ng-template pTemplate>Panel 2 &nbsp;
-      <ng-container *ngComponentOutlet="componentLabel; injector: componentInjector"></ng-container>
+      <ng-container *ngComponentOutlet="componentName; injector: componentInjector"></ng-container>
     </ng-template>
   </p-splitter>
 </div>
