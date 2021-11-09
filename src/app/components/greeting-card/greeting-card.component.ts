@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, HostListener, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Actions, ofActionDispatched, Select } from '@ngxs/store';
 import { Observable, Subscription } from 'rxjs';
@@ -23,7 +23,8 @@ export class GreetingCardComponent implements OnInit {
 
   private subscription: Subscription | undefined;
 
-  public componentLabel!: any;
+  public componentName!: any;
+  public componentLabel!: string;
   public componentNumber!: string;
 
   private componentData: unknown;
@@ -46,6 +47,11 @@ export class GreetingCardComponent implements OnInit {
     this.subscription?.unsubscribe();
   }
 
+  @HostListener('keyup')
+  onInputKeyDown(event: KeyboardEvent) {
+    this.initializeComponent(this.componentLabel);
+  }
+
   public subscribe() {
     // this.currentTemplateLabel$.subscribe(value => this.componentLabel = this.getComponent(value));
     this.subscription = this.currentTemplateLabel$.subscribe(value => this.initializeComponent(value));
@@ -61,11 +67,11 @@ export class GreetingCardComponent implements OnInit {
       case '1' : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
-            recipientName: 'Sree',
-            customMessage: 'Test Message',
-            recipientAddressCC: 'n.srikar@',
-            recipientAddressBCC: 'n.srikar@',
-            senderName: 'Srikar'
+            recipientName: this.recipientName,
+            customMessage: this.customMessage,
+            recipientAddressCC: this.recipientAddressCC,
+            recipientAddressBCC: this.recipientAddressBCC,
+            senderName: this.senderName
           }
         };
         return BirthdayGreetingsComponent;
@@ -75,7 +81,8 @@ export class GreetingCardComponent implements OnInit {
   }
 
   private initializeComponent(componentLabel: string) {
-    this.componentLabel = this.getComponent(componentLabel);
+    this.componentLabel = componentLabel;
+    this.componentName = this.getComponent(componentLabel);
     this.componentInjector = Injector.create({ providers: [{ provide: ModalData, useClass: ModalData, useValue: this.componentData }], parent: this.injector });
   }
 
