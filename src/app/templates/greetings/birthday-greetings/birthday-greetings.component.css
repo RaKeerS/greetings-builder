@@ -1,7 +1,7 @@
 /**************** Predefined CSS ****************/
 
 :host{
-  width: 100%;
+  width: 102%;
 }
 
 /**************** Custom CSS ****************/
@@ -15,4 +15,15 @@
   width: 550px;
   justify-content: center;
   padding: 0px 10px;
+}
+
+.name-box {
+  word-break: break-word;
+  width: 300px;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.w-inherit {
+  width: inherit;
 }
