@@ -2,7 +2,9 @@
 
 ::ng-deep.p-splitter-panel-nested {
   padding: 10px;
-  overflow: auto;
+  /* overflow: auto; */
+  height: 100.4vh;
+  overflow: hidden;
 }
 
 ::ng-deep .p-menubar.p-component,

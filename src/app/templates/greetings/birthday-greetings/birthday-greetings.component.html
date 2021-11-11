@@ -1,5 +1,5 @@
 <div class="d-flex flex-column h-100 w-inherit justify-content-center">
-  <div class="d-flex h-auto">
+  <div id="greetingTemplate" #greetingTemplate class="d-flex h-auto">
     <table class="es-content-body w-100" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
       <tbody class="ui-droppable">
         <tr class="ui-draggable">
@@ -67,10 +67,12 @@
                             <p style="line-height: 150%; color: #ffffff;">
                               <span style="font-size:16px;">
                                 <span style="font-family: arial,helvetica neue,helvetica,sans-serif;">
-                                  <div class="d-flex flex-column name-box" style="line-height: 150%;">
-                                    <span>Dear {{recipientName}},</span>
-                                    <span>it's your birthday and we think you deserve a little gift</span>
-                                  </div>
+                                  <span class="d-flex flex-column name-box" style="line-height: 150%;">
+                                    <p style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">
+                                      Dear {{recipientName}},
+                                    </p>
+                                    <span style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">it's your birthday and we think you deserve a little gift</span>
+                                  </span>
                                 </span>
                               </span>
                             </p>
