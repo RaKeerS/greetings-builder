@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
@@ -14,6 +14,8 @@ export class BirthdayGreetingsComponent implements OnInit {
   public recipientAddressBCC: string;
   public senderName: string;
 
+  @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
+
   constructor(public modalData: ModalData<GreetingData>) {
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.customMessage = this.modalData.inputData?.customMessage!;
@@ -24,5 +26,9 @@ export class BirthdayGreetingsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('GreetingStyle1 InputData: ', this.modalData.inputData);
+  }
+
+  ngAfterViewInit() {
+    console.log('greetingTemplate: ', this.greetingTemplate.nativeElement.outerHTML);
   }
 }
