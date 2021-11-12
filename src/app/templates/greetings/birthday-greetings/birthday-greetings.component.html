@@ -100,6 +100,12 @@
                             <p style="color: #ffffff; line-height: 150%;">
                               <span style="font-size: 13px; line-height: 150%;">YOUR NEXT ORDER + </span>FREE SHIPPING!
                             </p>
+                            <ng-container *ngIf="!!senderName && senderName.length > 0">
+                              <p style="color: #ffffff; line-height: 150%;">
+                                <span style="font-size: 13px; line-height: 150%;"> From, </span>
+                                <span><p style="color: #ffffff; line-height: 150%;"> {{senderName}} </p></span>
+                              </p>
+                            </ng-container>
                           </td>
                         </tr>
                       </tbody>

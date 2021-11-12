@@ -31,6 +31,7 @@ export class GreetingCardComponent implements OnInit {
 
   public recipientName!: string;
   public customMessage!: string;
+  public recipientAddress!: string;
   public recipientAddressCC!: string;
   public recipientAddressBCC: string = '';
   public senderName: string = '';
@@ -69,6 +70,7 @@ export class GreetingCardComponent implements OnInit {
           inputData: {
             recipientName: this.recipientName,
             customMessage: this.customMessage,
+            recipientAddress: this.recipientAddress,
             recipientAddressCC: this.recipientAddressCC,
             recipientAddressBCC: this.recipientAddressBCC,
             senderName: this.senderName
