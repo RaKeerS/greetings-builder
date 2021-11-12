@@ -15,7 +15,8 @@ export class ModalData<T> {
 export class GreetingData {
   recipientName!: string;
   customMessage!: string;
-  recipientAddressCC!: string;
+  recipientAddress!: string;
+  recipientAddressCC?: string;
   recipientAddressBCC?: string;
   senderName?: string
 }
