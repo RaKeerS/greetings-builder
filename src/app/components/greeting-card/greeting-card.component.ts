@@ -3,7 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Actions, ofActionDispatched, Select } from '@ngxs/store';
 import { Observable, Subscription } from 'rxjs';
 import { SelectRouterOutlet } from 'src/app/actions/birthday-greetings-actions';
-import { BirthdayGreetingsEnum } from 'src/app/enums/birthday-greetings-enum';
+import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
+import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { BirthdayGreetingsState } from 'src/app/store/birthday-greetings-store';
 import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday-greetings/birthday-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
@@ -16,16 +17,20 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 })
 export class GreetingCardComponent implements OnInit {
 
-  @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
 
   public componentInjector!: Injector;
 
   private subscription: Subscription | undefined;
 
   public componentName!: any;
-  public componentLabel!: string;
-  public componentNumber!: string;
+  public componentCategory!: string;
+  public componentType!: string;
+  public componentId!: string;
+  public componentDOMString!: string;
 
   private componentData: unknown;
 
@@ -36,7 +41,7 @@ export class GreetingCardComponent implements OnInit {
   public recipientAddressBCC: string = '';
   public senderName: string = '';
 
-  constructor(private injector: Injector, private actions$: Actions, private router: ActivatedRoute) {
+  constructor(private injector: Injector, private actions$: Actions, private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService) {
   }
 
   ngOnInit(): void {
@@ -50,22 +55,27 @@ export class GreetingCardComponent implements OnInit {
 
   @HostListener('keyup')
   onInputKeyDown(event: KeyboardEvent) {
-    this.initializeComponent(this.componentLabel);
+    this.initializeComponent(this.componentCategory, this.componentType);
   }
 
   public subscribe() {
     // this.currentTemplateLabel$.subscribe(value => this.componentLabel = this.getComponent(value));
-    this.subscription = this.currentTemplateLabel$.subscribe(value => this.initializeComponent(value));
-    this.subscription = this.currentTemplateNumber$.subscribe(value => this.componentNumber = value);
-    this.subscription = this.router.firstChild?.params.subscribe((params: Params) => this.initializeComponent(params.id));
+    this.subscription = this.currentTemplateType$.subscribe(value => this.componentType = value);
+    this.subscription = this.currentTemplateCategory$.subscribe(value => this.initializeComponent(value, this.componentType));
+    this.subscription = this.currentTemplateId$.subscribe(value => this.componentId = value);
+    this.subscription = this.currentTemplateDOMString$.subscribe(value => this.componentDOMString = value);
+
+    let urlSegment: string;
+    this.subscription = this.router.firstChild?.url.subscribe(value => urlSegment = value[0].toString());
+    this.subscription = this.router.firstChild?.params.subscribe((params: Params) => this.initializeComponent(urlSegment, params.id));
     // this.refreshRouterOutlet();
   }
 
-  private getComponent(componentLabel: string) {
-    const componentLabelValue = isNaN(Number(componentLabel)) ? (<any>BirthdayGreetingsEnum)[componentLabel] : componentLabel;
-    switch(componentLabelValue) {
-      case 'dummy' : return TemplatedummyComponent;
-      case '1' : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
+  private getComponent(componentCategory: GreetingsTemplateCategoryEnum, componentType: string) {
+    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
+    switch(componentCategory) {
+      case GreetingsTemplateCategoryEnum.dummy : return TemplatedummyComponent;
+      case GreetingsTemplateCategoryEnum['birthday-greetings'] : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
             recipientName: this.recipientName,
@@ -76,21 +86,30 @@ export class GreetingCardComponent implements OnInit {
             senderName: this.senderName
           }
         };
-        return BirthdayGreetingsComponent;
+        this.componentType = BirthdayGreetingsComponent.getComponentType(componentType);
+        return BirthdayGreetingsComponent.getComponent(componentType);
       }
-      default: return TemplatedummyComponent;
+      default:
+        this.componentType = TemplatedummyComponent.getComponentType(componentType);
+        return TemplatedummyComponent.getComponent(componentType);
     }
   }
 
-  private initializeComponent(componentLabel: string) {
-    this.componentLabel = componentLabel;
-    this.componentName = this.getComponent(componentLabel);
+  private initializeComponent(componentCategory: string, componentType: string) {
+    this.componentCategory = componentCategory;
+    // this.componentType = componentType;
+    this.componentName = this.getComponent((<any>GreetingsTemplateCategoryEnum)[componentCategory], componentType);
     this.componentInjector = Injector.create({ providers: [{ provide: ModalData, useClass: ModalData, useValue: this.componentData }], parent: this.injector });
   }
 
   private refreshRouterOutlet() {
     this.actions$.pipe()
-    this.actions$.pipe(ofActionDispatched(SelectRouterOutlet)).subscribe(payload => this.initializeComponent(payload.selectedRouterOutletId));
+    this.actions$.pipe(ofActionDispatched(SelectRouterOutlet)).subscribe(payload => this.initializeComponent(payload.selectedRouterOutletId, this.componentType));
+  }
+
+  public submitTemplateDetails() {
+    this.modalTemplateSvc.postTemplateData(this.componentDOMString)
+      .subscribe(data => console.log('Success: ', data), error => console.log('Error: ', error));
   }
 
 }

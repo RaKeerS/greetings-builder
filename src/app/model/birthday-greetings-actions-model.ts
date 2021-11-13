@@ -1,6 +1,6 @@
 import { Action, StateContext } from '@ngxs/store';
 
-import { SelectRouterOutlet, SelectTemplate } from '../actions/birthday-greetings-actions';
+import { SelectRouterOutlet, SelectTemplate, SelectTemplateDOMString } from '../actions/birthday-greetings-actions';
 import { BirthdayGreetingsModel } from './birthday-greetings-model';
 
 export class BirthdayGreetingsActionsModel {
@@ -10,8 +10,9 @@ export class BirthdayGreetingsActionsModel {
     const state = ctx.getState();
     ctx.setState({
       ...state,
-      currentTemplateLabel: payload.selectedTemplateLabel,
-      currentTemplateNumber: payload.selectedTemplateNumber
+      currentTemplateCategory: payload.selectedTemplateCategory,
+      currentTemplateType: payload.selectedTemplateType,
+      currentTemplateId: payload.selectedTemplateId
     });
   }
 
@@ -21,6 +22,15 @@ export class BirthdayGreetingsActionsModel {
     ctx.setState({
       ...state,
       currentRouterOutletName: payload.selectedRouterOutlet
+    });
+  }
+
+  @Action(SelectTemplateDOMString)
+  public selectTemplateDOMString(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectTemplateDOMString) {
+    const state = ctx.getState();
+    ctx.setState({
+      ...state,
+      currentRouterOutletName: payload.selectTemplateDOMString
     });
   }
 }

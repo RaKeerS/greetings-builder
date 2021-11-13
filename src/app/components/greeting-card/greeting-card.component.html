@@ -4,7 +4,7 @@
     <ng-template pTemplate>
       <div class="d-flex flex-column">
         <div class="header">
-          <h3><u>Email Details</u></h3>
+          <h3 class="d-flex justify-content-center"><u>Greeting Template Details</u></h3>
         </div>
         <form class="overflow-custom" #greetingCardForm="ngForm">
           <div class="form-group m-auto p-field row p-3">
@@ -56,7 +56,8 @@
           <div class="form-group m-auto row p-3 justify-content-end d-flex">
             <div class="col-md-5 p-0">
               <button pButton type="submit" label="Send Email" class="p-button-success p-button-raised w-100"
-                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"></button>
+                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"
+                (click)="submitTemplateDetails()"></button>
             </div>
           </div>
         </form>

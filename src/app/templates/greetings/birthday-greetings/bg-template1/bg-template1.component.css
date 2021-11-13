@@ -1,0 +1,29 @@
+/**************** Predefined CSS ****************/
+
+:host{
+  width: 102%;
+}
+
+/**************** Custom CSS ****************/
+
+.w-40 {
+  width: 40% !important;
+}
+
+.message-box {
+  word-break: break-word;
+  width: 550px;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.name-box {
+  word-break: break-word;
+  width: 300px;
+  justify-content: center;
+  padding: 0px 10px;
+}
+
+.w-inherit {
+  width: inherit;
+}

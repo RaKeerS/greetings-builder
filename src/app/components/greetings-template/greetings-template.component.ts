@@ -54,7 +54,7 @@ export class GreetingsTemplateComponent implements OnInit {
   }
 
   public doThis() {
-    this.store.dispatch(new SelectTemplate('changed', 1));
+    this.store.dispatch(new SelectTemplate('category', 'general-type', 1));
   }
 
   public showTemplate() {
@@ -62,9 +62,9 @@ export class GreetingsTemplateComponent implements OnInit {
   }
 
   public selectTemplate() {
-    this.store.dispatch(new SelectTemplate(this.templateInfo.type, this.templateInfo.id));
+    this.store.dispatch(new SelectTemplate(this.templateInfo.category, this.templateInfo.type, this.templateInfo.id));
     // this.store.dispatch(new SelectRouterOutlet('birthday-greetings', this.templateInfo.id));
-    this.store.dispatch(new SelectRouterOutlet('greeting', this.templateInfo.id));
+    this.store.dispatch(new SelectRouterOutlet(`${'greeting' + this.templateInfo.category}`, this.templateInfo.id));
   }
 
 }
