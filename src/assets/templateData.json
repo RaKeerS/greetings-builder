@@ -2,8 +2,8 @@
   "data": [
     {
       "id": "1",
-      "category": "anime",
-      "type": "birthday-greetings",
+      "category": "birthday-greetings",
+      "type": "template1",
       "label": "Obito Uchiha",
       "description": "The leader of Akatsuki, also known as Tobi. \n Obito Uchiha, also known by his alias Tobi, is a character in Masashi Kishimoto's manga Naruto. \n He is first introduced in a \"Kakashi Chronicle\" side story as a young ninja who sacrifices himself to save his friends from a rival group of ninjas",
       "abilities": "Kamui, Fire Style, Genjutsu, Taijutsu, Ninjutsu",
@@ -17,7 +17,7 @@
     },
     {
       "id": "2",
-      "category": "anime",
+      "category": "birthday-greetings",
       "type": "dummy",
       "label": "Pain",
       "description": "The known leader of Akatsuki, controlled by Nagato. Nagato (Japanese: 長門), known primarily under the alias of Pain (ペイン, Pein), is a fictional character in the manga and anime series Naruto created by Masashi Kishimoto. Nagato is the figurehead leader of the Akatsuki who wishes to capture the tailed beasts sealed into various people around the shinobi world.",

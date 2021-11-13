@@ -1,5 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
 import { ModalTypes } from '../types/modal-types';
 
 
@@ -12,8 +14,13 @@ export class ModalTemplateService {
 
   public getTemplateData(): Promise<any> {
     return this.http.get<any>('assets/templateData.json')
-    .toPromise()
-    .then(res => <ModalTypes>res.data)
-    .then(data => data);
+      .toPromise()
+      .then(res => <ModalTypes>res.data)
+      .then(data => data);
   }
+
+  public postTemplateData(body: any): Observable<any> {
+    return this.http.post<any>('http://localhost:8080/submitForm', body);
+  }
+
 }

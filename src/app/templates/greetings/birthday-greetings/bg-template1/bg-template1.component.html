@@ -1,0 +1,143 @@
+<div class="d-flex flex-column h-100 w-inherit justify-content-center">
+  <div id="greetingTemplate" #greetingTemplate class="d-flex h-auto">
+    <table class="es-content-body w-100" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
+      <tbody class="ui-droppable">
+        <tr class="ui-draggable">
+          <td class="esd-structure esd-frame esdev-disable-select esd-hover" esd-general-paddings-checked="false"
+            style="background-color: #43285f;" esd-handler-name="structureBlockHandler" bgcolor="#43285f" align="left">
+            <table width="100%" cellspacing="0" cellpadding="0">
+              <tbody class="ui-droppable">
+                <tr class="ui-draggable">
+                  <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
+                    esd-handler-name="containerHandler" width="600" valign="top" align="center">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tbody class="ui-droppable">
+                        <tr class="ui-draggable">
+                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            style="font-size:0" esd-handler-name="imgBlockHandler" align="center">
+                            <img class="adapt-img w-100"
+                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/36441502442545607.jpg"
+                              alt="Happy Birthday!" title="Happy Birthday!" width="600">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr class="ui-draggable">
+          <td class="d-flex" esd-general-paddings-checked="false" style="background-color: #43285f;"
+            esd-handler-name="structureBlockHandler" bgcolor="#43285f" align="left">
+            <table class="es-left w-40" cellspacing="0" cellpadding="0" align="left">
+              <tbody class="ui-droppable">
+                <tr class="ui-draggable">
+                  <td class="es-m-p0r es-m-p20b esd-container-frame esd-frame esd-hover esdev-disable-select"
+                    esd-handler-name="containerHandler" width="187" align="center">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tbody class="ui-droppable">
+                        <tr class="es-hidden ui-draggable">
+                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            style="font-size:0" esd-handler-name="imgBlockHandler" align="left">
+                            <img [style.width]="'70%'"
+                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/27021502445622301.jpg"
+                              alt="Very lovely balloon" width="116">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="es-hidden" width="20"></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="es-left w-auto" cellspacing="0" cellpadding="0" align="left">
+              <tbody class="ui-droppable">
+                <tr class="ui-draggable">
+                  <td class="es-m-p20b esd-container-frame esd-frame esd-hover esdev-disable-select"
+                    esd-handler-name="containerHandler" width="187" align="center">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tbody class="ui-droppable">
+                        <tr class="ui-draggable">
+                          <td
+                            class="esd-block-text es-p15t esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            esd-handler-name="textElementHandler" align="center">
+                            <p style="line-height: 150%; color: #ffffff;">
+                              <span style="font-size:16px;">
+                                <span style="font-family: arial,helvetica neue,helvetica,sans-serif;">
+                                  <span class="d-flex flex-column name-box" style="line-height: 150%;">
+                                    <p style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">
+                                      Dear {{recipientName}},
+                                    </p>
+                                    <span style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">it's your birthday and we think you deserve a little gift</span>
+                                  </span>
+                                </span>
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr class="ui-draggable">
+                          <td
+                            class="esd-block-text es-p10t es-p20b esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            esd-handler-name="textElementHandler" align="center">
+                            <p style="color: #ffffff; line-height: 150%;">
+                              <span
+                                style="font-family: playfair display,georgia,times new roman,serif; line-height: 150%;">
+                                <span style="font-size: 65px; line-height: 150%;">15%
+                                  <span style="font-size: 24px; line-height: 150%;">off</span>
+                                  <div class="d-flex message-box"> {{customMessage}} </div>
+                                </span>
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr class="ui-draggable">
+                          <td
+                            class="esd-block-text es-p30b es-p10r es-p10l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            esd-handler-name="textElementHandler" align="center">
+                            <p style="color: #ffffff; line-height: 150%;">
+                              <span style="font-size: 13px; line-height: 150%;">YOUR NEXT ORDER + </span>FREE SHIPPING!
+                            </p>
+                            <ng-container *ngIf="!!senderName && senderName.length > 0">
+                              <p style="color: #ffffff; line-height: 150%;">
+                                <span style="font-size: 13px; line-height: 150%;"> From, </span>
+                                <span><p style="color: #ffffff; line-height: 150%;"> {{senderName}} </p></span>
+                              </p>
+                            </ng-container>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="es-right w-40" cellspacing="0" cellpadding="0" align="right">
+              <tbody class="ui-droppable">
+                <tr class="ui-draggable">
+                  <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
+                    esd-handler-name="containerHandler" width="186" align="center">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tbody class="ui-droppable">
+                        <tr class="es-hidden ui-draggable">
+                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                            style="font-size:0" esd-handler-name="imgBlockHandler" align="right">
+                            <img [style.width]="'70%'"
+                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/77061502445629778.jpg"
+                              alt="Very lovely balloon" width="111">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

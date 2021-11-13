@@ -7,9 +7,11 @@ import { BirthdayGreetingsModel } from '../model/birthday-greetings-model';
 @State<BirthdayGreetingsModel>({
   name: 'global',
   defaults: {
-    currentTemplateLabel: 'initial ',
-    currentTemplateNumber: 0,
+    currentTemplateCategory: 'initial ',
+    currentTemplateType: 'type ',
+    currentTemplateId: 0,
     currentRouterOutletName: ' ',
+    currentTemplateDOMString: ' ',
     isEdit: false,
     isSaved: false
   }
@@ -18,18 +20,28 @@ import { BirthdayGreetingsModel } from '../model/birthday-greetings-model';
 export class BirthdayGreetingsState extends BirthdayGreetingsActionsModel {
 
   @Selector()
-  static getCurrentTemplateLabel(state: BirthdayGreetingsModel): string {
-    return state.currentTemplateLabel;
+  static getCurrentTemplateCategory(state: BirthdayGreetingsModel): string {
+    return state.currentTemplateCategory;
   }
 
   @Selector()
-  static getCurrentTemplateNumber(state: BirthdayGreetingsModel): number {
-    return state.currentTemplateNumber;
+  static getCurrentTemplateType(state: BirthdayGreetingsModel): string {
+    return state.currentTemplateType;
+  }
+
+  @Selector()
+  static getCurrentTemplateId(state: BirthdayGreetingsModel): number {
+    return state.currentTemplateId;
   }
 
   @Selector()
   static getCurrentRouterOutletName(state: BirthdayGreetingsModel): string {
     return state.currentRouterOutletName;
+  }
+
+  @Selector()
+  static getCurrentTemplateDOMString(state: BirthdayGreetingsModel): string {
+    return state.currentTemplateDOMString;
   }
 
   // @Action(SelectTemplate)

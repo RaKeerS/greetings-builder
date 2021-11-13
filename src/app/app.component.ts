@@ -17,8 +17,9 @@ export class AppComponent {
   public items: MenuItem[];
 
   // Currently the 3 declarations below have no intended purpose or use in the code.
-  @Select(BirthdayGreetingsState.getCurrentTemplateLabel) currentTemplateLabel$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateNumber) currentTemplateNumber$!: Observable<number>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
+  @Select(BirthdayGreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<number>;
   @Select(BirthdayGreetingsState.getCurrentRouterOutletName) currentRouterOutletName$!: Observable<string>;
 
   @ViewChild('customcontainer1') customcontainer1!: ElementRef;

@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { ModalTemplateService } from './services/modal-template.service';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+import { BgTemplate1Component } from './templates/greetings/birthday-greetings/bg-template1/bg-template1.component';
 import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greetings/birthday-greetings.component';
 import { GreetingStyle1Component } from './templates/greetings/greeting-style1/greeting-style1.component';
 import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
@@ -31,6 +32,7 @@ import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/
     TemplatedummyComponent,
     GreetingStyle1Component,
     BirthdayGreetingsComponent,
+    BgTemplate1Component,
   ],
   imports: [
     BrowserModule,

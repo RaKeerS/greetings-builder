@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'greeting', component: GreetingCardComponent,
     children: [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: ':id', component: GreetingCardComponent }
+      { path: ':id', component: GreetingCardComponent },
+      { path: 'birthday-greetings/:id', component: GreetingCardComponent }
     ]
   },
   { path: 'temp', component: GreetingCardComponent }
