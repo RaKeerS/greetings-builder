@@ -80,9 +80,9 @@ export class GreetingCardComponent implements OnInit {
           inputData: {
             recipientName: this.recipientName,
             customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress,
-            recipientAddressCC: this.recipientAddressCC,
-            recipientAddressBCC: this.recipientAddressBCC,
+            recipientAddress: this.recipientAddress?.toString(),
+            recipientAddressCC: this.recipientAddressCC?.toString(),
+            recipientAddressBCC: this.recipientAddressBCC?.toString(),
             senderName: this.senderName
           }
         };
@@ -108,7 +108,11 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public submitTemplateDetails() {
-    this.modalTemplateSvc.postTemplateData(this.componentDOMString)
+    const requestBody = {
+      params: (this.componentData as ModalData<GreetingData>).inputData,
+      payload: this.componentDOMString
+    }
+    this.modalTemplateSvc.postTemplateData(requestBody)
       .subscribe(data => console.log('Success: ', data), error => console.log('Error: ', error));
   }
 
