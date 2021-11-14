@@ -20,7 +20,7 @@ export class ModalTemplateService {
   }
 
   public postTemplateData(body: any): Observable<any> {
-    return this.http.post<any>('http://localhost:8080/submitForm', body);
+    return this.http.post<any>('http://localhost:8080/submitForm', JSON.stringify({ data: body }));
   }
 
 }

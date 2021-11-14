@@ -30,7 +30,7 @@ export class BirthdayGreetingsActionsModel {
     const state = ctx.getState();
     ctx.setState({
       ...state,
-      currentRouterOutletName: payload.selectTemplateDOMString
+      currentTemplateDOMString: payload.selectTemplateDOMString
     });
   }
 }
