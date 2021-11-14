@@ -1,6 +1,8 @@
 import { Component, HostListener, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Actions, ofActionDispatched, Select } from '@ngxs/store';
+import * as download from 'downloadjs';
+import * as htmlToImage from 'html-to-image';
 import { Observable, Subscription } from 'rxjs';
 import { SelectRouterOutlet } from 'src/app/actions/birthday-greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
@@ -114,6 +116,19 @@ export class GreetingCardComponent implements OnInit {
     }
     this.modalTemplateSvc.postTemplateData(requestBody)
       .subscribe(data => console.log('Success: ', data), error => console.log('Error: ', error));
+  }
+
+  public downloadTemplate() {
+    // import * as htmlToImage from 'html-to-image';
+  // let htmlToImage = require('html-to-image');
+
+    // console.log('Inside html-to-image: ', domElement);
+    htmlToImage.toPng<any>(document.getElementById('greetingTemplate'))
+    .then(function (dataUrl) {
+      console.log('Inside html-to-image: ', dataUrl);
+      let date = new Date();
+      download(dataUrl, `output-image-${date.getTime()}.png`);
+    }, err => console.log(err));
   }
 
 }
