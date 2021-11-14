@@ -53,7 +53,12 @@
             <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
               placeholder="Enter Sender's Name" [(ngModel)]="senderName">
           </div>
-          <div class="form-group m-auto row p-3 justify-content-end d-flex">
+          <div class="form-group m-auto row p-3 justify-content-between d-flex">
+            <div class="col-md-5 p-0">
+              <button pButton type="submit" label="Save Image" class="p-button-info p-button-raised w-100"
+                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"
+                (click)="downloadTemplate()"></button>
+            </div>
             <div class="col-md-5 p-0">
               <button pButton type="submit" label="Send Email" class="p-button-success p-button-raised w-100"
                 [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"
