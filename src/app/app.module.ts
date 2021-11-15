@@ -7,7 +7,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { NgxsModule } from '@ngxs/store';
-import { MenubarModule } from 'primeng/menubar';
+import { ToastrModule } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -47,7 +47,10 @@ import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/
     }),
 
     PrimeNGModules,
-    MenubarModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }), // ToastrModule added
+
     FormsModule,
     AppRoutingModule
 

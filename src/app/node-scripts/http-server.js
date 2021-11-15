@@ -40,9 +40,9 @@ http.createServer(function(req, res) {
 
 }).listen(port);
 
-function convertToImage(data) {
+async function convertToImage(data) {
   let date = new Date();
-  convertHtmlToImage.convertToPng(data, `output-image-${date.getTime()}`);
+  return await convertHtmlToImage.convertToPng(data, `output-image-${date.getTime()}`);
 }
 
 function parseRequestBody(req, res, headers) {
@@ -54,24 +54,27 @@ function parseRequestBody(req, res, headers) {
     // console.log(reqHeaders, reqMethod, reqURL);
 
     let body = [];
+    let response;
     req.on('error', (err) => {
       console.error(err);
     }).on('data', (chunk) => {
       body.push(chunk);
       // console.log(`Data chunk available: ${chunk}`)
-    }).on('end', () => {
+    }).on('end', async () => {
       body = Buffer.concat(body).toString(); // at this point, `body` has the entire request body stored in it as a string
       // console.log('body: ', JSON.parse(body).data);
-      convertToImage(JSON.parse(body).data);
+        response = await convertToImage(JSON.parse(body).data);
+        // console.log('response: ', response);
+
+        console.log('Hua re Hua!!!!!');
+
+        headers['Content-Type'] = 'application/json'
+
+        res.writeHead(200, headers);
+        // console.log('headers: ', headers);
+        // res.write('D Test Case');
+        // res.end(JSON.stringify({ data: 'D Test Case' }));
+        res.end(JSON.stringify(response));
+        return;
     });
-
-    console.log('Hua re Hua!!!!!');
-
-    headers['Content-Type'] = 'application/json'
-
-    res.writeHead(200, headers);
-    // console.log('headers: ', headers);
-    // res.write('D Test Case');
-    res.end(JSON.stringify({ data: 'D Test Case' }));
-    return;
 }

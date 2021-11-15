@@ -12,8 +12,8 @@ export class BgTemplate1Component implements OnInit {
 
   public recipientName: string;
   public customMessage: string;
-  public recipientAddressCC: string;
-  public recipientAddressBCC: string;
+  // public recipientAddressCC: string;
+  // public recipientAddressBCC: string;
   public senderName: string;
 
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
@@ -21,8 +21,8 @@ export class BgTemplate1Component implements OnInit {
   constructor(public modalData: ModalData<GreetingData>, private store: Store) {
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.customMessage = this.modalData.inputData?.customMessage!;
-    this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
-    this.recipientAddressBCC = this.modalData.inputData?.recipientAddressBCC!;
+    // this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
+    // this.recipientAddressBCC = this.modalData.inputData?.recipientAddressBCC!;
     this.senderName = this.modalData.inputData?.senderName || '';
   }
 

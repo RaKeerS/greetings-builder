@@ -1,5 +1,5 @@
 <div class="d-flex vw-85">
-  <p-splitter class="internal-splitter p-0 ml-n10p overflow-hidden" [style.width]="'100%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[26, 50]"
+  <p-splitter class="internal-splitter p-0 ml-n10p overflow-hidden" [style.width]="'100%'" [style.height]="'98vh'" [style.overflow]="'auto'" [minSizes]="[26, 50]"
     [gutterSize]="5" [panelSizes]="[26, 74]" layout="horizontal">
     <ng-template pTemplate>
       <div class="d-flex flex-column">
@@ -8,16 +8,23 @@
         </div>
         <form class="overflow-custom" #greetingCardForm="ngForm">
           <div class="form-group m-auto p-field row p-3">
-            <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
-            <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
-              name="recipientName" placeholder="Enter Name"
-              aria-describedby="recipientName-help" [(ngModel)]="recipientName" #recipientNameModel="ngModel" required>
-              <small *ngIf="recipientNameModel.invalid" id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
+            <label for="emailSubject" class="pl-0 pb-2"> Enter Email Subject </label>
+            <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="emailSubject"
+              name="emailSubject" placeholder="Enter Email's Subject" aria-describedby="emailSubject-help" autocomplete="off"
+              [(ngModel)]="emailSubject" #emailSubjectModel="ngModel" required>
+              <small *ngIf="emailSubjectModel.invalid" id="emailSubject-help" class="p-error"> Email Subject cannot be empty! </small>
           </div>
           <div class="form-group m-auto row p-3">
             <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
             <textarea rows="5" cols="30" class="p-inputtextarea p-inputtext resize-none p-component p-element form-control"
             id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
+          </div>
+          <div class="form-group m-auto p-field row p-3">
+            <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
+            <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
+              name="recipientName" placeholder="Enter Name" aria-describedby="recipientName-help"
+              [(ngModel)]="recipientName" #recipientNameModel="ngModel" required>
+              <small *ngIf="recipientNameModel.invalid" id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
           </div>
           <div class="form-group m-auto row p-3">
             <label for="recipientAddressCC" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address </label>
@@ -51,17 +58,24 @@
           <div class="form-group m-auto p-field row p-3">
             <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
             <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
-              placeholder="Enter Sender's Name" [(ngModel)]="senderName">
+              placeholder="Enter Sender's Name" autocomplete="off" [(ngModel)]="senderName">
+          </div>
+          <div class="form-group m-auto row p-3">
+            <label for="senderAddress" class="pl-0 pb-2"> Enter Sender's Email Address </label>
+            <input type="email" class="form-control p-inputtext p-component p-element" id="senderAddress" name="senderAddress"
+              placeholder="Enter Sender's Email Address" aria-describedby="senderAddress-help" autocomplete="off"
+              [(ngModel)]="senderAddress" required #senderAddressModel="ngModel">
+            <small *ngIf="senderAddressModel.invalid" id="senderAddress-help" class="p-error"> Sender's Email Address cannot be empty! </small>
           </div>
           <div class="form-group m-auto row p-3 justify-content-between d-flex">
             <div class="col-md-5 p-0">
-              <button pButton type="submit" label="Save Image" class="p-button-info p-button-raised w-100"
-                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"
+              <button pButton type="button" label="Save Image" class="p-button-info p-button-raised w-100"
+                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (recipientNameModel.invalid) || (emailSubjectModel.invalid)"
                 (click)="downloadTemplate()"></button>
             </div>
             <div class="col-md-5 p-0">
-              <button pButton type="submit" label="Send Email" class="p-button-success p-button-raised w-100"
-                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (recipientNameModel.invalid)"
+              <button pButton type="button" label="Send Email" class="p-button-success p-button-raised w-100"
+                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (recipientNameModel.invalid) || (emailSubjectModel.invalid)"
                 (click)="submitTemplateDetails()"></button>
             </div>
           </div>

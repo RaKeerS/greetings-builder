@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Actions, ofActionDispatched, Select } from '@ngxs/store';
 import * as download from 'downloadjs';
 import * as htmlToImage from 'html-to-image';
+import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
 import { SelectRouterOutlet } from 'src/app/actions/birthday-greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
@@ -36,14 +37,18 @@ export class GreetingCardComponent implements OnInit {
 
   private componentData: unknown;
 
+  public emailSubject!: string;
   public recipientName!: string;
   public customMessage!: string;
-  public recipientAddress!: string;
-  public recipientAddressCC!: string;
-  public recipientAddressBCC: string = '';
+  public recipientAddress!: string[];
+  public recipientAddressCC: string[] = [];
+  public recipientAddressBCC: string[] = [];
+  public senderAddress!: string;
   public senderName: string = '';
 
-  constructor(private injector: Injector, private actions$: Actions, private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService) {
+  constructor(private injector: Injector, private actions$: Actions,
+    private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService,
+    private toastr: ToastrService) {
   }
 
   ngOnInit(): void {
@@ -80,11 +85,13 @@ export class GreetingCardComponent implements OnInit {
       case GreetingsTemplateCategoryEnum['birthday-greetings'] : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
+            emailSubject: this.emailSubject,
             recipientName: this.recipientName,
             customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress?.toString(),
-            recipientAddressCC: this.recipientAddressCC?.toString(),
-            recipientAddressBCC: this.recipientAddressBCC?.toString(),
+            recipientAddress: this.recipientAddress,
+            recipientAddressCC: this.recipientAddressCC,
+            recipientAddressBCC: this.recipientAddressBCC,
+            senderAddress: this.senderAddress,
             senderName: this.senderName
           }
         };
@@ -110,12 +117,14 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public submitTemplateDetails() {
+    this.initializeComponent(this.componentCategory, this.componentType);
     const requestBody = {
       params: (this.componentData as ModalData<GreetingData>).inputData,
       payload: this.componentDOMString
     }
     this.modalTemplateSvc.postTemplateData(requestBody)
-      .subscribe(data => console.log('Success: ', data), error => console.log('Error: ', error));
+      .subscribe(response => this.toastr.success(response.success, 'Success'), error => this.toastr.error(error, 'Error'));
+    this.toastr.info('Sending Email, Please Wait...', 'Info')
   }
 
   public downloadTemplate() {
@@ -124,11 +133,12 @@ export class GreetingCardComponent implements OnInit {
 
     // console.log('Inside html-to-image: ', domElement);
     htmlToImage.toPng<any>(document.getElementById('greetingTemplate'))
-    .then(function (dataUrl) {
+    .then((dataUrl) => {
       console.log('Inside html-to-image: ', dataUrl);
       let date = new Date();
       download(dataUrl, `output-image-${date.getTime()}.png`);
-    }, err => console.log(err));
+      this.toastr.info('Please check your browser\'s download section', 'Info');
+    }, error => this.toastr.error(error, 'Error'));
   }
 
 }

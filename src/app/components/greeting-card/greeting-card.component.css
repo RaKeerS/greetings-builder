@@ -11,6 +11,11 @@
   margin-left: 10px;
 }
 
+/* :host(::ng-deep .p-splitter-panel-nested) {
+  overflow-y: hidden !important;
+} */
+
+
 ::ng-deep .p-chips.p-component {
   width: 100%;
 }
