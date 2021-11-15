@@ -1,5 +1,5 @@
 <div class="d-flex flex-column h-100 w-inherit justify-content-center">
-  <div id="greetingTemplate" #greetingTemplate class="d-flex h-auto">
+  <div id="greetingTemplate" #greetingTemplate class="d-flex h-auto overflow-auto">
     <table class="es-content-body w-100" [style.width]="'100% !important'" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
       <tbody class="ui-droppable">
         <tr class="ui-draggable">
@@ -87,7 +87,7 @@
                                 style="font-family: playfair display,georgia,times new roman,serif; line-height: 150%;">
                                 <span style="font-size: 65px; line-height: 150%;">15%
                                   <span style="font-size: 24px; line-height: 150%;">off</span>
-                                  <div class="d-flex message-box"> {{customMessage}} </div>
+                                  <!-- <span class="d-flex message-box"> {{customMessage}} </span> -->
                                 </span>
                               </span>
                             </p>

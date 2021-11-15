@@ -12,20 +12,20 @@ import { BgTemplate1Component } from './bg-template1/bg-template1.component';
 })
 export class BirthdayGreetingsComponent implements OnInit {
 
-  public recipientName: string;
-  public customMessage: string;
-  public recipientAddressCC: string;
-  public recipientAddressBCC: string;
-  public senderName: string;
+  // public recipientName: string;
+  // public customMessage: string;
+  // public recipientAddressCC: string;
+  // public recipientAddressBCC: string;
+  // public senderName: string;
 
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
   constructor(public modalData: ModalData<GreetingData>) {
-    this.recipientName = this.modalData.inputData?.recipientName!;
-    this.customMessage = this.modalData.inputData?.customMessage!;
-    this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
-    this.recipientAddressBCC = this.modalData.inputData?.recipientAddressBCC!;
-    this.senderName = this.modalData.inputData?.senderName || '';
+    // this.recipientName = this.modalData.inputData?.recipientName!;
+    // this.customMessage = this.modalData.inputData?.customMessage!;
+    // this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
+    // this.recipientAddressBCC = this.modalData.inputData?.recipientAddressBCC!;
+    // this.senderName = this.modalData.inputData?.senderName || '';
   }
 
   ngOnInit(): void {

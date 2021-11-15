@@ -13,10 +13,12 @@ export class ModalData<T> {
 }
 
 export class GreetingData {
+  emailSubject!: string;
   recipientName!: string;
   customMessage!: string;
-  recipientAddress!: string;
-  recipientAddressCC?: string;
-  recipientAddressBCC?: string;
+  recipientAddress!: string[];
+  recipientAddressCC?: string[];
+  recipientAddressBCC?: string[];
+  senderAddress!: string;
   senderName?: string
 }
