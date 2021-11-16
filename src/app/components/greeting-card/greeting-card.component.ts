@@ -39,7 +39,7 @@ export class GreetingCardComponent implements OnInit {
 
   public emailSubject!: string;
   public recipientName!: string;
-  public customMessage!: string;
+  public customMessage: string = '';
   public recipientAddress!: string[];
   public recipientAddressCC: string[] = [];
   public recipientAddressBCC: string[] = [];

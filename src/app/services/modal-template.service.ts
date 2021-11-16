@@ -13,7 +13,7 @@ export class ModalTemplateService {
   constructor(private http: HttpClient) { }
 
   public getTemplateData(): Promise<any> {
-    return this.http.get<any>('assets/templateData.json')
+    return this.http.get<any>('assets/source-data/templateData.json')
       .toPromise()
       .then(res => <ModalTypes>res.data)
       .then(data => data);

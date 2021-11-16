@@ -29,15 +29,15 @@ export class AppComponent {
   constructor(private primengConfig: PrimeNGConfig, private store: Store) {
     this.items = [
       {
-        label: 'Menu Item 1',
+        label: 'Anime',
         icon: 'pi pi-fw pi-file'
       },
       {
-        label: 'Menu Item 2',
+        label: 'Birthday',
         icon: 'pi pi-fw pi-pencil'
       },
       {
-        label: 'Menu Item 3',
+        label: 'Miscellanous',
         icon: 'pi pi-fw pi-user'
       },
       {
