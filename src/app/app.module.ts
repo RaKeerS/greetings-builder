@@ -43,7 +43,7 @@ import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({
-      key: 'global'
+      // key: 'global'  // commented for now since it was saving older keys and values in the store, i.e. those properties which were created during the beginning but were later removed in the localStorage of browser.
     }),
 
     PrimeNGModules,

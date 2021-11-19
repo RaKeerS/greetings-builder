@@ -70,7 +70,6 @@
           <div class="form-group m-auto row p-3 justify-content-between d-flex">
             <div class="col-md-5 p-0">
               <button pButton type="button" label="Save Image" class="p-button-info p-button-raised w-100"
-                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (recipientNameModel.invalid) || (emailSubjectModel.invalid)"
                 (click)="downloadTemplate()"></button>
             </div>
             <div class="col-md-5 p-0">

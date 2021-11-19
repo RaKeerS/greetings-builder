@@ -132,12 +132,19 @@ export class GreetingCardComponent implements OnInit {
   // let htmlToImage = require('html-to-image');
 
     // console.log('Inside html-to-image: ', domElement);
-    htmlToImage.toPng<any>(document.getElementById('greetingTemplate'))
+
+    console.log('greetingTemplate: ', document.getElementById('greetingTemplate'));
+
+    const tempDom: any = document.getElementById('greetingTemplate');
+    tempDom.style.overflow = 'unset';
+
+    htmlToImage.toPng<any>(tempDom)
     .then((dataUrl) => {
       console.log('Inside html-to-image: ', dataUrl);
       let date = new Date();
       download(dataUrl, `output-image-${date.getTime()}.png`);
       this.toastr.info('Please check your browser\'s download section', 'Info');
+      tempDom.style.overflow = 'auto';
     }, error => this.toastr.error(error, 'Error'));
   }
 
