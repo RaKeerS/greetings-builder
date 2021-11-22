@@ -18,7 +18,7 @@
     {
       "id": "2",
       "category": "birthday-greetings",
-      "type": "dummy",
+      "type": "template2",
       "label": "Pain",
       "description": "The known leader of Akatsuki, controlled by Nagato. Nagato (Japanese: 長門), known primarily under the alias of Pain (ペイン, Pein), is a fictional character in the manga and anime series Naruto created by Masashi Kishimoto. Nagato is the figurehead leader of the Akatsuki who wishes to capture the tailed beasts sealed into various people around the shinobi world.",
       "abilities": "Six Paths of Pain",
@@ -33,8 +33,8 @@
     },
     {
       "id": "3",
-      "category": "anime",
-      "type": "dummy",
+      "category": "birthday-greetings",
+      "type": "template1",
       "label": "Itachi Uchiha",
       "description": "Known as the Rogue Ninja who committed a genocide of his own clan. Itachi Uchiha is a fictional character in the Naruto manga and anime series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.",
       "abilities": "Fire Style, Genjutsu, Taijutsu, Ninjutsu",

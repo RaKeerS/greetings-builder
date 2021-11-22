@@ -5,6 +5,7 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { BgTemplate1Component } from './bg-template1/bg-template1.component';
 import { BgTemplate2Component } from './bg-template2/bg-template2.component';
+import { BgTemplate3Component } from './bg-template3/bg-template3.component';
 
 @Component({
   selector: 'app-birthday-greetings',
@@ -51,8 +52,8 @@ export class BirthdayGreetingsComponent implements OnInit {
       case 'dummy' : return 'dummy';
       case '1' : return BgTemplate1Component;
       case '2' : return BgTemplate2Component;
-      case '3' : return TemplatedummyComponent;
-      case '4' : return 'bg-template4';
+      case '3' : return BgTemplate3Component;
+      case '4' : return TemplatedummyComponent;
       case '5' : return 'bg-template5';
       default: return 'dummy';
       }

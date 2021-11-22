@@ -4,12 +4,11 @@ import { SelectTemplateDOMString } from 'src/app/actions/birthday-greetings-acti
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-bg-template1',
-  templateUrl: './bg-template1.component.html',
-  styleUrls: ['./bg-template1.component.css']
+  selector: 'app-bg-template3',
+  templateUrl: './bg-template3.component.html',
+  styleUrls: ['./bg-template3.component.css']
 })
-export class BgTemplate1Component implements OnInit {
-
+export class BgTemplate3Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
