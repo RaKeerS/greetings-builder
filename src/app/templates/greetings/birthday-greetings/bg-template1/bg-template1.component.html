@@ -1,144 +1,268 @@
-<div class="d-flex flex-column h-100 w-inherit justify-content-center">
-  <div id="greetingTemplate" #greetingTemplate class="d-flex h-auto" [style.overflow]="'auto'">
-    <table class="es-content-body w-100" [style.width]="'100% !important'" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
-      <tbody class="ui-droppable">
-        <tr class="ui-draggable">
-          <td class="esd-structure esd-frame esdev-disable-select esd-hover" esd-general-paddings-checked="false"
-            style="background-color: #43285f;" esd-handler-name="structureBlockHandler" bgcolor="#43285f" align="left">
-            <table width="100%" cellspacing="0" cellpadding="0">
-              <tbody class="ui-droppable">
-                <tr class="ui-draggable">
-                  <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
-                    esd-handler-name="containerHandler" width="600" valign="top" align="center">
-                    <table width="100%" cellspacing="0" cellpadding="0">
-                      <tbody class="ui-droppable">
-                        <tr class="ui-draggable">
-                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            style="font-size:0" esd-handler-name="imgBlockHandler" align="center">
-                            <img class="adapt-img w-100" [style.width]="'100% !important'"
-                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/36441502442545607.jpg"
-                              alt="Happy Birthday!" title="Happy Birthday!" width="600">
-                          </td>
-                        </tr>
-                      </tbody>
+<div id="greetingTemplate" #greetingTemplate class="es-wrapper-color">
+  <table class="es-wrapper" style="height: 100vh;" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <!-- <table class="es-content" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+            <td align="center">
+              <table class="es-content-body" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                align="center">
+                <tr>
+                  <td class="es-p10t es-p10b es-p20r es-p20l" align="left">
+                    <table class="es-left" cellspacing="0" cellpadding="0" align="left">
+                      <tr>
+                        <td class="es-m-p20b" width="270" align="left">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td class="es-infoblock es-m-txt-c" align="left">
+                                <p>Put your preheader text here</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="es-right" cellspacing="0" cellpadding="0" align="right">
+                      <tr>
+                        <td width="270" align="left">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td class="es-infoblock es-m-txt-c" align="right">
+                                <p style="line-height: 150%"><span style="line-height: 150%">Trouble viewing
+                                    this email? <strong><a target="_blank" href="https://viewstripo.email"
+                                        class="view">Try
+                                        Here</a></strong></span></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
                     </table>
                   </td>
                 </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-        <tr class="ui-draggable">
-          <td class="d-flex" esd-general-paddings-checked="false" style="background-color: #43285f;"
-            esd-handler-name="structureBlockHandler" bgcolor="#43285f" align="left">
-            <table class="es-left w-40" [style.width]="'35%'" cellspacing="0" cellpadding="0" align="left">
-              <tbody class="ui-droppable">
-                <tr class="ui-draggable">
-                  <td class="es-m-p0r es-m-p20b esd-container-frame esd-frame esd-hover esdev-disable-select"
-                    esd-handler-name="containerHandler" width="187" align="center">
-                    <table width="100%" cellspacing="0" cellpadding="0">
-                      <tbody class="ui-droppable">
-                        <tr class="es-hidden ui-draggable">
-                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            style="font-size:0" esd-handler-name="imgBlockHandler" align="left">
-                            <img [style.width]="'70%'"
-                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/27021502445622301.jpg"
-                              alt="Very lovely balloon" width="116">
-                          </td>
-                        </tr>
-                      </tbody>
+              </table>
+            </td>
+          </tr>
+        </table> -->
+        <table class="es-content" style="height: 98%;" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+            <td align="center">
+              <table class="es-content-body" style="height: auto; width: 80%" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                align="center">
+                <tr>
+                  <td style="background-color: #43285f" bgcolor="#43285f" align="left">
+                    <table width="100%" style="height: 100%;" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="600" valign="top" align="center">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td style="font-size:0" align="center">
+                                <img class="adapt-img" style="height: 100%; width: 100%" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/36441502442545607.jpg" alt="Happy Birthday!"
+                                  title="Happy Birthday!" width="600" height="270" layout="responsive" />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
                     </table>
                   </td>
-                  <td class="es-hidden" width="20"></td>
                 </tr>
-              </tbody>
-            </table>
-            <table class="es-left w-auto" [style.width]="'30%'" cellspacing="0" cellpadding="0" align="left">
-              <tbody class="ui-droppable">
-                <tr class="ui-draggable">
-                  <td class="es-m-p20b esd-container-frame esd-frame esd-hover esdev-disable-select"
-                    esd-handler-name="containerHandler" width="187" align="center">
-                    <table width="100%" cellspacing="0" cellpadding="0">
-                      <tbody class="ui-droppable">
-                        <tr class="ui-draggable">
-                          <td
-                            class="esd-block-text es-p15t esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            esd-handler-name="textElementHandler" align="center">
-                            <p style="line-height: 150%; color: #ffffff;">
-                              <span style="font-size:16px;">
-                                <span style="font-family: arial,helvetica neue,helvetica,sans-serif;">
-                                  <span class="d-flex flex-column name-box" style="line-height: 150%;">
-                                    <p style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">
-                                      Dear {{recipientName}},
-                                    </p>
-                                    <span style="font-family: arial,helvetica neue,helvetica,sans-serif; line-height: 150%; color: #ffffff;">it's your birthday and we think you deserve a little gift</span>
+                <tr>
+                  <td class="es-p30b" style="background-color: #43285f" bgcolor="#43285f" align="left">
+                    <table class="es-left" cellspacing="0" cellpadding="0" align="left">
+                      <tr>
+                        <td class="es-m-p0r es-m-p20b" width="187" align="center">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr class="es-hidden">
+                              <td style="font-size:0" align="left">
+                                <img src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/27021502445622301.jpg" alt="Very lovely balloon"
+                                  title="Very lovely balloon" style="height: auto; width: 90%" width="116" height="277" />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="es-hidden" width="20"></td>
+                      </tr>
+                    </table>
+                    <table class="es-left" style="height: auto; width: 50%;" cellspacing="0" cellpadding="0" align="left">
+                      <tr>
+                        <td class="es-m-p20b" width="187" align="center">
+                          <table width="100%" style="height: auto; width: 80%; margin-top: 7em;" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td class="es-p15t" align="center">
+                                <p style="line-height: 150%;color: #ffffff">
+                                  <span style="font-size:16px">
+                                    <span
+                                      style="font-family: arial,helvetica neue,helvetica,sans-serif">
+                                      <span style="line-height: 150%">
+                                        <span style="font-size: 20px;line-height: 36px"> Dear {{recipientName}}, </span>
+                                        <br>
+                                        it's your birthday and we
+                                        think you deserve a little
+                                        gift
+                                      </span>
+                                    </span>
                                   </span>
-                                </span>
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr class="ui-draggable">
-                          <td
-                            class="esd-block-text es-p10t es-p20b esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            esd-handler-name="textElementHandler" align="center">
-                            <p style="color: #ffffff; line-height: 150%;">
-                              <span
-                                style="font-family: playfair display,georgia,times new roman,serif; line-height: 150%;">
-                                <span style="font-size: 65px; line-height: 150%;">15%
-                                  <span style="font-size: 24px; line-height: 150%;">off</span>
-                                  <!-- <span class="d-flex message-box"> {{customMessage}} </span> -->
-                                </span>
-                              </span>
-                            </p>
-                          </td>
-                        </tr>
-                        <tr class="ui-draggable">
-                          <td
-                            class="esd-block-text es-p30b es-p10r es-p10l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            esd-handler-name="textElementHandler" align="center">
-                            <p style="color: #ffffff; line-height: 150%;">
-                              <span style="font-size: 13px; line-height: 150%;">YOUR NEXT ORDER + </span>FREE SHIPPING!
-                            </p>
-                            <ng-container *ngIf="!!senderName && senderName.length > 0">
-                              <p style="color: #ffffff; line-height: 150%;">
-                                <span style="font-size: 13px; line-height: 150%;"> From, </span>
-                                <span><p style="color: #ffffff; line-height: 150%;"> {{senderName}} </p></span>
-                              </p>
-                            </ng-container>
-                          </td>
-                        </tr>
-                      </tbody>
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p10t es-p20b" align="center">
+                                <p style="color: #ffffff;line-height: 150%">
+                                  <span style="font-family: playfair display,georgia,times new roman,serif;line-height: 150%">
+                                    <span style="font-size: 24px;line-height: 98px">
+                                      <span style="line-height: 150%">From, <br>
+                                        <span style="font-size: 24px;line-height: 36px"> {{senderName}} </span>
+                                      </span>
+                                    </span>
+                                  </span>
+                                </p>
+                              </td>
+                            </tr>
+                            <!-- <tr>
+                              <td class="es-p30b es-p10r es-p10l" align="center">
+                                <p style="color: #ffffff;line-height: 150%"><span
+                                    style="font-size: 13px;line-height: 20px">YOUR
+                                    NEXT ORDER + </span>FREE SHIPPING!</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p5t es-p5b es-p10r es-p10l" align="center"><span class="es-button-border"
+                                  style="display: block"><a href="https://viewstripo.email/" class="es-button"
+                                    target="_blank"
+                                    style="border-left-width: 0px;border-right-width: 0px;display: block">+
+                                    Shop now</a></span></td>
+                            </tr> -->
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="es-right" cellspacing="0" cellpadding="0" align="right">
+                      <tr>
+                        <td class="es-hidden" width="20"></td>
+                        <td width="186" align="center">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr class="es-hidden">
+                              <td style="font-size:0" align="right">
+                                <img src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/77061502445629778.jpg" alt="Very lovely balloon"
+                                  title="Very lovely balloon" style="height: 50%; width: 90%" width="111" height="278" />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
                     </table>
                   </td>
                 </tr>
-              </tbody>
-            </table>
-            <table class="es-right w-40" [style.width]="'35%'" cellspacing="0" cellpadding="0" align="right">
-              <tbody class="ui-droppable">
-                <tr class="ui-draggable">
-                  <td class="es-hidden" width="20"></td>
-                  <td class="es-m-p0r es-m-p20b esd-container-frame esd-frame esd-hover esdev-disable-select"
-                    esd-handler-name="containerHandler" width="187" align="center">
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- <table class="es-footer" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+            <td align="center">
+              <table class="es-footer-body" width="600" cellspacing="0" cellpadding="0" align="center">
+                <tr>
+                  <td class="es-p10t es-p20r es-p20l" align="left">
                     <table width="100%" cellspacing="0" cellpadding="0">
-                      <tbody class="ui-droppable">
-                        <tr class="es-hidden ui-draggable">
-                          <td class="esd-block-image esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                            style="font-size:0" esd-handler-name="imgBlockHandler" align="right">
-                            <img [style.width]="'75%'"
-                              src="https://tlr.stripocdn.email/content/guids/CABINET_18b9b37a94ea92e75434475b4360dcd0/images/77061502445629778.jpg"
-                              alt="Very lovely balloon" width="116">
-                          </td>
-                        </tr>
-                      </tbody>
+                      <tr>
+                        <td width="560" valign="top" align="center">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td class="es-p20t es-p20b" style="font-size:0" align="center">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
+                                  <tr>
+                                    <td
+                                      style="border-bottom: 1px solid #cccccc;background:none;height:1px;width:100%;margin:0px 0px 0px 0px">
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p10t es-p10b" style="font-size:0" align="center">
+                                <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0"
+                                  role="presentation">
+                                  <tr>
+                                    <td class="es-p20r" valign="top" align="center">
+                                      <img title="Twitter" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/twitter-square-colored.png" alt="Tw" width="32"
+                                        height="32" />
+                                    </td>
+                                    <td class="es-p20r" valign="top" align="center">
+                                      <img title="Facebook" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/facebook-square-colored.png" alt="Fb" width="32"
+                                        height="32" />
+                                    </td>
+                                    <td class="es-p20r" valign="top" align="center">
+                                      <img title="Youtube" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/youtube-square-colored.png" alt="Yt" width="32"
+                                        height="32" />
+                                    </td>
+                                    <td class="es-p20r" valign="top" align="center">
+                                      <img title="Linkedin" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/linkedin-square-colored.png" alt="In" width="32"
+                                        height="32" />
+                                    </td>
+                                    <td valign="top" align="center">
+                                      <img title="Pinterest" src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/pinterest-square-colored.png" alt="P"
+                                        width="32" height="32" />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p10t es-p10b" align="center">
+                                <p style="line-height: 150%">You are receiving this
+                                  email because you have visited our site or asked
+                                  us about the regular newsletter. If you would
+                                  not like to receive this email <strong><a target="_blank" class="unsubscribe"
+                                      style="line-height: 150%" href="">unsubscribe here</a></strong>.
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="es-p10t es-p10b" align="center">
+                                <p>© 2017 Sport</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
                     </table>
                   </td>
                 </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table class="es-content" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+            <td align="center">
+              <table class="es-content-body" style="background-color: transparent" width="600" cellspacing="0"
+                cellpadding="0" align="center">
+                <tr>
+                  <td class="es-p30t es-p30b es-p20r es-p20l" align="left">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="560" valign="top" align="center">
+                          <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                            <tr>
+                              <td class="es-infoblock made_with" style="font-size:0" align="center">
+                                <a target="_blank"
+                                  href="https://viewstripo.email/?utm_source=templates&utm_medium=email&utm_campaign=sport&utm_content=holiday_newsletter">
+                                  <img src="../../../../../assets/greetings/birthday-greetings/bg-template3/images/64951510234941531.png" alt width="125" height="56" />
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table> -->
+      </td>
+    </tr>
+  </table>
 </div>
