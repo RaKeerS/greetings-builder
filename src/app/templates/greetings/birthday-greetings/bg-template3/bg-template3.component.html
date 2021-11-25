@@ -14,12 +14,7 @@
                       <tr class="ui-draggable">
                         <td class="esd-structure es-p10r es-p10l esd-frame esdev-disable-select esd-activated esd-hover"
                           esd-handler-name="structureBlockHandler" align="left">
-                          <div class="esd-structure-type">
-
-
-                            Structure
-
-                          </div>
+                          <div class="esd-structure-type">Structure</div>
                           <div class="esd-block-btn ">
                             <div class="esd-more"><a><span class="es-icon-dot-3"></span></a></div>
 
@@ -42,12 +37,7 @@
                               <tr class="ui-draggable">
                                 <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
                                   esd-handler-name="containerHandler" width="580" valign="top" align="center">
-                                  <div class="esd-structure-type">
-
-
-                                    Container
-
-                                  </div>
+                                  <div class="esd-structure-type"></div>
                                   <div class="esd-block-btn ">
                                     <div class="esd-more"><a><span class="es-icon-dot-3"></span></a></div>
 
@@ -86,12 +76,10 @@
                                               <a><span class="es-icon-delete"></span></a>
                                             </div>
                                           </div>
-                                            <a target="_blank" href="https://viewstripo.email">
-                                              <img class="adapt-img esdev-stretch-width esdev-banner-rendered"
-                                                style="padding: 15px;"
-                                                src="https://tlr.stripocdn.email/content/guids/bannerImgGuid/images/1451577359453383.png"
-                                                alt="" title="" style="display: block;" width="580">
-                                            </a>
+                                            <img class="adapt-img esdev-stretch-width esdev-banner-rendered"
+                                              style="padding: 15px;"
+                                              src="https://tlr.stripocdn.email/content/guids/bannerImgGuid/images/1451577359453383.png"
+                                              alt="" title="" style="display: block;" width="580">
                                         </td>
                                       </tr>
                                       <tr class="ui-draggable">
@@ -112,7 +100,7 @@
                                               <a><span class="es-icon-delete"></span></a>
                                             </div>
                                           </div>
-                                          <h3 style="color: #666666;">Dear Janet,</h3>
+                                          <h3 style="color: #666666;">Dear {{recipientName}},</h3>
                                         </td>
                                       </tr>
                                       <tr class="ui-draggable">
@@ -176,12 +164,7 @@
                               <tr class="ui-draggable">
                                 <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
                                   esd-handler-name="containerHandler" width="540" valign="top" align="center">
-                                  <div class="esd-structure-type">
-
-
-                                    Container
-
-                                  </div>
+                                  <div class="esd-structure-type"></div>
                                   <div class="esd-block-btn ">
                                     <div class="esd-more"><a><span class="es-icon-dot-3"></span></a></div>
 
@@ -202,7 +185,7 @@
                                   <table width="100%" cellspacing="0" cellpadding="0">
                                     <tbody class="ui-droppable">
                                       <tr class="ui-draggable">
-                                        <td
+                                        <td style="padding: 10px;"
                                           class="esd-block-text es-m-txt-c esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                           esd-handler-name="textElementHandler" align="center">
                                           <div class="esd-block-btn ">
@@ -219,15 +202,15 @@
                                               <a><span class="es-icon-delete"></span></a>
                                             </div>
                                           </div>
-                                          <p style="padding: 5px;">Thank you for choosing us among a wide range of financial companies. We
+                                          <p>Thank you for choosing us among a wide range of financial companies. We
                                             appreciate your trust and support.</p>
-                                          <p style="padding: 5px;">Your honest feedbacks help us improve and get better for you.</p>
-                                          <p style="padding: 5px;">Without you we would not be there where we are now.</p>
-                                          <p style="color: #999999; padding: 5px;">May your company grow. I wish you success.</p>
+                                          <p>Your honest feedbacks help us improve and get better for you.</p>
+                                          <p>Without you we would not be there where we are now.</p>
+                                          <p style="color: #999999;">May your company grow. I wish you success.</p>
                                         </td>
                                       </tr>
                                       <tr class="ui-draggable">
-                                        <td
+                                        <td style="padding: 10px;"
                                           class="esd-block-text es-m-txt-c es-p20t esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                           esd-handler-name="textElementHandler" align="center">
                                           <div class="esd-block-btn ">
@@ -245,7 +228,7 @@
                                             </div>
                                           </div>
                                           <p>Sincerely,</p>
-                                          <p><strong>Blake Adams</strong>, CEO of Bookkeeping.</p>
+                                          <p><strong>{{senderName}}</strong></p>
                                         </td>
                                       </tr>
                                     </tbody>
