@@ -34,7 +34,7 @@
     {
       "id": "3",
       "category": "birthday-greetings",
-      "type": "template1",
+      "type": "template3",
       "label": "Itachi Uchiha",
       "description": "Known as the Rogue Ninja who committed a genocide of his own clan. Itachi Uchiha is a fictional character in the Naruto manga and anime series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.",
       "abilities": "Fire Style, Genjutsu, Taijutsu, Ninjutsu",
@@ -48,8 +48,8 @@
     },
     {
       "id": "4",
-      "category": "anime",
-      "type": "dummy",
+      "category": "birthday-greetings",
+      "type": "template4",
       "label": "Kisame Hoshigaki",
       "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
       "abilities": "Water Style, Weapon User",

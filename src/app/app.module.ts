@@ -24,6 +24,7 @@ import { GreetingStyle1Component } from './templates/greetings/greeting-style1/g
 import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 import { BgTemplate2Component } from './templates/greetings/birthday-greetings/bg-template2/bg-template2.component';
 import { BgTemplate3Component } from './templates/greetings/birthday-greetings/bg-template3/bg-template3.component';
+import { BgTemplate4Component } from './templates/greetings/birthday-greetings/bg-template4/bg-template4.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BgTemplate3Component } from './templates/greetings/birthday-greetings/b
     BgTemplate1Component,
     BgTemplate2Component,
     BgTemplate3Component,
+    BgTemplate4Component,
   ],
   imports: [
     BrowserModule,
