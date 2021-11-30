@@ -9,5 +9,10 @@ export class SelectRouterOutlet {
 }
 export class SelectTemplateDOMString {
   static readonly type = '[Main Page] Select Template DOM String';
-  constructor(public selectTemplateDOMString: string) {}
+  constructor(public selectedTemplateDOMString: string) {}
+}
+
+export class SelectCategory {
+  static readonly type = '[Main Page] Select Category';
+  constructor(public selectedCategory: string) {}
 }

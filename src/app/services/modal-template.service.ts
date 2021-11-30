@@ -12,8 +12,8 @@ export class ModalTemplateService {
 
   constructor(private http: HttpClient) { }
 
-  public getTemplateData(): Promise<any> {
-    return this.http.get<any>('assets/source-data/templateData.json')
+  public getTemplateData(sourceDataCategory: string): Promise<any> {
+    return this.http.get<any>(`assets/source-data/${sourceDataCategory}-data.json`)
       .toPromise()
       .then(res => <ModalTypes>res.data)
       .then(data => data);
