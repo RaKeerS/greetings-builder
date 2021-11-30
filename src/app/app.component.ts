@@ -3,7 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { MenuItem, PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
 
-import { SelectRouterOutlet } from './actions/birthday-greetings-actions';
+import { SelectCategory, SelectRouterOutlet } from './actions/birthday-greetings-actions';
 import { BirthdayGreetingsState } from './store/birthday-greetings-store';
 
 @Component({
@@ -42,7 +42,8 @@ export class AppComponent {
       },
       {
         label:'Quit',
-        icon:'pi pi-fw pi-power-off'
+        icon:'pi pi-fw pi-power-off',
+        command: () => this.store.dispatch(new SelectCategory('birthday-greetings'))
       }
     ];
 
