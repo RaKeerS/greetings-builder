@@ -30,7 +30,8 @@ export class AppComponent {
     this.items = [
       {
         label: 'Anime',
-        icon: 'pi pi-fw pi-file'
+        icon: 'pi pi-fw pi-file',
+        command: () => this.store.dispatch(new SelectCategory('anime-greetings'))
       },
       {
         label: 'Birthday',
