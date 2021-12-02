@@ -35,7 +35,8 @@ export class AppComponent {
       },
       {
         label: 'Birthday',
-        icon: 'pi pi-fw pi-pencil'
+        icon: 'pi pi-fw pi-pencil',
+        command: () => this.store.dispatch(new SelectCategory('birthday-greetings'))
       },
       {
         label: 'Miscellanous',
@@ -43,8 +44,7 @@ export class AppComponent {
       },
       {
         label:'Quit',
-        icon:'pi pi-fw pi-power-off',
-        command: () => this.store.dispatch(new SelectCategory('birthday-greetings'))
+        icon:'pi pi-fw pi-power-off'
       }
     ];
 
