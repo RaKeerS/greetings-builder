@@ -10,6 +10,7 @@
 
 .img-style {
     height: 250px;
+    object-fit: cover;
 }
 
 .card-style {
