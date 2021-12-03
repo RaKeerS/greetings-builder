@@ -1,9 +1,28 @@
 /************** Predefined CSS ***************/
 
-
-::ng-deep.p-card-content {
+::ng-deep .p-card-content {
   height: 216px;
   overflow: auto;
+}
+
+::ng-deep .p-card.p-component {
+  margin-right: 8px;
+  margin-left: 8px;
+  box-shadow: 0px 0px 0px 4px white;
+  border-radius: 3px;
+}
+
+::ng-deep .p-card .p-card-body {
+  padding: 15px;
+  text-align: justify;
+}
+
+::ng-deep .p-card .p-card-content {
+  padding: 10px;
+}
+
+::ng-deep .p-card .p-card-title {
+  padding: 0px 10px;
 }
 
 /************** Custom CSS ***************/
