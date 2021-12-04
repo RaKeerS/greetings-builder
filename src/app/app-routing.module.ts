@@ -14,7 +14,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: ':id', component: GreetingCardComponent },
-      { path: 'birthday-greetings/:id', component: GreetingCardComponent }
+      { path: 'birthday-greetings/:id', component: GreetingCardComponent },
+      { path: 'anime-greetings/:id', component: GreetingCardComponent }
     ]
   },
   { path: 'temp', component: GreetingCardComponent }
