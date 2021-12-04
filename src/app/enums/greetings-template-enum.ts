@@ -1,6 +1,6 @@
 export enum GreetingsTemplateCategoryEnum {
-  'birthday-greetings' = '1',
-  'greeting-style2' = '2',
+  'anime-greetings' = '1',
+  'birthday-greetings' = '2',
   'greeting-style3' = '3',
   'greeting-style4' = '4',
   'greeting-style5' = '5',
@@ -13,15 +13,15 @@ export enum GreetingsTemplateCategoryEnum {
 }
 
 export enum GreetingsTemplateTypeEnum {
-  'bg-template1' = '1',
-  'bg-template2' = '2',
-  'bg-template3' = '3',
-  'bg-template4' = '4',
-  'bg-template5' = '5',
-  'bg-template6' = '6',
-  'bg-template7' = '7',
-  'bg-template8' = '8',
-  'bg-template9' = '9',
-  'bg-template10' = '10',
+  'template1' = '1',
+  'template2' = '2',
+  'template3' = '3',
+  'template4' = '4',
+  'template5' = '5',
+  'template6' = '6',
+  'template7' = '7',
+  'template8' = '8',
+  'template9' = '9',
+  'template10' = '10',
   'dummy' = 'dummy'
 }
