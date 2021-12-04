@@ -9,6 +9,7 @@ import { SelectRouterOutlet } from 'src/app/actions/birthday-greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { BirthdayGreetingsState } from 'src/app/store/birthday-greetings-store';
+import { AnimeGreetingsComponent } from 'src/app/templates/greetings/anime-greetings/anime-greetings.component';
 import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday-greetings/birthday-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
@@ -82,6 +83,10 @@ export class GreetingCardComponent implements OnInit {
     // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     switch(componentCategory) {
       case GreetingsTemplateCategoryEnum.dummy : return TemplatedummyComponent;
+      case GreetingsTemplateCategoryEnum['anime-greetings'] : {
+        this.componentType = AnimeGreetingsComponent.getComponentType(componentType);
+        return AnimeGreetingsComponent.getComponent(componentType);
+      };
       case GreetingsTemplateCategoryEnum['birthday-greetings'] : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
@@ -97,7 +102,7 @@ export class GreetingCardComponent implements OnInit {
         };
         this.componentType = BirthdayGreetingsComponent.getComponentType(componentType);
         return BirthdayGreetingsComponent.getComponent(componentType);
-      }
+      };
       default:
         this.componentType = TemplatedummyComponent.getComponentType(componentType);
         return TemplatedummyComponent.getComponent(componentType);

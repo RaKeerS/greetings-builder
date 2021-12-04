@@ -25,6 +25,8 @@ import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/
 import { BgTemplate2Component } from './templates/greetings/birthday-greetings/bg-template2/bg-template2.component';
 import { BgTemplate3Component } from './templates/greetings/birthday-greetings/bg-template3/bg-template3.component';
 import { BgTemplate4Component } from './templates/greetings/birthday-greetings/bg-template4/bg-template4.component';
+import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
+import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { BgTemplate4Component } from './templates/greetings/birthday-greetings/b
     BgTemplate2Component,
     BgTemplate3Component,
     BgTemplate4Component,
+    AnimeGreetingsComponent,
+    AgTemplate1Component,
   ],
   imports: [
     BrowserModule,
