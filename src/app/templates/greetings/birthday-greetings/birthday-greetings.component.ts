@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum';
-import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { BgTemplate1Component } from './bg-template1/bg-template1.component';
@@ -21,7 +20,7 @@ export class BirthdayGreetingsComponent implements OnInit {
   // public recipientAddressBCC: string;
   // public senderName: string;
 
-  constructor(public modalData: ModalData<GreetingData>) {
+  constructor() {
     // this.recipientName = this.modalData.inputData?.recipientName!;
     // this.customMessage = this.modalData.inputData?.customMessage!;
     // this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
@@ -37,11 +36,11 @@ export class BirthdayGreetingsComponent implements OnInit {
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
-      case '1' : return 'bg-template1';
-      case '2' : return 'bg-template2';
-      case '3' : return 'bg-template3';
-      case '4' : return 'bg-template4';
-      case '5' : return 'bg-template5';
+      case '1' : return 'template1';
+      case '2' : return 'template2';
+      case '3' : return 'template3';
+      case '4' : return 'template4';
+      case '5' : return 'template5';
       default: return 'dummy';
       }
   }
