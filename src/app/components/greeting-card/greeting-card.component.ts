@@ -84,6 +84,18 @@ export class GreetingCardComponent implements OnInit {
     switch(componentCategory) {
       case GreetingsTemplateCategoryEnum.dummy : return TemplatedummyComponent;
       case GreetingsTemplateCategoryEnum['anime-greetings'] : {
+        (this.componentData as ModalData<GreetingData>) = {
+          inputData: {
+            emailSubject: this.emailSubject,
+            recipientName: this.recipientName,
+            customMessage: this.customMessage,
+            recipientAddress: this.recipientAddress,
+            recipientAddressCC: this.recipientAddressCC,
+            recipientAddressBCC: this.recipientAddressBCC,
+            senderAddress: this.senderAddress,
+            senderName: this.senderName
+          }
+        };
         this.componentType = AnimeGreetingsComponent.getComponentType(componentType);
         return AnimeGreetingsComponent.getComponent(componentType);
       };

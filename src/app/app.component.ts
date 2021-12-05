@@ -31,11 +31,13 @@ export class AppComponent {
       {
         label: 'Anime',
         icon: 'pi pi-fw pi-file',
+        routerLink: 'home',
         command: () => this.store.dispatch(new SelectCategory('anime-greetings'))
       },
       {
         label: 'Birthday',
         icon: 'pi pi-fw pi-pencil',
+        routerLink: 'home',
         command: () => this.store.dispatch(new SelectCategory('birthday-greetings'))
       },
       {
