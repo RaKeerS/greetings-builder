@@ -3,6 +3,7 @@ import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum
 
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { AgTemplate1Component } from './ag-template1/ag-template1.component';
+import { AgTemplate2Component } from './ag-template2/ag-template2.component';
 
 @Component({
   selector: 'app-anime-greetings',
@@ -36,7 +37,7 @@ export class AnimeGreetingsComponent implements OnInit {
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
       case '1' : return AgTemplate1Component;
-      // case '2' : return BgTemplate2Component;
+      case '2' : return AgTemplate2Component;
       // case '3' : return BgTemplate3Component;
       // case '4' : return BgTemplate4Component;
       case '5' : return TemplatedummyComponent;
