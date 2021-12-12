@@ -28,14 +28,21 @@ exports.convertToPng = async function(data, imageTitle) {
   <html>
     <head>
       <style>
-      .es-content-body {
-        height: 100%;
-        width: 100%;
-      }
-      .es-content.ui-draggable {
-        height: 100%;
-        width: 100%;
-      }
+        body {
+          height: 2100px;
+          width: 3000px;
+        }
+        .es-content-body {
+          height: 100%;
+          width: 100%;
+        }
+        .es-content.ui-draggable {
+          height: 100%;
+          width: 100%;
+        }
+        .adapt-img {
+          height: 497px !important;
+        }
       </style>
     </head>
     <body> ${domElement} </body>
@@ -48,10 +55,6 @@ exports.convertToPng = async function(data, imageTitle) {
       <html>
         <head>
           <style>
-            body {
-              height: 2100px;
-              width: 3000px;
-            }
             .es-content-body {
               height: 100%;
               width: 100%;
@@ -59,6 +62,9 @@ exports.convertToPng = async function(data, imageTitle) {
             .es-content.ui-draggable {
               height: 100%;
               width: 100%;
+            }
+            .adapt-img {
+              height: 497px !important;
             }
           </style>
         </head>

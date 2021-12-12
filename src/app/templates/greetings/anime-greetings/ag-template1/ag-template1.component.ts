@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectTemplateDOMString } from 'src/app/actions/birthday-greetings-actions';
+import { SelectTemplateDOMString, StoreImageData } from 'src/app/actions/greetings-actions';
+import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
@@ -14,9 +15,13 @@ export class AgTemplate1Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
+  public imageUrl1: string = './../../assets/greetings/anime-greetings/ag-template1/images/Obito-Wallpaper-HD.jpg';
+
+  private imageData: Array<object> = [];
+
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
-  constructor(public modalData: ModalData<GreetingData>, private store: Store) {
+  constructor(public modalData: ModalData<GreetingData>, private store: Store, private modalSvc: ModalTemplateService) {
     this.customMessage = this.modalData.inputData?.customMessage!;
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.senderName = this.modalData.inputData?.senderName || '';
@@ -26,7 +31,29 @@ export class AgTemplate1Component implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.store.dispatch(new SelectTemplateDOMString(this.greetingTemplate.nativeElement.outerHTML));
+    let domTemplateString = this.greetingTemplate.nativeElement.outerHTML;
+
+    // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
+    domTemplateString = this.processImageTemplate(domTemplateString, this.imageUrl1, 'imageUrl1');
+
+    this.store.dispatch(new SelectTemplateDOMString(domTemplateString));
   }
 
+  private processImageTemplate(domTemplateString: string, imageUrl: string, imageLabel: string) {
+    this.storeImageData(imageUrl);
+    return domTemplateString.replace(imageUrl, `{{${imageLabel}}}`);
+  }
+
+  private storeImageData(imageUrl: string) {
+    this.modalSvc.toDataURL(imageUrl)
+      .then(response => {
+        this.storeImage(response);
+    });
+  }
+
+  private storeImage(response: any ) {
+    const imageBase64String = response?.toString() ?? '';
+    this.imageData.push({ imageUrl1: imageBase64String, output: '' });
+    this.store.dispatch(new StoreImageData(this.imageData))
+  }
 }

@@ -1,3 +1,10 @@
+
+/* A must add CSS */
+.es-content-body {
+  height: 65%;
+  width: 85%;
+}
+
 .es-desk-hidden {
   display: none;
   float: left;
@@ -283,12 +290,10 @@ ol li {
 
 .es-content-body {
   background-color: #FFFFFF;
-  width: 300px;
-	height: 100px;
 	background-color: #FFFFFF;
 	position: relative;
 	/* box-shadow: 0px 0px 0px 2px #000000; */
-	box-shadow: 0px 0px 15px 5px #000000
+	box-shadow: 0px 0px 15px 5px #000000;
 }
 
 .es-content-body p,
