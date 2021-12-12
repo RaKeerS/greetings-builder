@@ -17,6 +17,8 @@ export class AgTemplate2Component implements OnInit {
 
   public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template2/images/Pain-1-Wallpaper.jpg';
 
+  private imageData: Array<object> = [];
+
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
   constructor(public modalData: ModalData<GreetingData>, private store: Store, private modalSvc: ModalTemplateService) {
@@ -29,31 +31,33 @@ export class AgTemplate2Component implements OnInit {
   }
 
   ngAfterViewInit() {
-    const tempDom: any = document.getElementById('greetingTemplate');
-    tempDom.style.overflow = 'unset';
-
     // this.store.dispatch(new SelectTemplateDOMString(this.greetingTemplate.nativeElement.outerHTML));
     // this.toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0');
 
-    this.storeImageData();
+    let domTemplateString = this.greetingTemplate.nativeElement.outerHTML;
 
-    // Replace all file paths with template handlers
-    const domTemplateString = this.greetingTemplate.nativeElement.outerHTML.replace(this.imageUrl1, '{{imageUrl1}}');
+    // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
+    domTemplateString = this.processImageTemplate(domTemplateString, this.imageUrl1, 'imageUrl1');
+
     this.store.dispatch(new SelectTemplateDOMString(domTemplateString));
   }
 
-  private storeImageData() {
-    this.modalSvc.toDataURL(this.imageUrl1)
-    .then(response => {
-      this.storeImage(response);
+  private processImageTemplate(domTemplateString: string, imageUrl: string, imageLabel: string) {
+    this.storeImageData(imageUrl);
+    return domTemplateString.replace(imageUrl, `{{${imageLabel}}}`);
+  }
+
+  private storeImageData(imageUrl: string) {
+    this.modalSvc.toDataURL(imageUrl)
+      .then(response => {
+        this.storeImage(response);
     });
   }
 
   private storeImage(response: any ) {
-    const imageUrl = response?.toString() ?? '';
-    let imageData: Array<object> = [];
-    imageData.push({ imageUrl1: imageUrl, output: '' });
-    this.store.dispatch(new StoreImageData(imageData))
+    const imageBase64String = response?.toString() ?? '';
+    this.imageData.push({ imageUrl1: imageBase64String, output: '' });
+    this.store.dispatch(new StoreImageData(this.imageData))
   }
 
 }
