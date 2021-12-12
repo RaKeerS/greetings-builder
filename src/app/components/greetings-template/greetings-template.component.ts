@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectRouterOutlet, SelectTemplate } from 'src/app/actions/birthday-greetings-actions';
+import { SelectRouterOutlet, SelectTemplate } from 'src/app/actions/greetings-actions';
 import { ModalTypes } from 'src/app/types/modal-types';
 
 @Component({

@@ -23,4 +23,23 @@ export class ModalTemplateService {
     return this.http.post<any>('http://localhost:8080/submitForm', JSON.stringify({ data: body }));
   }
 
+  public toDataURL(url: string): Promise<string | ArrayBuffer | null> {
+    return new Promise<string | ArrayBuffer | null>((resolve, reject) => {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = () => {
+        var reader = new FileReader();
+        reader.onloadend = () => {
+          // imageUrl = callbackFn(reader.result, 'abc');
+          resolve(reader.result);
+          // console.log(this.imageUrl1);
+        }
+        reader.onerror = error => reject(error);
+        reader.readAsDataURL(xhr.response);
+      };
+      xhr.open('GET', url);
+      xhr.responseType = 'blob';
+      xhr.send();
+    });
+  }
+
 }

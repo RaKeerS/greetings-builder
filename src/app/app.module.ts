@@ -17,17 +17,17 @@ import { GreetingsTemplateComponent } from './components/greetings-template/gree
 import { HomeComponent } from './components/home/home.component';
 import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { ModalTemplateService } from './services/modal-template.service';
-import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+import { GreetingsState } from './store/greetings-store';
+import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
+import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-template2/ag-template2.component';
+import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
 import { BgTemplate1Component } from './templates/greetings/birthday-greetings/bg-template1/bg-template1.component';
-import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greetings/birthday-greetings.component';
-import { GreetingStyle1Component } from './templates/greetings/greeting-style1/greeting-style1.component';
-import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 import { BgTemplate2Component } from './templates/greetings/birthday-greetings/bg-template2/bg-template2.component';
 import { BgTemplate3Component } from './templates/greetings/birthday-greetings/bg-template3/bg-template3.component';
 import { BgTemplate4Component } from './templates/greetings/birthday-greetings/bg-template4/bg-template4.component';
-import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
-import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
-import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-template2/ag-template2.component';
+import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greetings/birthday-greetings.component';
+import { GreetingStyle1Component } from './templates/greetings/greeting-style1/greeting-style1.component';
+import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-t
     BrowserAnimationsModule,
     HttpClientModule,
 
-    NgxsModule.forRoot([BirthdayGreetingsState], { developmentMode: !environment.production }), // RECOMMENDATION: Set developmentMode to true on the NgxsModule when Angular is running in development mode. NgxsModule.forRoot(states, { developmentMode: !environment.production })
+    NgxsModule.forRoot([GreetingsState], { developmentMode: !environment.production }), // RECOMMENDATION: Set developmentMode to true on the NgxsModule when Angular is running in development mode. NgxsModule.forRoot(states, { developmentMode: !environment.production })
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({

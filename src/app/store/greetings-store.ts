@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Selector, State } from '@ngxs/store';
 
-import { BirthdayGreetingsActionsModel } from '../model/birthday-greetings-actions-model';
-import { BirthdayGreetingsModel } from '../model/birthday-greetings-model';
+import { GreetingsActionsModel } from '../model/greetings-actions-model';
+import { GreetingsModel } from '../model/greetings-model';
 
-@State<BirthdayGreetingsModel>({
+@State<GreetingsModel>({
   name: 'global',
   defaults: {
     currentTemplateCategory: 'initial ',
@@ -13,35 +13,41 @@ import { BirthdayGreetingsModel } from '../model/birthday-greetings-model';
     currentRouterOutletName: ' ',
     currentTemplateDOMString: ' ',
     isEdit: false,
-    isSaved: false
+    isSaved: false,
+    imageData: []
   }
 })
 @Injectable() // 'BirthdayGreetingsState' class should be decorated with @Injectable() right after the @State() decorator
-export class BirthdayGreetingsState extends BirthdayGreetingsActionsModel {
+export class GreetingsState extends GreetingsActionsModel {
 
   @Selector()
-  static getCurrentTemplateCategory(state: BirthdayGreetingsModel): string {
+  static getCurrentTemplateCategory(state: GreetingsModel): string {
     return state.currentTemplateCategory;
   }
 
   @Selector()
-  static getCurrentTemplateType(state: BirthdayGreetingsModel): string {
+  static getCurrentTemplateType(state: GreetingsModel): string {
     return state.currentTemplateType;
   }
 
   @Selector()
-  static getCurrentTemplateId(state: BirthdayGreetingsModel): number {
+  static getCurrentTemplateId(state: GreetingsModel): number {
     return state.currentTemplateId;
   }
 
   @Selector()
-  static getCurrentRouterOutletName(state: BirthdayGreetingsModel): string {
+  static getCurrentRouterOutletName(state: GreetingsModel): string {
     return state.currentRouterOutletName;
   }
 
   @Selector()
-  static getCurrentTemplateDOMString(state: BirthdayGreetingsModel): string {
+  static getCurrentTemplateDOMString(state: GreetingsModel): string {
     return state.currentTemplateDOMString;
+  }
+
+  @Selector()
+  static getImageData(state: GreetingsModel): Array<object> {
+    return state.imageData;
   }
 
   // @Action(SelectTemplate)

@@ -3,8 +3,8 @@ import { Select, Store } from '@ngxs/store';
 import { MenuItem, PrimeNGConfig } from 'primeng/api';
 import { Observable } from 'rxjs';
 
-import { SelectCategory, SelectRouterOutlet } from './actions/birthday-greetings-actions';
-import { BirthdayGreetingsState } from './store/birthday-greetings-store';
+import { SelectCategory, SelectRouterOutlet } from './actions/greetings-actions';
+import { GreetingsState } from './store/greetings-store';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +17,10 @@ export class AppComponent {
   public items: MenuItem[];
 
   // Currently the 3 declarations below have no intended purpose or use in the code.
-  @Select(BirthdayGreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<number>;
-  @Select(BirthdayGreetingsState.getCurrentRouterOutletName) currentRouterOutletName$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<number>;
+  @Select(GreetingsState.getCurrentRouterOutletName) currentRouterOutletName$!: Observable<string>;
 
   @ViewChild('customcontainer1') customcontainer1!: ElementRef;
   @ViewChild('customcard1') customcard1!: ElementRef;
