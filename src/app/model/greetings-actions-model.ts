@@ -5,13 +5,14 @@ import {
   SelectRouterOutlet,
   SelectTemplate,
   SelectTemplateDOMString,
-} from '../actions/birthday-greetings-actions';
-import { BirthdayGreetingsModel } from './birthday-greetings-model';
+  StoreImageData,
+} from '../actions/greetings-actions';
+import { GreetingsModel } from './greetings-model';
 
-export class BirthdayGreetingsActionsModel {
+export class GreetingsActionsModel {
 
   @Action(SelectTemplate)
-  public selectTemplate(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectTemplate) {
+  public selectTemplate(ctx: StateContext<GreetingsModel>, payload: SelectTemplate) {
     const state = ctx.getState();
     ctx.setState({
       ...state,
@@ -22,7 +23,7 @@ export class BirthdayGreetingsActionsModel {
   }
 
   @Action(SelectRouterOutlet)
-  public selectRouterOutlet(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectRouterOutlet) {
+  public selectRouterOutlet(ctx: StateContext<GreetingsModel>, payload: SelectRouterOutlet) {
     const state = ctx.getState();
     ctx.setState({
       ...state,
@@ -31,7 +32,7 @@ export class BirthdayGreetingsActionsModel {
   }
 
   @Action(SelectTemplateDOMString)
-  public selectTemplateDOMString(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectTemplateDOMString) {
+  public selectTemplateDOMString(ctx: StateContext<GreetingsModel>, payload: SelectTemplateDOMString) {
     const state = ctx.getState();
     ctx.setState({
       ...state,
@@ -40,11 +41,20 @@ export class BirthdayGreetingsActionsModel {
   }
 
   @Action(SelectCategory)
-  public selectCategory(ctx: StateContext<BirthdayGreetingsModel>, payload: SelectCategory) {
+  public selectCategory(ctx: StateContext<GreetingsModel>, payload: SelectCategory) {
     const state = ctx.getState();
     ctx.setState({
       ...state,
       currentTemplateCategory: payload.selectedCategory
+    })
+  }
+
+  @Action(StoreImageData)
+  public storeImageData(ctx: StateContext<GreetingsModel>, payload: StoreImageData) {
+    const state = ctx.getState();
+    ctx.setState({
+      ...state,
+      imageData: payload.imageData
     })
   }
 }

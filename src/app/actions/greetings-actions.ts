@@ -16,3 +16,8 @@ export class SelectCategory {
   static readonly type = '[Main Page] Select Category';
   constructor(public selectedCategory: string) {}
 }
+
+export class StoreImageData {
+  static readonly type = '[Main Page] Store Image Data';
+  constructor(public imageData: Array<object>) {}
+}

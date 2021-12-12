@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectTemplateDOMString } from 'src/app/actions/birthday-greetings-actions';
+import { SelectTemplateDOMString } from 'src/app/actions/greetings-actions';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({

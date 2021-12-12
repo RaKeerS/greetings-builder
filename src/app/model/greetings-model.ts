@@ -1,4 +1,4 @@
-export interface BirthdayGreetingsModel {
+export interface GreetingsModel {
   currentTemplateCategory: string;
   currentTemplateType: string;
   currentTemplateId: number;
@@ -6,4 +6,5 @@ export interface BirthdayGreetingsModel {
   currentTemplateDOMString: string,
   isEdit: boolean;
   isSaved: boolean;
+  imageData: Array<object>;
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Select } from '@ngxs/store';
 import { Observable, Subscription } from 'rxjs';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
-import { BirthdayGreetingsState } from 'src/app/store/birthday-greetings-store';
+import { GreetingsState } from 'src/app/store/greetings-store';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   public subscription: Subscription | undefined;
 
-  @Select(BirthdayGreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
 
   constructor(private modalSvc: ModalTemplateService) { }
 

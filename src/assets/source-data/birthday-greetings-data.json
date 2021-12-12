@@ -42,6 +42,17 @@
       "images": [
         "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
       ]
+    },
+    {
+      "id": "5",
+      "category": "birthday-greetings",
+      "type": "dummy",
+      "label": "Template 5",
+      "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
+      "abilities": "Water Style, Weapon User",
+      "images": [
+        "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
+      ]
     }
   ]
 }

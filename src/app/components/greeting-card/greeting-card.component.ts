@@ -5,10 +5,10 @@ import * as download from 'downloadjs';
 import * as htmlToImage from 'html-to-image';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
-import { SelectRouterOutlet } from 'src/app/actions/birthday-greetings-actions';
+import { SelectRouterOutlet } from 'src/app/actions/greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
-import { BirthdayGreetingsState } from 'src/app/store/birthday-greetings-store';
+import { GreetingsState } from 'src/app/store/greetings-store';
 import { AnimeGreetingsComponent } from 'src/app/templates/greetings/anime-greetings/anime-greetings.component';
 import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday-greetings/birthday-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
@@ -21,10 +21,11 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 })
 export class GreetingCardComponent implements OnInit {
 
-  @Select(BirthdayGreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
-  @Select(BirthdayGreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
+  @Select(GreetingsState.getImageData) imageData$!: Observable<Array<object>>;
 
   public componentInjector!: Injector;
 
@@ -37,6 +38,7 @@ export class GreetingCardComponent implements OnInit {
   public componentDOMString!: string;
 
   private componentData: unknown;
+  private imageData: Array<object> = [];
 
   public emailSubject!: string;
   public recipientName!: string;
@@ -72,6 +74,7 @@ export class GreetingCardComponent implements OnInit {
     this.subscription = this.currentTemplateCategory$.subscribe(value => this.initializeComponent(value, this.componentType));
     this.subscription = this.currentTemplateId$.subscribe(value => this.componentId = value);
     this.subscription = this.currentTemplateDOMString$.subscribe(value => this.componentDOMString = value);
+    this.subscription = this.imageData$.subscribe(value => this.imageData = value);
 
     let urlSegment: string;
     this.subscription = this.router.firstChild?.url.subscribe(value => urlSegment = value[0].toString());
@@ -134,10 +137,12 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public submitTemplateDetails() {
-    this.initializeComponent(this.componentCategory, this.componentType);
+    // this.initializeComponent(this.componentCategory, this.componentType);
+    this.getComponent((<any>GreetingsTemplateCategoryEnum)[this.componentCategory], this.componentType);
     const requestBody = {
       params: (this.componentData as ModalData<GreetingData>).inputData,
-      payload: this.componentDOMString
+      payload: this.componentDOMString,
+      imageData: this.imageData
     }
     this.modalTemplateSvc.postTemplateData(requestBody)
       .subscribe(response => this.toastr.success(response.success, 'Success'), error => this.toastr.error(error, 'Error'));
