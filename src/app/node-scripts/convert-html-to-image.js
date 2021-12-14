@@ -18,13 +18,14 @@ exports.convertToPng = async function(data, imageTitle) {
   const domElement = data.payload;
   const reqParams = data.params;
   const fileName = `${imageTitle}.png`;
-  const filePath = `./../template-images/${imageTitle}.png`;
-  const imageData = data.imageData.map(element => {
-    element.output = filePath;
-    return element;
-  });
+  const filePath = `./../../assets/template-images/${imageTitle}.png`;
+  const imageData = data.imageData;
+  // const imageData = data.imageData.map(element => {
+  //   element.output = filePath;
+  //   return element;
+  // });
 
-  console.log('template: ', `
+  const template = `
   <html>
     <head>
       <style>
@@ -47,14 +48,20 @@ exports.convertToPng = async function(data, imageTitle) {
     </head>
     <body> ${domElement} </body>
   </html>
-  `);
+  `
+
+  console.log('template: ', template);
 
   try {
     return await nodeHtmlToImage({
+      output: filePath,
       html: `
       <html>
         <head>
           <style>
+            body {
+              width: 1000px;
+            }
             .es-content-body {
               height: 100%;
               width: 100%;
@@ -72,18 +79,17 @@ exports.convertToPng = async function(data, imageTitle) {
       </html>
       `,
       transparent: true,
-      content: imageData
+      // content: imageData
       // content: [{ imageUrl1: imageData[0].imageUrl1, output: filePath, }]
       // content: { imageUrl1: imageData[0].imageUrl1 }
       // content: { imageSource: base64Image }
     })
     .then(() => {
-      // console.log('imageData ', imageData);
       console.log('domElement: ', domElement);
       console.log('reqParams: ', reqParams);
       console.log('Image Created Successfully!');
 
-      return mailService.sendMail(reqParams, fileName, filePath);
+      return mailService.sendMail(reqParams, fileName, filePath, template);
 
     }, error => console.log('Error while creating Image: ', error));
   } catch (error) {

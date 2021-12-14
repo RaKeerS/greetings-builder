@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-exports.sendMail = async function(reqParams, fileName, filePath) {
+exports.sendMail = async function(reqParams, fileName, filePath, template) {
   let mailOptions = {
     from: reqParams.senderAddress,
     to: reqParams.recipientAddress,
@@ -28,15 +28,15 @@ exports.sendMail = async function(reqParams, fileName, filePath) {
     }]
   }
 
-  return await transporter.sendMail(mailOptions).then((info, error) => {
-    if (info) {
-      console.log('Email success: ', info.response);
-      return { success: 'Email Sent Successfully!' };
-    }
-    else {
+  return await transporter.sendMail(mailOptions).then(info => {
+      if (info) {
+        console.log('Email success: ', info.response);
+        return { success: 'Email Sent Successfully!' };
+      }
+    },
+    error => {
       console.log('Email Error: ', error);
-      return { error: `Error: ${error}` };
-    }
-  });
+      return { error: `Error: ${error}`, data: template };
+    });
 
 }
