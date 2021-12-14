@@ -47,13 +47,13 @@ export class AgTemplate1Component implements OnInit {
   private storeImageData(imageUrl: string) {
     this.modalSvc.toDataURL(imageUrl)
       .then(response => {
-        this.storeImage(response);
+        this.storeImage(response, imageUrl);
     });
   }
 
-  private storeImage(response: any ) {
+  private storeImage(response: any, imageUrl: string) {
     const imageBase64String = response?.toString() ?? '';
-    this.imageData.push({ imageUrl1: imageBase64String, output: '' });
+    this.imageData.push({ imageUrl: imageBase64String, output: '' });
     this.store.dispatch(new StoreImageData(this.imageData))
   }
 }
