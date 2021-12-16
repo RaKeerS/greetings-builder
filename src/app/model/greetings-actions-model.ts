@@ -1,12 +1,6 @@
 import { Action, StateContext } from '@ngxs/store';
 
-import {
-  SelectCategory,
-  SelectRouterOutlet,
-  SelectTemplate,
-  SelectTemplateDOMString,
-  StoreImageData,
-} from '../actions/greetings-actions';
+import { SelectCategory, SelectRouterOutlet, SelectTemplate, SelectTemplateDOMString } from '../actions/greetings-actions';
 import { GreetingsModel } from './greetings-model';
 
 export class GreetingsActionsModel {
@@ -49,12 +43,4 @@ export class GreetingsActionsModel {
     })
   }
 
-  @Action(StoreImageData)
-  public storeImageData(ctx: StateContext<GreetingsModel>, payload: StoreImageData) {
-    const state = ctx.getState();
-    ctx.setState({
-      ...state,
-      imageData: payload.imageData
-    })
-  }
 }

@@ -25,7 +25,6 @@ export class GreetingCardComponent implements OnInit {
   @Select(GreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
   @Select(GreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
   @Select(GreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
-  @Select(GreetingsState.getImageData) imageData$!: Observable<Array<object>>;
 
   public componentInjector!: Injector;
 
@@ -38,7 +37,6 @@ export class GreetingCardComponent implements OnInit {
   public componentDOMString!: string;
 
   private componentData: unknown;
-  private imageData: Array<object> = [];
 
   public emailSubject!: string;
   public recipientName!: string;
@@ -74,7 +72,6 @@ export class GreetingCardComponent implements OnInit {
     this.subscription = this.currentTemplateCategory$.subscribe(value => this.initializeComponent(value, this.componentType));
     this.subscription = this.currentTemplateId$.subscribe(value => this.componentId = value);
     this.subscription = this.currentTemplateDOMString$.subscribe(value => this.componentDOMString = value);
-    this.subscription = this.imageData$.subscribe(value => this.imageData = value);
 
     let urlSegment: string;
     this.subscription = this.router.firstChild?.url.subscribe(value => urlSegment = value[0].toString());
@@ -142,7 +139,6 @@ export class GreetingCardComponent implements OnInit {
     const requestBody = {
       params: (this.componentData as ModalData<GreetingData>).inputData,
       payload: this.componentDOMString,
-      imageData: this.imageData
     }
     this.modalTemplateSvc.postTemplateData(requestBody)
       .subscribe(response => this.toastr.success(response.success, 'Success'), error => this.toastr.error(error, 'Error'));
