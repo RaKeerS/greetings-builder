@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-exports.sendMail = async function(reqParams, fileName, filePath, template) {
+exports.sendMail = function(reqParams, fileName, filePath, template) { // TODO: remove the template argument from the function arguments since, it is used only for debugging.
   let mailOptions = {
     from: reqParams.senderAddress,
     to: reqParams.recipientAddress,
@@ -28,7 +28,7 @@ exports.sendMail = async function(reqParams, fileName, filePath, template) {
     }]
   }
 
-  return await transporter.sendMail(mailOptions).then(info => {
+  return transporter.sendMail(mailOptions).then(info => {
       if (info) {
         console.log('Email success: ', info.response);
         return { success: 'Email Sent Successfully!' };
@@ -36,7 +36,7 @@ exports.sendMail = async function(reqParams, fileName, filePath, template) {
     },
     error => {
       console.log('Email Error: ', error);
-      return { error: `Error: ${error}`, data: template };
+      return { error: `Error: ${error}`, data: template }; // TODO: remove the data: template property from the json object since, it is used only for debugging.
     });
 
 }

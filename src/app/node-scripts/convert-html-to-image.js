@@ -14,11 +14,11 @@ const mailService = require('./mailing-service');
 
 const nodeHtmlToImage = require('node-html-to-image');
 
-exports.convertToPng = async function(data, imageTitle) {
+exports.convertToPng = function(data, imageTitle) {
   const domElement = data.payload;
   const reqParams = data.params;
   const fileName = `${imageTitle}.png`;
-  const filePath = `./../../assets/template-images/${imageTitle}.png`;
+  const filePath = `./../template-images/${imageTitle}.png`;
   const imageData = data.imageData;
   // const imageData = data.imageData.map(element => {
   //   element.output = filePath;
@@ -50,10 +50,10 @@ exports.convertToPng = async function(data, imageTitle) {
   </html>
   `
 
-  console.log('template: ', template);
+  // console.log('template: ', template);
 
   try {
-    return await nodeHtmlToImage({
+    return nodeHtmlToImage({
       output: filePath,
       html: `
       <html>
@@ -85,11 +85,11 @@ exports.convertToPng = async function(data, imageTitle) {
       // content: { imageSource: base64Image }
     })
     .then(() => {
-      console.log('domElement: ', domElement);
+      // console.log('domElement: ', domElement);
       console.log('reqParams: ', reqParams);
       console.log('Image Created Successfully!');
 
-      return mailService.sendMail(reqParams, fileName, filePath, template);
+      return mailService.sendMail(reqParams, fileName, filePath, template); // TODO: remove the template argument being passed to the function since, it is used only for debugging.
 
     }, error => console.log('Error while creating Image: ', error));
   } catch (error) {
