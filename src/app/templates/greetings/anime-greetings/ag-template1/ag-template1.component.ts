@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectTemplateDOMString, StoreImageData } from 'src/app/actions/greetings-actions';
+import { SelectTemplateDOMString } from 'src/app/actions/greetings-actions';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
@@ -17,7 +17,7 @@ export class AgTemplate1Component implements OnInit {
 
   public imageUrl1: string = './../../assets/greetings/anime-greetings/ag-template1/images/Obito-Wallpaper-HD.jpg';
 
-  private imageData: Array<object> = [];
+  public domTemplateString: string = '';
 
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
@@ -31,29 +31,21 @@ export class AgTemplate1Component implements OnInit {
   }
 
   ngAfterViewInit() {
-    let domTemplateString = this.greetingTemplate.nativeElement.outerHTML;
+    this.domTemplateString = this.greetingTemplate.nativeElement.outerHTML;
 
     // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
-    domTemplateString = this.processImageTemplate(domTemplateString, this.imageUrl1, 'imageUrl1');
-
-    this.store.dispatch(new SelectTemplateDOMString(domTemplateString));
-  }
-
-  private processImageTemplate(domTemplateString: string, imageUrl: string, imageLabel: string) {
-    this.storeImageData(imageUrl);
-    return domTemplateString.replace(imageUrl, `{{${imageLabel}}}`);
+    this.storeImageData(this.imageUrl1);
   }
 
   private storeImageData(imageUrl: string) {
     this.modalSvc.toDataURL(imageUrl)
       .then(response => {
-        this.storeImage(response, imageUrl);
+        const imageBase64String = response?.toString() ?? '';
+
+        this.domTemplateString = this.domTemplateString.replace(imageUrl, imageBase64String);
+
+        this.store.dispatch(new SelectTemplateDOMString(this.domTemplateString));
     });
   }
 
-  private storeImage(response: any, imageUrl: string) {
-    const imageBase64String = response?.toString() ?? '';
-    this.imageData.push({ imageUrl: imageBase64String, output: '' });
-    this.store.dispatch(new StoreImageData(this.imageData))
-  }
 }

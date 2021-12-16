@@ -18,8 +18,6 @@ export class BgTemplate1Component implements OnInit {
   public imageUrl2: string = '../../../../../assets/greetings/birthday-greetings/bg-template1/images/27021502445622301.jpg';
   public imageUrl3: string = '../../../../../assets/greetings/birthday-greetings/bg-template1/images/77061502445629778.jpg';
 
-  private imageData: Array<object> = [];
-
   public domTemplateString: string = '';
 
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
@@ -39,24 +37,12 @@ export class BgTemplate1Component implements OnInit {
     this.storeImageData(this.imageUrl1);
     this.storeImageData(this.imageUrl2);
     this.storeImageData(this.imageUrl3);
-
-
-    // domTemplateString = this.processImageTemplate(domTemplateString, this.imageUrl2);
-    // domTemplateString = this.processImageTemplate(domTemplateString, this.imageUrl3);
   }
-
-  // private processImageTemplate(domTemplateString: string, imageUrl: string) {
-  //   return this.storeImageData(domTemplateString, imageUrl);
-  // }
 
   private storeImageData(imageUrl: string) {
     this.modalSvc.toDataURL(imageUrl)
       .then(response => {
         const imageBase64String = response?.toString() ?? '';
-        // this.imageData = [...this.imageData, JSON.parse(`{ "${imageLabel}": "${imageBase64String}" }`)]
-        // this.imageData.push(JSON.parse(`{ "${imageLabel}": "${imageBase64String}", "output": "" }`));
-
-        // this.store.dispatch(new StoreImageData(this.imageData))
 
         this.domTemplateString = this.domTemplateString.replace(imageUrl, imageBase64String);
 
