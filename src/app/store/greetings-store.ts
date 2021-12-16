@@ -14,7 +14,6 @@ import { GreetingsModel } from '../model/greetings-model';
     currentTemplateDOMString: ' ',
     isEdit: false,
     isSaved: false,
-    imageData: []
   }
 })
 @Injectable() // 'BirthdayGreetingsState' class should be decorated with @Injectable() right after the @State() decorator
@@ -43,11 +42,6 @@ export class GreetingsState extends GreetingsActionsModel {
   @Selector()
   static getCurrentTemplateDOMString(state: GreetingsModel): string {
     return state.currentTemplateDOMString;
-  }
-
-  @Selector()
-  static getImageData(state: GreetingsModel): Array<object> {
-    return state.imageData;
   }
 
   // @Action(SelectTemplate)
