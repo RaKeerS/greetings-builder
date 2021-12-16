@@ -1,3 +1,9 @@
+/* A must add CSS */
+.es-content-body {
+  height: 70%;
+  width: 70%;
+}
+
 .es-desk-hidden {
   display: none;
   float: left;
