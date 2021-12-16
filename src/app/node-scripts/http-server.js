@@ -40,9 +40,9 @@ http.createServer(function(req, res) {
 
 }).listen(port);
 
-async function convertToImage(data, isError) {
+function convertToImage(data) {
   let date = new Date();
-  return await convertHtmlToImage.convertToPng(data, `output-image-${date.getTime()}`, isError);
+  return convertHtmlToImage.convertToPng(data, `output-image-${date.getTime()}`);
 }
 
 function parseRequestBody(req, res, headers) {
@@ -60,27 +60,59 @@ function parseRequestBody(req, res, headers) {
     }).on('data', (chunk) => {
       body.push(chunk);
       // console.log(`Data chunk available: ${chunk}`)
-    }).on('end', async () => {
+    }).on('end', () => {
       body = Buffer.concat(body).toString(); // at this point, `body` has the entire request body stored in it as a string
       // console.log('body: ', JSON.parse(body).data);
-      let isError = false;
-      response = await convertToImage(JSON.parse(body).data, isError);
-      // console.log('response: ', response);
+      // response = convertToImage(JSON.parse(body).data).then(response => {
+      //   console.log('Response Here: ');
+      //   console.log('Hua re Hua!!!!!');
 
-      console.log('Hua re Hua!!!!!');
+      //   headers['Content-Type'] = 'application/json'
 
-      headers['Content-Type'] = 'application/json'
+      //   if (response.success) {
+      //     res.writeHead(200, headers);
+      //   }
+      //   else {
+      //     res.writeHead(500, headers);
+      //   }
 
-      if (response.success) {
-        res.writeHead(200, headers);
-      }
-      else {
-        res.writeHead(500, headers);
-      }
-      // console.log('headers: ', headers);
-      // res.write('D Test Case');
-      // res.end(JSON.stringify({ data: 'D Test Case' }));
-      res.end(JSON.stringify(response));
-      return;
+      //   res.on('error', error => {
+      //     console.error('hrere: ', error)
+      //   })
+
+      //   res.write(JSON.stringify(response));
+
+      //   res.end();
+      //   return res;
+
+      //   // console.log('response: ', response);
+
+      //   // console.log('headers: ', headers);
+      //   // res.write('D Test Case');
+      //   // res.end(JSON.stringify({ data: 'D Test Case' }));
+      // });
+
+      convertToImage(JSON.parse(body).data).then(response => {
+        console.log('Response Here: ');
+        console.log('Hua re Hua!!!!!');
+
+        headers['Content-Type'] = 'application/json'
+
+        if (response.success) {
+          res.writeHead(200, headers);
+        }
+        else {
+          res.writeHead(500, headers);
+        }
+
+        res.on('error', error => {
+          console.error('hrere: ', error)
+        })
+
+        // res.write(JSON.stringify(response));
+
+        res.end(JSON.stringify(response));
+
+      });
     });
 }
