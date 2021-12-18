@@ -141,7 +141,7 @@ export class GreetingCardComponent implements OnInit {
       payload: this.componentDOMString,
     }
     this.modalTemplateSvc.postTemplateData(requestBody)
-      .subscribe(response => this.toastr.success(response.success, 'Success'), error => this.toastr.error(error, 'Error'));
+      .subscribe(response => this.toastr.success(response.success, 'Success'), err => this.toastr.error(err.error, 'Error'));
     this.toastr.info('Sending Email, Please Wait...', 'Info')
   }
 
