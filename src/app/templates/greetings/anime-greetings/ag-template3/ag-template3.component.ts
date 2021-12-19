@@ -15,7 +15,7 @@ export class AgTemplate3Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template2/images/Pain-1-Wallpaper.jpg';
+  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template3/images/art-nona-naruto-itachi-uchiha.jpg';
 
   public domTemplateString: string = '';
 
