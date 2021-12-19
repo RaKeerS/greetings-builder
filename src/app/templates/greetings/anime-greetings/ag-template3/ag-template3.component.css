@@ -5,7 +5,8 @@
 }
 
 .custom-font-family {
-  font-family: 'Coustard', serif;
+  /* font-family: 'Licorice', cursive; */
+  font-family: 'Indie Flower', cursive;
 }
 
 .es-desk-hidden {
@@ -268,7 +269,15 @@ ol li {
 .es-wrapper-color {
   /* background-color: #EFEFEF; */
   background-color: #d3ba0a;
-  background-color: #ff7621;
+  background-color: #ff2122;
+  /* background: rgb(2,0,36);
+  background: -moz-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%); */
+  background: rgb(2,0,36);
+  background: -moz-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 25%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 25%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 25%, rgba(224,31,31,1) 63%, rgba(255,0,0,1) 100%);
 }
 
 .es-header {
