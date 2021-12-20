@@ -21,6 +21,7 @@ import { GreetingsState } from './store/greetings-store';
 import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
 import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-template2/ag-template2.component';
 import { AgTemplate3Component } from './templates/greetings/anime-greetings/ag-template3/ag-template3.component';
+import { AgTemplate4Component } from './templates/greetings/anime-greetings/ag-template4/ag-template4.component';
 import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
 import { BestWishesGreetingsComponent } from './templates/greetings/best-wishes-greetings/best-wishes-greetings.component';
 import { BwgTemplate1Component } from './templates/greetings/best-wishes-greetings/bwg-template1/bwg-template1.component';
@@ -51,6 +52,7 @@ import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/
     BestWishesGreetingsComponent,
     BwgTemplate1Component,
     AgTemplate3Component,
+    AgTemplate4Component,
   ],
   imports: [
     BrowserModule,

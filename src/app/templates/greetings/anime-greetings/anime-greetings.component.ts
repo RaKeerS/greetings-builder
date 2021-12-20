@@ -5,6 +5,7 @@ import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templa
 import { AgTemplate1Component } from './ag-template1/ag-template1.component';
 import { AgTemplate2Component } from './ag-template2/ag-template2.component';
 import { AgTemplate3Component } from './ag-template3/ag-template3.component';
+import { AgTemplate4Component } from './ag-template4/ag-template4.component';
 
 @Component({
   selector: 'app-anime-greetings',
@@ -40,7 +41,7 @@ export class AnimeGreetingsComponent implements OnInit {
       case '1' : return AgTemplate1Component;
       case '2' : return AgTemplate2Component;
       case '3' : return AgTemplate3Component;
-      // case '4' : return BgTemplate4Component;
+      case '4' : return AgTemplate4Component;
       case '5' : return TemplatedummyComponent;
       default: return 'dummy';
     }
