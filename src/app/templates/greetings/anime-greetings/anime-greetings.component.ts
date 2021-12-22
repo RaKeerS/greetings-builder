@@ -6,6 +6,7 @@ import { AgTemplate1Component } from './ag-template1/ag-template1.component';
 import { AgTemplate2Component } from './ag-template2/ag-template2.component';
 import { AgTemplate3Component } from './ag-template3/ag-template3.component';
 import { AgTemplate4Component } from './ag-template4/ag-template4.component';
+import { AgTemplate5Component } from './ag-template5/ag-template5.component';
 
 @Component({
   selector: 'app-anime-greetings',
@@ -37,13 +38,13 @@ export class AnimeGreetingsComponent implements OnInit {
     // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
-      case 'dummy' : return 'dummy';
+      case 'dummy' : return TemplatedummyComponent;
       case '1' : return AgTemplate1Component;
       case '2' : return AgTemplate2Component;
       case '3' : return AgTemplate3Component;
       case '4' : return AgTemplate4Component;
-      case '5' : return TemplatedummyComponent;
-      default: return 'dummy';
+      case '5' : return AgTemplate5Component;
+      default: return TemplatedummyComponent;
     }
   }
 

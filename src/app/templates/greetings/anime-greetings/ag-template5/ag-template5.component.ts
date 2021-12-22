@@ -5,17 +5,17 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-ag-template4',
-  templateUrl: './ag-template4.component.html',
-  styleUrls: ['./ag-template4.component.css']
+  selector: 'app-ag-template5',
+  templateUrl: './ag-template5.component.html',
+  styleUrls: ['./ag-template5.component.css']
 })
-export class AgTemplate4Component implements OnInit {
+export class AgTemplate5Component implements OnInit {
 
   public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template4/images/kisame-hoshikage-wallpaperflare.jpg';
+  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template5/images/sasori-wallpaper.jpg';
 
   public domTemplateString: string = '';
 
@@ -50,5 +50,4 @@ export class AgTemplate4Component implements OnInit {
         this.store.dispatch(new SelectTemplateDOMString(this.domTemplateString));
     });
   }
-
 }

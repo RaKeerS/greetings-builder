@@ -63,8 +63,8 @@
     },
     {
       "id": "5",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template5",
       "label": "Sasori",
       "description": "The rogue ninja of Hidden Sand Village. Sasori, known as Sasori of the Red Sand, was an S-rank Missing-nin from Sunagakure, and the grandson of Chiyo, one of the elders, who trained him as a puppeteer. He was the partner of Orochimaru in the criminal organization Akatsuki until the later left, and then the partner of Deidara until he was killed.",
       "abilities": "Puppetry, Taijutsu",
