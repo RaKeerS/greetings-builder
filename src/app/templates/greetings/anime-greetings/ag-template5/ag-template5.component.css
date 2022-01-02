@@ -270,7 +270,6 @@ ol li {
   background: -moz-radial-gradient(circle, rgba(186,78,157,1) 25%, rgba(252,70,107,1) 84%);
   background: -webkit-radial-gradient(circle, rgba(186,78,157,1) 25%, rgba(252,70,107,1) 84%);
   background: radial-gradient(circle, rgba(186,78,157,1) 25%, rgba(252,70,107,1) 84%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ba4e9d",endColorstr="#fc466b",GradientType=1);
 }
 
 .es-header {

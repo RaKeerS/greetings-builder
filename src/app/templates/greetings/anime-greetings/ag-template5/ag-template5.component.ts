@@ -50,4 +50,5 @@ export class AgTemplate5Component implements OnInit {
         this.store.dispatch(new SelectTemplateDOMString(this.domTemplateString));
     });
   }
+
 }
