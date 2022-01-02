@@ -33,6 +33,7 @@ import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greet
 import { GreetingStyle1Component } from './templates/greetings/greeting-style1/greeting-style1.component';
 import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 import { AgTemplate5Component } from './templates/greetings/anime-greetings/ag-template5/ag-template5.component';
+import { AgTemplate6Component } from './templates/greetings/anime-greetings/ag-template6/ag-template6.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AgTemplate5Component } from './templates/greetings/anime-greetings/ag-t
     AgTemplate3Component,
     AgTemplate4Component,
     AgTemplate5Component,
+    AgTemplate6Component,
   ],
   imports: [
     BrowserModule,

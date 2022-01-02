@@ -78,8 +78,8 @@
     },
     {
       "id": "6",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template6",
       "label": "Deidara",
       "description": "Another reogue Ninja obsessed with his explosive art. Deidara (デイダラ, Deidara) was an S-rank missing-nin from Iwagakure. During his time in the village, he was a member of the Explosion Corps.",
       "abilities": "Clay explosives, Strategist",
