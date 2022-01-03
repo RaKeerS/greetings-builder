@@ -93,8 +93,8 @@
     },
     {
       "id": "7",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template7",
       "label": "Kakuzu",
       "description": "Another rogue ninja who strives for funding for the organization. Kakuzu is a rogue ninja from the Village Hidden in the Waterfall who became a member of the Akatsuki, serving as their treasurer, and an antagonist in the manga/anime series Naruto. He steals hearts from his victims in order to remain alive and achieve a near-immortal lifespan.",
       "abilities": "5 element style and has multiple lives",
