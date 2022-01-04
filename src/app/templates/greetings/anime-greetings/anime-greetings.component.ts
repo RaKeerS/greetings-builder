@@ -9,6 +9,7 @@ import { AgTemplate4Component } from './ag-template4/ag-template4.component';
 import { AgTemplate5Component } from './ag-template5/ag-template5.component';
 import { AgTemplate6Component } from './ag-template6/ag-template6.component';
 import { AgTemplate7Component } from './ag-template7/ag-template7.component';
+import { AgTemplate8Component } from './ag-template8/ag-template8.component';
 
 @Component({
   selector: 'app-anime-greetings',
@@ -35,6 +36,8 @@ export class AnimeGreetingsComponent implements OnInit {
       case '6' : return 'template6';
       case '7' : return 'template7';
       case '8' : return 'template8';
+      case '9' : return 'template9';
+      case '10' : return 'template10';
       default: return 'dummy';
     }
   }
@@ -51,7 +54,9 @@ export class AnimeGreetingsComponent implements OnInit {
       case '5' : return AgTemplate5Component;
       case '6' : return AgTemplate6Component;
       case '7' : return AgTemplate7Component;
-      case '8' : return AgTemplate6Component;
+      case '8' : return AgTemplate8Component;
+      case '9' : return AgTemplate1Component;
+      case '10' : return AgTemplate1Component;
       default: return TemplatedummyComponent;
     }
   }

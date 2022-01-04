@@ -108,8 +108,8 @@
     },
     {
       "id": "8",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template8",
       "label": "Hidan",
       "description": "An immortal rogue ninja that follows the way of Jashin. Hidan is a villain from the anime and manga Naruto and is a member of the Akatsuki. He is partnered with Kakuzu and is known throughout the Akatsuki as being an immortal duo. He is foul-mouthed and incredibly impulsive. He enjoys praying to his god, Jashin, and enjoys fighting.",
       "abilities": "Taijutsu, Jashin's secret ritual technique",
