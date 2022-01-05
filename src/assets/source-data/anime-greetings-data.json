@@ -123,8 +123,8 @@
     },
     {
       "id": "9",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template9",
       "label": "Oorochimaru",
       "description": "A rogue ninja of the Hidden Leaf village also known as one of the Legendary Sanin. Orochimaru is a fictional character from Naruto, a manga series created by Masashi Kishimoto. In the anime and manga, Orochimaru is a former ninja from the village of Konohagakure who is well known for his abilities. He is one of the three Legendary Sannin and a former member of the terrorist organization Akatsuki.",
       "abilities": "Genjutsu, Snake summoning, Ninjutsu",
