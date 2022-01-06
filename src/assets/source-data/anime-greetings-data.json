@@ -138,8 +138,8 @@
     },
     {
       "id": "10",
-      "category": "anime",
-      "type": "dummy",
+      "category": "anime-greetings",
+      "type": "template10",
       "label": "Zetsu",
       "description": "An entity whose information is unknown. When Madara had seemingly created White Zetsu and its clone siblings, it was actually Black Zetsu pulling the transformed humans from Kaguya's Infinite Tsukuyomi out of the Demonic Statue of the Outer Path, merging them with the essence of the Hashirama plant clone Madara created to give them a diluted Wood Release.",
       "abilities": "Wood style, fast healing and cloning",

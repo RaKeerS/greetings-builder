@@ -5,17 +5,17 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-ag-template9',
-  templateUrl: './ag-template9.component.html',
-  styleUrls: ['./ag-template9.component.css']
+  selector: 'app-ag-template10',
+  templateUrl: './ag-template10.component.html',
+  styleUrls: ['./ag-template10.component.css']
 })
-export class AgTemplate9Component implements OnInit {
+export class AgTemplate10Component implements OnInit {
 
   public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template9/images/orochimaru-wallpaper.jpg';
+  public imageUrl1: string = '../../../../../assets/greetings/anime-greetings/ag-template10/images/zetsu-wallpaper.jpg';
 
   public domTemplateString: string = '';
 
