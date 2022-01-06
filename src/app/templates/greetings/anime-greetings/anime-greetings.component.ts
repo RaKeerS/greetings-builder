@@ -3,6 +3,7 @@ import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum
 
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { AgTemplate1Component } from './ag-template1/ag-template1.component';
+import { AgTemplate10Component } from './ag-template10/ag-template10.component';
 import { AgTemplate2Component } from './ag-template2/ag-template2.component';
 import { AgTemplate3Component } from './ag-template3/ag-template3.component';
 import { AgTemplate4Component } from './ag-template4/ag-template4.component';
@@ -57,7 +58,7 @@ export class AnimeGreetingsComponent implements OnInit {
       case '7' : return AgTemplate7Component;
       case '8' : return AgTemplate8Component;
       case '9' : return AgTemplate9Component;
-      case '10' : return AgTemplate1Component;
+      case '10' : return AgTemplate10Component;
       default: return TemplatedummyComponent;
     }
   }
