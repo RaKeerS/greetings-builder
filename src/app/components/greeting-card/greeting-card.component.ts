@@ -10,6 +10,9 @@ import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingsState } from 'src/app/store/greetings-store';
 import { AnimeGreetingsComponent } from 'src/app/templates/greetings/anime-greetings/anime-greetings.component';
+import {
+  BestWishesGreetingsComponent,
+} from 'src/app/templates/greetings/best-wishes-greetings/best-wishes-greetings.component';
 import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday-greetings/birthday-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
@@ -114,6 +117,22 @@ export class GreetingCardComponent implements OnInit {
         };
         this.componentType = BirthdayGreetingsComponent.getComponentType(componentType);
         return BirthdayGreetingsComponent.getComponent(componentType);
+      };
+      case GreetingsTemplateCategoryEnum['best-wishes-greetings'] : {
+        (this.componentData as ModalData<GreetingData>) = {
+          inputData: {
+            emailSubject: this.emailSubject,
+            recipientName: this.recipientName,
+            customMessage: this.customMessage,
+            recipientAddress: this.recipientAddress,
+            recipientAddressCC: this.recipientAddressCC,
+            recipientAddressBCC: this.recipientAddressBCC,
+            senderAddress: this.senderAddress,
+            senderName: this.senderName
+          }
+        };
+        this.componentType = BestWishesGreetingsComponent.getComponentType(componentType);
+        return BestWishesGreetingsComponent.getComponent(componentType);
       };
       default:
         this.componentType = TemplatedummyComponent.getComponentType(componentType);
