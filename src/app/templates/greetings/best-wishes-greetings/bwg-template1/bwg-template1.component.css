@@ -1,3 +1,7 @@
+::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
+  overflow: auto !important;
+}
+
 /* A must add CSS */
 .es-content-body {
   height: 65%;
