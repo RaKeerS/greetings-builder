@@ -5,6 +5,10 @@
   width: 85%;
 }
 
+.custom-font-family {
+  font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .es-desk-hidden {
   display: none;
   float: left;
