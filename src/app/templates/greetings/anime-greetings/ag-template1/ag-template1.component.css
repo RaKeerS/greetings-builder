@@ -1,3 +1,6 @@
+:host {
+  height: 110%;
+}
 
 /* A must add CSS */
 .es-content-body {

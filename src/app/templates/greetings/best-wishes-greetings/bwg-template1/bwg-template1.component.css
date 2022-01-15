@@ -1,7 +1,3 @@
-::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
-  overflow: auto !important;
-}
-
 :host {
   height: 110%;
 }
