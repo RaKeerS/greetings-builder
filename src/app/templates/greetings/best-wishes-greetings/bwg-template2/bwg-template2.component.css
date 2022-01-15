@@ -6,6 +6,7 @@
   height: 110%;
 }
 
+
 /* A must add CSS */
 .es-content-body {
   height: 65%;
@@ -276,19 +277,9 @@ ol li {
 
 .es-wrapper-color {
   background: rgb(254,254,254);
-  background: -moz-radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(0,0,0,1) 50%, rgba(122,133,145,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(0,0,0,1) 50%, rgba(122,133,145,1) 100%);
-  background: radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(0,0,0,1) 50%, rgba(122,133,145,1) 100%);
-
-  background: rgb(254,254,254);
-  background: -moz-radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(122,133,145,1) 50%, rgba(0,0,0,1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(122,133,145,1) 50%, rgba(0,0,0,1) 100%);
-  background: radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(122,133,145,1) 50%, rgba(0,0,0,1) 100%);
-
-  background: rgb(254,254,254);
-  background: -moz-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(122,133,145,1) 60%, rgba(0,0,0,1) 90%);
-  background: -webkit-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(122,133,145,1) 60%, rgba(0,0,0,1) 90%);
-  background: radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(122,133,145,1) 60%, rgba(0,0,0,1) 90%);
+  background: -moz-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
+  background: -webkit-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
+  background: radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
 }
 
 .es-header {

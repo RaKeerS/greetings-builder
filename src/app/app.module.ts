@@ -38,6 +38,7 @@ import { AgTemplate7Component } from './templates/greetings/anime-greetings/ag-t
 import { AgTemplate8Component } from './templates/greetings/anime-greetings/ag-template8/ag-template8.component';
 import { AgTemplate9Component } from './templates/greetings/anime-greetings/ag-template9/ag-template9.component';
 import { AgTemplate10Component } from './templates/greetings/anime-greetings/ag-template10/ag-template10.component';
+import { BwgTemplate2Component } from './templates/greetings/best-wishes-greetings/bwg-template2/bwg-template2.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { AgTemplate10Component } from './templates/greetings/anime-greetings/ag-
     AgTemplate8Component,
     AgTemplate9Component,
     AgTemplate10Component,
+    BwgTemplate2Component,
   ],
   imports: [
     BrowserModule,

@@ -5,17 +5,18 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-bwg-template1',
-  templateUrl: './bwg-template1.component.html',
-  styleUrls: ['./bwg-template1.component.css']
+  selector: 'app-bwg-template2',
+  templateUrl: './bwg-template2.component.html',
+  styleUrls: ['./bwg-template2.component.css']
 })
-export class BwgTemplate1Component implements OnInit {
+export class BwgTemplate2Component implements OnInit {
+
 
   public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template1/images/happy-fathers-day-image.png';
+  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template2/images/happy-mothers-day-image.png';
 
   public domTemplateString: string = '';
 
