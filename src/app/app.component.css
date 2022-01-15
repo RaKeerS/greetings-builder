@@ -58,6 +58,10 @@
 
 /***************** Custom CSS *****************/
 
+::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
+  overflow: auto !important;
+}
+
 .main-container .row .col-sm-12 {
   padding: 0px !important;
 }
