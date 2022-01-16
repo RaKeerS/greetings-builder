@@ -6,7 +6,6 @@
       "type": "template1",
       "label": "Father's Day Wishes",
       "description": "Come together to celebrate and wish the first idol and hero for every child on his special day today!",
-      "abilities": "Kamui, Fire Style, Genjutsu, Taijutsu, Ninjutsu",
       "images": [
         "../../../../../assets/greetings/best-wishes-greetings/bwg-template1/images/happy-fathers-day-image.png"
       ]
@@ -15,9 +14,8 @@
       "id": "2",
       "category": "best-wishes-greetings",
       "type": "template2",
-      "label": "Pain",
-      "description": "The known leader of Akatsuki, controlled by Nagato. Nagato (Japanese: 長門), known primarily under the alias of Pain (ペイン, Pein), is a fictional character in the manga and best-wishes series Naruto created by Masashi Kishimoto. Nagato is the figurehead leader of the Akatsuki who wishes to capture the tailed beasts sealed into various people around the shinobi world.",
-      "abilities": "Six Paths of Pain",
+      "label": "Mother's Day Wishes",
+      "description": "Let's celebrate the motherhood for all mother's around the world today!",
       "images": [
         "../../../../../assets/greetings/best-wishes-greetings/bwg-template2/images/happy-mothers-day-image.png"
       ]
@@ -28,7 +26,6 @@
       "type": "template3",
       "label": "Itachi Uchiha",
       "description": "Known as the Rogue Ninja who committed a genocide of his own clan. Itachi Uchiha is a fictional character in the Naruto manga and best-wishes series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.",
-      "abilities": "Fire Style, Genjutsu, Taijutsu, Ninjutsu",
       "images": [
         "https://pbs.twimg.com/profile_images/718657168241598464/UneFJsV__400x400.jpg",
         "https://images.everyeye.it/img-notizie/naruto-commovente-tributo-appassionato-all-eroe-itachi-uchiha-v3-473130-640x360.jpg",
@@ -43,7 +40,6 @@
       "type": "template4",
       "label": "Kisame Hoshigaki",
       "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
-      "abilities": "Water Style, Weapon User",
       "images": [
         "http://pm1.narvii.com/6773/89d617e5b0d55dad92dec37ae1d6e87ba578b44dv2_00.jpg",
         "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dd3t5ul-3bcc1793-8e8e-48ed-bc55-db7db251cc4c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZGMxM2I3LWEyZTctNGI0NS04M2VjLTMxMWU3MmU4MjkwMFwvZGQzdDV1bC0zYmNjMTc5My04ZThlLTQ4ZWQtYmM1NS1kYjdkYjI1MWNjNGMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.b-_PX9zcjXU-BcfO0qZFv1YWBLffgwe040dsFj3VqVI",
