@@ -4,6 +4,7 @@ import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { BwgTemplate1Component } from './bwg-template1/bwg-template1.component';
 import { BwgTemplate2Component } from './bwg-template2/bwg-template2.component';
+import { BwgTemplate3Component } from './bwg-template3/bwg-template3.component';
 
 @Component({
   selector: 'app-best-wishes-greetings',
@@ -38,7 +39,7 @@ export class BestWishesGreetingsComponent implements OnInit {
       case 'dummy' : return 'dummy';
       case '1' : return BwgTemplate1Component;
       case '2' : return BwgTemplate2Component;
-      // case '3' : return BgTemplate3Component;
+      case '3' : return BwgTemplate3Component;
       // case '4' : return BgTemplate4Component;
       case '5' : return TemplatedummyComponent;
       default: return 'dummy';
