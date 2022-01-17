@@ -5,11 +5,11 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-bwg-template2',
-  templateUrl: './bwg-template2.component.html',
-  styleUrls: ['./bwg-template2.component.css']
+  selector: 'app-bwg-template3',
+  templateUrl: './bwg-template3.component.html',
+  styleUrls: ['./bwg-template3.component.css']
 })
-export class BwgTemplate2Component implements OnInit {
+export class BwgTemplate3Component implements OnInit {
 
   public customMessage: string;
   public recipientName: string;
