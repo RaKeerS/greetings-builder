@@ -1,10 +1,10 @@
 /* PAGE SPECIFIC CSS */
 
 h1 {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: normal;
-  color: #333333;
+  font-size: 48px !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  color: #333333 !important;
 }
 
 h1, h2, h3, h4, h5 {
@@ -291,10 +291,10 @@ ol li {
 }
 
 .es-wrapper-color {
-  background: rgb(254,254,254);
-  background: -moz-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
-  background: -webkit-radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
-  background: radial-gradient(circle, rgba(254,254,254,1) 20%, rgba(224,231,198,1) 50%, rgba(244,155,183,1) 90%);
+  background: rgb(218,202,183);
+  background: -moz-radial-gradient(circle, rgba(218,202,183,1) 40%, rgba(208,169,124,1) 72%);
+  background: -webkit-radial-gradient(circle, rgba(218,202,183,1) 40%, rgba(208,169,124,1) 72%);
+  background: radial-gradient(circle, rgba(218,202,183,1) 40%, rgba(208,169,124,1) 72%);
 }
 
 .es-header {
