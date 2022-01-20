@@ -15,7 +15,7 @@ export class BwgTemplate3Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template2/images/happy-mothers-day-image.png';
+  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template3/images/happy-fathers-day-image.png';
 
   public domTemplateString: string = '';
 
