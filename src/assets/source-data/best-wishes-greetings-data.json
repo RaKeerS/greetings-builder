@@ -24,14 +24,10 @@
       "id": "3",
       "category": "best-wishes-greetings",
       "type": "template3",
-      "label": "Itachi Uchiha",
-      "description": "Known as the Rogue Ninja who committed a genocide of his own clan. Itachi Uchiha is a fictional character in the Naruto manga and best-wishes series created by Masashi Kishimoto. Itachi is the older brother of Sasuke Uchiha, and is responsible for killing all the members of their clan, sparing only Sasuke.",
+      "label": "Father's Day Wishes",
+      "description": "For all the girls who are their father's angels, help your dad celebrate father's day this year!.",
       "images": [
-        "https://pbs.twimg.com/profile_images/718657168241598464/UneFJsV__400x400.jpg",
-        "https://images.everyeye.it/img-notizie/naruto-commovente-tributo-appassionato-all-eroe-itachi-uchiha-v3-473130-640x360.jpg",
-        "https://images.everyeye.it/img-notizie/naruto-shippuden-community-omaggia-itachi-uchiha-occasione-compleanno-v5-522821-1280x720.webp",
-        "https://sportshub.cbsistatic.com/i/2021/03/17/c6ca9bc7-1d31-45e3-b742-0f4f99c7c4f0/itachi-naruto-1195026.jpg",
-        "https://cdn.shopify.com/s/files/1/0046/2779/1960/articles/itachi_uchiha_600x.jpg?v=1584277272"
+        "../../../../../assets/greetings/best-wishes-greetings/bwg-template3/images/happy-fathers-day-image.png"
       ]
     },
     {
