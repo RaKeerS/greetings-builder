@@ -320,6 +320,11 @@ ol li {
   background: -moz-radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(254, 227, 237) 50%, rgb(255, 178, 198) 90%);
   background: -webkit-radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(254, 227, 237) 50%, rgb(255, 178, 198) 90%);
   background: radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(254, 227, 237) 50%, rgb(255, 178, 198) 90%);
+
+  background: rgb(254,254,254);
+  background: -moz-radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(255 67 137) 50%, rgb(255, 178, 198) 90%);
+  background: -webkit-radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(255 67 137) 50%, rgb(255, 178, 198) 90%);
+  background: radial-gradient(circle, rgb(231, 174, 125) 20%, rgb(255 67 137) 50%, rgb(255, 178, 198) 90%);
 }
 
 .es-header {
