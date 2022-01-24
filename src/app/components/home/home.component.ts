@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Select } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
 import { Observable, Subscription } from 'rxjs';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingsState } from 'src/app/store/greetings-store';
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
   @Select(GreetingsState.getCurrentTemplateCategory) currentTemplateCategory$!: Observable<string>;
 
-  constructor(private modalSvc: ModalTemplateService) { }
+  constructor(private modalSvc: ModalTemplateService, private store: Store) { }
 
   ngOnInit(): void {
     this.getTemplateData();
@@ -29,7 +29,13 @@ export class HomeComponent implements OnInit {
   }
 
   private getTemplateData(): any {
-    this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+    const currentTemplateCategory = this.store.selectSnapshot(GreetingsState.getCurrentTemplateCategory);
+    if (!!currentTemplateCategory) {
+      this.modalSvc.getTemplateData(currentTemplateCategory).then(data => { this.templateData = data; });
+    }
+    else {
+      this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+    }
   }
 
   public getRows(totalLength: number) {
