@@ -38,3 +38,7 @@
     overflow: auto;
     margin-bottom: 2em;
 }
+
+::ng-deep .p-card-header {
+  background-color: white;
+}
