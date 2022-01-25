@@ -47,6 +47,12 @@ export class AppComponent {
         command: () => this.store.dispatch(new SelectCategory('best-wishes-greetings'))
       },
       {
+        label:'Miscellanous',
+        icon:'pi pi-fw pi-star',
+        routerLink: 'home',
+        command: () => this.store.dispatch(new SelectCategory('best-wishes-greetings'))
+      },
+      {
         label:'Quit',
         icon:'pi pi-fw pi-power-off'
       }
