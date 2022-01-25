@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "1",
-      "category": "birthday-greetings",
+      "category": "miscellanous-greetings",
       "type": "template1",
       "label": "Template 1",
       "description": "Wish your dear ones by calling out for a huge celebration!!",
@@ -12,7 +12,7 @@
     },
     {
       "id": "2",
-      "category": "birthday-greetings",
+      "category": "miscellanous-greetings",
       "type": "template2",
       "label": "Template 2",
       "description": "Let them all know! Invite them all for the birthday celebration of your loved ones!",
@@ -22,7 +22,7 @@
     },
     {
       "id": "3",
-      "category": "birthday-greetings",
+      "category": "miscellanous-greetings",
       "type": "template3",
       "label": "Template 3",
       "description": "Invite them all for your loved Ones, 3rd anniversary! Comon what are you waiting for!?",
@@ -32,7 +32,7 @@
     },
     {
       "id": "4",
-      "category": "birthday-greetings",
+      "category": "miscellanous-greetings",
       "type": "template4",
       "label": "Template 4",
       "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
@@ -42,7 +42,7 @@
     },
     {
       "id": "5",
-      "category": "birthday-greetings",
+      "category": "miscellanous-greetings",
       "type": "dummy",
       "label": "Template 5",
       "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",

@@ -33,10 +33,10 @@
 }
 
 .card-style {
-    width: 22rem;
-    height: 40rem;
-    overflow: auto;
-    margin-bottom: 2em;
+  width: 22rem;
+  height: 40rem;
+  overflow: auto;
+  margin-bottom: 2em;
 }
 
 ::ng-deep .p-card-header {
