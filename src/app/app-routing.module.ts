@@ -16,7 +16,8 @@ const routes: Routes = [
       { path: ':id', component: GreetingCardComponent },
       { path: 'birthday-greetings/:id', component: GreetingCardComponent },
       { path: 'anime-greetings/:id', component: GreetingCardComponent },
-      { path: 'best-wishes-greetings/:id', component: GreetingCardComponent }
+      { path: 'best-wishes-greetings/:id', component: GreetingCardComponent },
+      { path: 'miscellanous-greetings/:id', component: GreetingCardComponent }
     ]
   },
   { path: 'temp', component: GreetingCardComponent }

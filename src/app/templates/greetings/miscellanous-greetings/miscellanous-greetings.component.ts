@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum';
 
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
+import { MgTemplate1Component } from './mg-template1/mg-template1.component';
 
 @Component({
   selector: 'app-miscellanous-greetings',
@@ -35,7 +36,7 @@ export class MiscellanousGreetingsComponent implements OnInit {
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
-      // case '1' : return BgTemplate1Component;
+      case '1' : return MgTemplate1Component;
       // case '2' : return BgTemplate2Component;
       // case '3' : return BgTemplate3Component;
       // case '4' : return BgTemplate4Component;

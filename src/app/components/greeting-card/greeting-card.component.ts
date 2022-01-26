@@ -14,6 +14,9 @@ import {
   BestWishesGreetingsComponent,
 } from 'src/app/templates/greetings/best-wishes-greetings/best-wishes-greetings.component';
 import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday-greetings/birthday-greetings.component';
+import {
+  MiscellanousGreetingsComponent,
+} from 'src/app/templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
@@ -133,6 +136,22 @@ export class GreetingCardComponent implements OnInit {
         };
         this.componentType = BestWishesGreetingsComponent.getComponentType(componentType);
         return BestWishesGreetingsComponent.getComponent(componentType);
+      };
+      case GreetingsTemplateCategoryEnum['miscellanous-greetings'] : {
+        (this.componentData as ModalData<GreetingData>) = {
+          inputData: {
+            emailSubject: this.emailSubject,
+            recipientName: this.recipientName,
+            customMessage: this.customMessage,
+            recipientAddress: this.recipientAddress,
+            recipientAddressCC: this.recipientAddressCC,
+            recipientAddressBCC: this.recipientAddressBCC,
+            senderAddress: this.senderAddress,
+            senderName: this.senderName
+          }
+        };
+        this.componentType = MiscellanousGreetingsComponent.getComponentType(componentType);
+        return MiscellanousGreetingsComponent.getComponent(componentType);
       };
       default:
         this.componentType = TemplatedummyComponent.getComponentType(componentType);
