@@ -2,7 +2,7 @@ export enum GreetingsTemplateCategoryEnum {
   'anime-greetings' = '1',
   'birthday-greetings' = '2',
   'best-wishes-greetings' = '3',
-  'greeting-style4' = '4',
+  'miscellanous-greetings' = '4',
   'greeting-style5' = '5',
   'greeting-style6' = '6',
   'greeting-style7' = '7',
