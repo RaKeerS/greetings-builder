@@ -11,19 +11,21 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 })
 export class MgTemplate1Component implements OnInit {
 
+  public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg';
+  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template1/images/happy-fathers-day-image.png';
 
   public domTemplateString: string = '';
 
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
   constructor(public modalData: ModalData<GreetingData>, private store: Store, private modalSvc: ModalTemplateService) {
+    this.customMessage = this.modalData.inputData?.customMessage!;
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.senderName = this.modalData.inputData?.senderName || '';
-  }
+   }
 
   ngOnInit(): void {
   }
