@@ -17,6 +17,11 @@
   width: 85%;
 }
 
+.custom-font-family {
+  /* font-family: 'Twinkle Star', cursive; */
+  font-family: 'Architects Daughter', cursive;
+}
+
 .adapt-img {
   width: 100%;
   height: auto;
@@ -282,8 +287,17 @@ ol li {
 
 .es-wrapper-color {
   /* background-color: #EFEFEF; */
-  background-color: #d3ba0a;
-  background-color: #f7f6f2;
+
+  background: rgb(3,129,250);
+  background: -moz-radial-gradient(circle, rgba(3,129,250,1) 18%, rgba(154,191,129,1) 50%, rgba(0,0,0,1) 93%);
+  background: -webkit-radial-gradient(circle, rgba(3,129,250,1) 18%, rgba(154,191,129,1) 50%, rgba(0,0,0,1) 93%);
+  background: radial-gradient(circle, rgba(3,129,250,1) 18%, rgba(154,191,129,1) 50%, rgba(0,0,0,1) 93%);
+
+  background: rgb(3,129,250);
+  background: -moz-linear-gradient(180deg, rgba(3,129,250,1) 10%, rgba(154,191,129,1) 44%, rgba(0,0,0,1) 96%);
+  background: -webkit-linear-gradient(180deg, rgba(3,129,250,1) 10%, rgba(154,191,129,1) 44%, rgba(0,0,0,1) 96%);
+  background: linear-gradient(180deg, rgba(3,129,250,1) 10%, rgba(154,191,129,1) 44%, rgba(0,0,0,1) 96%);
+
 }
 
 .es-header {
