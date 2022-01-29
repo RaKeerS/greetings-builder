@@ -1,9 +1,10 @@
 :host {
-  height: 110%;
+  display: flex;
 }
 
 #greetingTemplate {
-  height: 100%;
+  /* height: 100%; */
+  padding: 5% 0%;
 }
 
 /* A must add CSS */

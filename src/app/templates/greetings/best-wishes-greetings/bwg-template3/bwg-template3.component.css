@@ -13,13 +13,15 @@ h1, h2, h3, h4, h5 {
   font-family: 'Vast Shadow', Arial, cursive !important;
 }
 
+/* GENERIC CSS */
 
 :host {
-  height: 110%;
+  display: initial;
 }
 
 #greetingTemplate {
-  height: 115%;
+  /* height: 100%; */
+  padding: 5% 0%;
 }
 
 /* A must add CSS */
