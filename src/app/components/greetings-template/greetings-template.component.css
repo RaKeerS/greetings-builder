@@ -41,4 +41,5 @@
 
 ::ng-deep .p-card-header {
   background-color: white;
+  display: flex;
 }
