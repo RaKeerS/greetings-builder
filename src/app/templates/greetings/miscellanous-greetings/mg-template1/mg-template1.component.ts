@@ -15,7 +15,8 @@ export class MgTemplate1Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = '../../../../../assets/greetings/best-wishes-greetings/bwg-template1/images/happy-fathers-day-image.png';
+  public imageUrl1: string = '../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-1.png';
+  public imageUrl2: string = '../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-2.png';
 
   public domTemplateString: string = '';
 
@@ -35,6 +36,7 @@ export class MgTemplate1Component implements OnInit {
 
     // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
     this.storeImageData(this.imageUrl1);
+    this.storeImageData(this.imageUrl2);
   }
 
   private storeImageData(imageUrl: string) {
