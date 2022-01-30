@@ -71,7 +71,7 @@ exports.convertToPng = function(data, imageTitle) {
               width: 100%;
             }
             .adapt-img {
-              height: 497px !important;
+              height: auto !important;
             }
           </style>
         </head>
