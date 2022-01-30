@@ -1,15 +1,16 @@
-/* :host {
-  height: 110%;
-} */
+:host {
+  /* height: 110%; */
+  display: initial;
+}
 
 #greetingTemplate {
   /* height: 100%; */
   padding: 5% 0%;
 }
 
-.background-layer {
+/* .background-layer {
   background-image: "../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-1.png";
-}
+} */
 
 /* A must add CSS */
 .es-content-body {
@@ -25,7 +26,7 @@
 .adapt-img {
   width: 100%;
   height: auto;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .es-desk-hidden {
