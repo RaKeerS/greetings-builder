@@ -43,6 +43,7 @@ import { BwgTemplate3Component } from './templates/greetings/best-wishes-greetin
 import { BwgTemplate4Component } from './templates/greetings/best-wishes-greetings/bwg-template4/bwg-template4.component';
 import { MiscellanousGreetingsComponent } from './templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
 import { MgTemplate1Component } from './templates/greetings/miscellanous-greetings/mg-template1/mg-template1.component';
+import { MgTemplate2Component } from './templates/greetings/miscellanous-greetings/mg-template2/mg-template2.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { MgTemplate1Component } from './templates/greetings/miscellanous-greetin
     BwgTemplate4Component,
     MiscellanousGreetingsComponent,
     MgTemplate1Component,
+    MgTemplate2Component,
   ],
   imports: [
     BrowserModule,
