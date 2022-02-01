@@ -14,10 +14,10 @@
       "id": "2",
       "category": "miscellanous-greetings",
       "type": "template2",
-      "label": "Template 2",
-      "description": "Let them all know! Invite them all for the birthday celebration of your loved ones!",
+      "label": "Valentine's Day",
+      "description": "Wish you loved ones on the eve of Valentine's Day",
       "images": [
-        "../assets/greetings/birthday-greetings/bg-template2/images/36321522405737710.gif"
+        "../assets/greetings/miscellanous-greetings/mg-template2/images/valentines-day-image.png"
       ]
     },
     {

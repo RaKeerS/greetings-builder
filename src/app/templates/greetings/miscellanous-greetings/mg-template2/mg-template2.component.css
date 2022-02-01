@@ -1,5 +1,5 @@
 :host {
-  display: flex;
+  display: initial;
 }
 
 #greetingTemplate {
@@ -14,7 +14,7 @@
 }
 
 .custom-font-family {
-  font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Courgette', cursive;
 }
 
 .es-desk-hidden {
