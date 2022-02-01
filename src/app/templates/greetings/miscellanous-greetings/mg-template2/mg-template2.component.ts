@@ -15,7 +15,7 @@ export class MgTemplate2Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = './../../assets/greetings/anime-greetings/ag-template1/images/Obito-Wallpaper-HD.jpg';
+  public imageUrl1: string = './../../assets/greetings/miscellanous-greetings/mg-template2/images/valentines-day-image.png';
 
   public domTemplateString: string = '';
 
