@@ -4,6 +4,7 @@ import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum
 import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
 import { MgTemplate1Component } from './mg-template1/mg-template1.component';
 import { MgTemplate2Component } from './mg-template2/mg-template2.component';
+import { MgTemplate3Component } from './mg-template3/mg-template3.component';
 
 @Component({
   selector: 'app-miscellanous-greetings',
@@ -39,7 +40,7 @@ export class MiscellanousGreetingsComponent implements OnInit {
       case 'dummy' : return 'dummy';
       case '1' : return MgTemplate1Component;
       case '2' : return MgTemplate2Component;
-      // case '3' : return BgTemplate3Component;
+      case '3' : return MgTemplate3Component;
       // case '4' : return BgTemplate4Component;
       case '5' : return TemplatedummyComponent;
       default: return 'dummy';

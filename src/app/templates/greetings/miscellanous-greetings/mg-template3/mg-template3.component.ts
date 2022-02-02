@@ -5,17 +5,17 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-mg-template2',
-  templateUrl: './mg-template2.component.html',
-  styleUrls: ['./mg-template2.component.css']
+  selector: 'app-mg-template3',
+  templateUrl: './mg-template3.component.html',
+  styleUrls: ['./mg-template3.component.css']
 })
-export class MgTemplate2Component implements OnInit {
+export class MgTemplate3Component implements OnInit {
 
   public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = './../../assets/greetings/miscellanous-greetings/mg-template2/images/valentines-day-image.png';
+  public imageUrl1: string = './../../assets/greetings/miscellanous-greetings/mg-template3/images/travel-image.png';
 
   public domTemplateString: string = '';
 
@@ -47,5 +47,4 @@ export class MgTemplate2Component implements OnInit {
         this.store.dispatch(new SelectTemplateDOMString(this.domTemplateString));
     });
   }
-
 }
