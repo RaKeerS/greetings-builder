@@ -5,6 +5,7 @@ import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templa
 import { MgTemplate1Component } from './mg-template1/mg-template1.component';
 import { MgTemplate2Component } from './mg-template2/mg-template2.component';
 import { MgTemplate3Component } from './mg-template3/mg-template3.component';
+import { MgTemplate4Component } from './mg-template4/mg-template4.component';
 
 @Component({
   selector: 'app-miscellanous-greetings',
@@ -41,7 +42,7 @@ export class MiscellanousGreetingsComponent implements OnInit {
       case '1' : return MgTemplate1Component;
       case '2' : return MgTemplate2Component;
       case '3' : return MgTemplate3Component;
-      // case '4' : return BgTemplate4Component;
+      case '4' : return MgTemplate4Component;
       case '5' : return TemplatedummyComponent;
       default: return 'dummy';
       }

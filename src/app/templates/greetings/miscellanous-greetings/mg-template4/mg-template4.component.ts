@@ -5,11 +5,11 @@ import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
 
 @Component({
-  selector: 'app-mg-template3',
-  templateUrl: './mg-template3.component.html',
-  styleUrls: ['./mg-template3.component.css']
+  selector: 'app-mg-template4',
+  templateUrl: './mg-template4.component.html',
+  styleUrls: ['./mg-template4.component.css']
 })
-export class MgTemplate3Component implements OnInit {
+export class MgTemplate4Component implements OnInit {
 
   public customMessage: string;
   public recipientName: string;
