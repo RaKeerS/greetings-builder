@@ -34,20 +34,10 @@
       "id": "4",
       "category": "miscellanous-greetings",
       "type": "template4",
-      "label": "Template 4",
-      "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
+      "label": "Happy Programming!",
+      "description": "To all the code developers around the world, here's something to relate with...",
       "images": [
-        "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
-      ]
-    },
-    {
-      "id": "5",
-      "category": "miscellanous-greetings",
-      "type": "dummy",
-      "label": "Template 5",
-      "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
-      "images": [
-        "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
+        "../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-1.png"
       ]
     }
   ]
