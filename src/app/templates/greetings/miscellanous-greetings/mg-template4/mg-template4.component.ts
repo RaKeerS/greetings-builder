@@ -15,7 +15,12 @@ export class MgTemplate4Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
-  public imageUrl1: string = './../../assets/greetings/miscellanous-greetings/mg-template3/images/travel-image.png';
+  public imageUrl1: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-1.png';
+  public imageUrl2: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-2.png';
+  public imageUrl3: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-3.png';
+  public imageUrl4: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-4.png';
+  public imageUrl5: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-5.png';
+  public imageUrl6: string = './../../assets/greetings/miscellanous-greetings/mg-template4/images/happy-programming-image-6.png';
 
   public domTemplateString: string = '';
 
@@ -35,6 +40,11 @@ export class MgTemplate4Component implements OnInit {
 
     // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
     this.storeImageData(this.imageUrl1);
+    this.storeImageData(this.imageUrl2);
+    this.storeImageData(this.imageUrl3);
+    this.storeImageData(this.imageUrl4);
+    this.storeImageData(this.imageUrl5);
+    this.storeImageData(this.imageUrl6);
   }
 
   private storeImageData(imageUrl: string) {
