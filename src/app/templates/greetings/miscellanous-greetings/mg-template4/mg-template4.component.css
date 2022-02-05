@@ -275,10 +275,20 @@ ol li {
 }
 
 .es-wrapper-color {
-  background: rgb(164,140,109);
-  background: -moz-radial-gradient(circle, rgba(164,140,109,1) 38%, rgba(88,102,163,1) 75%, rgba(30,42,88,1) 90%);
-  background: -webkit-radial-gradient(circle, rgba(164,140,109,1) 38%, rgba(88,102,163,1) 75%, rgba(30,42,88,1) 90%);
-  background: radial-gradient(circle, rgba(164,140,109,1) 38%, rgba(88,102,163,1) 75%, rgba(30,42,88,1) 90%);
+  background: rgb(255,255,255);
+  background: -moz-radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(185,184,239,1) 50%, rgba(87,108,210,1) 90%);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(185,184,239,1) 50%, rgba(87,108,210,1) 90%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(185,184,239,1) 50%, rgba(87,108,210,1) 90%);
+
+  /* background: rgb(255,255,255);
+  background: -moz-radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(185,184,239,1) 72%, rgba(87,108,210,1) 89%);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(185,184,239,1) 72%, rgba(87,108,210,1) 89%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(185,184,239,1) 72%, rgba(87,108,210,1) 89%); */
+
+  /* background: rgb(255,255,255);
+  background: -moz-radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(185,184,239,1) 65%, rgba(87,108,210,1) 89%);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(185,184,239,1) 65%, rgba(87,108,210,1) 89%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(185,184,239,1) 65%, rgba(87,108,210,1) 89%); */
 }
 
 .es-header {
