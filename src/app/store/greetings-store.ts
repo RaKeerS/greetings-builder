@@ -14,6 +14,7 @@ import { GreetingsModel } from '../model/greetings-model';
     currentTemplateDOMString: ' ',
     isEdit: false,
     isSaved: false,
+    isFormDirty: false
   }
 })
 @Injectable() // 'BirthdayGreetingsState' class should be decorated with @Injectable() right after the @State() decorator

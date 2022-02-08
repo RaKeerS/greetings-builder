@@ -1,11 +1,12 @@
-import { Component, HostListener, Injector, OnInit } from '@angular/core';
+import { Component, HostListener, Injector, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Actions, ofActionDispatched, Select } from '@ngxs/store';
+import { Actions, ofActionDispatched, Select, Store } from '@ngxs/store';
 import * as download from 'downloadjs';
 import * as htmlToImage from 'html-to-image';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
-import { SelectRouterOutlet } from 'src/app/actions/greetings-actions';
+import { SelectRouterOutlet, SetFormDirtyStatus } from 'src/app/actions/greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingsState } from 'src/app/store/greetings-store';
@@ -32,6 +33,8 @@ export class GreetingCardComponent implements OnInit {
   @Select(GreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
   @Select(GreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
 
+  @ViewChild('greetingCardForm') greetingCardForm!: NgForm;
+
   public componentInjector!: Injector;
 
   private subscription: Subscription | undefined;
@@ -55,7 +58,7 @@ export class GreetingCardComponent implements OnInit {
 
   constructor(private injector: Injector, private actions$: Actions,
     private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService,
-    private toastr: ToastrService) {
+    private toastr: ToastrService, private store: Store) {
   }
 
   ngOnInit(): void {
@@ -70,6 +73,8 @@ export class GreetingCardComponent implements OnInit {
   @HostListener('keyup')
   onInputKeyDown(event: KeyboardEvent) {
     this.initializeComponent(this.componentCategory, this.componentType);
+    // console.log('this.greetingCardForm.form.dirty: ', this.greetingCardForm.form.dirty);
+    this.store.dispatch(new SetFormDirtyStatus(this.greetingCardForm.form.dirty));
   }
 
   public subscribe() {

@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   private getTemplateData(): any {
     const currentTemplateCategory = this.store.selectSnapshot(GreetingsState.getCurrentTemplateCategory);
-    if (!!currentTemplateCategory) {
+    if (!!currentTemplateCategory && currentTemplateCategory.trim() != 'initial') {
       this.modalSvc.getTemplateData(currentTemplateCategory).then(data => { this.templateData = data; });
     }
     else {

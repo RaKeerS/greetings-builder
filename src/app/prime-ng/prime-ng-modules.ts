@@ -2,6 +2,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 import { ChipsModule } from 'primeng/chips';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -21,5 +22,6 @@ export const PrimeNGModules = [
   DialogModule,
   CarouselModule,
   ChipsModule,
-  InputTextareaModule
+  InputTextareaModule,
+  ConfirmDialogModule
 ]

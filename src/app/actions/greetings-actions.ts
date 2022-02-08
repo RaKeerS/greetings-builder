@@ -16,3 +16,8 @@ export class SelectCategory {
   static readonly type = '[Main Page] Select Category';
   constructor(public selectedCategory: string) {}
 }
+
+export class SetFormDirtyStatus {
+  static readonly type = '[Main Page] Set Form Status';
+  constructor(public setFormDirtyStatus: boolean) {}
+}
