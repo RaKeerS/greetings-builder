@@ -90,3 +90,13 @@
 .clickable, .clickable:hover {
   cursor: pointer !important;
 }
+
+::ng-deep .p-element.p-panelmenu-header {
+  cursor: pointer !important;
+}
+
+::ng-deep .p-confirm-dialog-reject.p-button {
+  /* color: #151515; */
+  color: black !important;
+  background-color: white !important;
+}

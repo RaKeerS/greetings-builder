@@ -6,4 +6,5 @@ export interface GreetingsModel {
   currentTemplateDOMString: string,
   isEdit: boolean;
   isSaved: boolean;
+  isFormDirty: boolean;
 }

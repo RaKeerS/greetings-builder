@@ -1,6 +1,12 @@
 import { Action, StateContext } from '@ngxs/store';
 
-import { SelectCategory, SelectRouterOutlet, SelectTemplate, SelectTemplateDOMString } from '../actions/greetings-actions';
+import {
+  SelectCategory,
+  SelectRouterOutlet,
+  SelectTemplate,
+  SelectTemplateDOMString,
+  SetFormDirtyStatus,
+} from '../actions/greetings-actions';
 import { GreetingsModel } from './greetings-model';
 
 export class GreetingsActionsModel {
@@ -40,6 +46,15 @@ export class GreetingsActionsModel {
     ctx.setState({
       ...state,
       currentTemplateCategory: payload.selectedCategory
+    })
+  }
+
+  @Action(SetFormDirtyStatus)
+  public setFormDirtyStatus(ctx: StateContext<GreetingsModel>, payload: SetFormDirtyStatus) {
+    const state = ctx.getState();
+    ctx.setState({
+      ...state,
+      isFormDirty: payload.setFormDirtyStatus
     })
   }
 
