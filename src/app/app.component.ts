@@ -34,26 +34,26 @@ export class AppComponent {
       {
         label: 'Anime',
         icon: 'pi pi-fw pi-file',
-        routerLink: this.isFormEdited ? undefined : 'home',
-        command: () => this.isFormEdited ? this.showConfirmationDialog('anime-greetings') : this.store.dispatch(new SelectCategory('anime-greetings'))
+        // routerLink: this.isFormEdited ? ' ' : 'home', // removing this piece of code as, adding undefined or a whitespace would trigger it to be redirected to '/home', which in turn always triggers the routing module.
+        command: () => this.isFormEdited ? this.showConfirmationDialog('anime-greetings') : this.redirectUrl('anime-greetings')
       },
       {
         label: 'Birthday',
         icon: 'pi pi-fw pi-pencil',
-        routerLink: this.isFormEdited ? undefined : 'home',
-        command: () => this.isFormEdited ? this.showConfirmationDialog('birthday-greetings') : this.store.dispatch(new SelectCategory('birthday-greetings'))
+        // routerLink: this.isFormEdited ? undefined : 'home',
+        command: () => this.isFormEdited ? this.showConfirmationDialog('birthday-greetings') : this.redirectUrl('birthday-greetings')
       },
       {
         label: 'Best Wishes',
         icon: 'pi pi-fw pi-user',
-        routerLink: this.isFormEdited ? undefined : 'home',
-        command: () => this.isFormEdited ? this.showConfirmationDialog('best-wishes-greetings') : this.store.dispatch(new SelectCategory('best-wishes-greetings'))
+        // routerLink: this.isFormEdited ? undefined : 'home',
+        command: () => this.isFormEdited ? this.showConfirmationDialog('best-wishes-greetings') : this.redirectUrl('best-wishes-greetings')
       },
       {
         label:'Miscellanous',
         icon:'pi pi-fw pi-star',
-        routerLink: this.isFormEdited ? undefined : 'home',
-        command: () => this.isFormEdited ? this.showConfirmationDialog('miscellanous-greetings') : this.store.dispatch(new SelectCategory('miscellanous-greetings'))
+        // routerLink: this.isFormEdited ? undefined : 'home',
+        command: () => this.isFormEdited ? this.showConfirmationDialog('miscellanous-greetings') : this.redirectUrl('miscellanous-greetings')
       },
       {
         label:'Quit',
@@ -75,7 +75,12 @@ export class AppComponent {
     // let bbc = this.Cards;
   }
 
-  showConfirmationDialog(category: string) {
+  redirectUrl(category: string): void {
+    this.router.navigate(['/home']);
+    this.store.dispatch(new SelectCategory(category))
+  }
+
+  showConfirmationDialog(category: string): void {
     this.confirmationService.confirm({
         message: 'You will lose all current changes. Are you sure that you want to perform this action?',
         header: 'Confirmation',
