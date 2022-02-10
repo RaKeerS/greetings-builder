@@ -31,9 +31,6 @@ export class AgTemplate9Component implements OnInit {
   }
 
   ngAfterViewInit() {
-    // this.store.dispatch(new SelectTemplateDOMString(this.greetingTemplate.nativeElement.outerHTML));
-    // this.toDataURL('https://www.gravatar.com/avatar/d50c83cc0c6523b4d3f6085295c953e0');
-
     this.domTemplateString = this.greetingTemplate.nativeElement.outerHTML;
 
     // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
