@@ -3,7 +3,6 @@
 }
 
 #greetingTemplate {
-  /* height: 100%; */
   padding: 5% 0%;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .custom-font-family {
-  /* font-family: 'Twinkle Star', cursive; */
   font-family: 'Comfortaa', cursive;
 }
 
