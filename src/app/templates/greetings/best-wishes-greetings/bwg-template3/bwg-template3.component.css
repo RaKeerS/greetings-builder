@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5 {
 }
 
 #greetingTemplate {
-  /* height: 100%; */
   padding: 5% 0%;
 }
 
@@ -31,7 +30,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .custom-font-family {
-  /* font-family: 'Twinkle Star', cursive; */
   font-family: 'Comfortaa', cursive;
 }
 
