@@ -26,7 +26,6 @@ export class AnimeGreetingsComponent implements OnInit {
   }
 
   static getComponentType(componentType: string) {
-    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
@@ -45,7 +44,6 @@ export class AnimeGreetingsComponent implements OnInit {
   }
 
   static getComponent(componentType: string) {
-    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return TemplatedummyComponent;
