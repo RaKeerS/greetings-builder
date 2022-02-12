@@ -9,6 +9,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   margin-left: 10px;
+  padding-bottom: 0px;
 }
 
 /* :host(::ng-deep .p-splitter-panel-nested) {

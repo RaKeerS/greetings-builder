@@ -1,9 +1,23 @@
+/* Page Specific CSS */
+
+:host {
+  display: table !important;
+  height: 100% !important;
+}
+
+#greetingTemplate {
+  padding: 5% 0% !important;
+  height: 100% !important;
+}
+
+
+/* Generic CSS */
+
 :host {
   display: flex;
 }
 
 #greetingTemplate {
-  /* height: 100%; */
   padding: 5% 0%;
 }
 
@@ -11,8 +25,6 @@
 .es-content-body {
   height: 65%;
   width: 85%;
-  /* height: auto;
-  width: 80%; */
 }
 
 .es-desk-hidden {
