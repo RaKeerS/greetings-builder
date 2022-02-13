@@ -1,9 +1,23 @@
+/* Page Specific CSS */
+
+:host {
+  display: table !important;
+  height: 100% !important;
+}
+
+#greetingTemplate {
+  padding: 5% 0% !important;
+  height: 100% !important;
+}
+
+
+/* Generic CSS */
+
 :host {
   display: flex;
 }
 
 #greetingTemplate {
-  /* height: 100%; */
   padding: 5% 0%;
 }
 
@@ -14,7 +28,6 @@
 }
 
 .custom-font-family {
-  /* font-family: 'Twinkle Star', cursive; */
   font-family: 'Comfortaa', cursive;
 }
 

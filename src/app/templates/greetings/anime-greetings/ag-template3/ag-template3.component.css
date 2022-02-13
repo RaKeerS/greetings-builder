@@ -1,3 +1,18 @@
+/* Page Specific CSS */
+
+:host {
+  display: table !important;
+  height: 100% !important;
+}
+
+#greetingTemplate {
+  padding: 5% 0% !important;
+  height: 100% !important;
+}
+
+
+/* Generic CSS */
+
 :host {
   display: flex;
 }
