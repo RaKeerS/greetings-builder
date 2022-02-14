@@ -14,25 +14,10 @@ import { BgTemplate4Component } from './bg-template4/bg-template4.component';
 })
 export class BirthdayGreetingsComponent implements OnInit {
 
-  // public recipientName: string;
-  // public customMessage: string;
-  // public recipientAddressCC: string;
-  // public recipientAddressBCC: string;
-  // public senderName: string;
-
-  constructor() {
-    // this.recipientName = this.modalData.inputData?.recipientName!;
-    // this.customMessage = this.modalData.inputData?.customMessage!;
-    // this.recipientAddressCC = this.modalData.inputData?.recipientAddressCC!;
-    // this.recipientAddressBCC = this.modalData.inputData?.recipientAddressBCC!;
-    // this.senderName = this.modalData.inputData?.senderName || '';
-  }
-
   ngOnInit(): void {
   }
 
   static getComponentType(componentType: string) {
-    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
@@ -46,7 +31,6 @@ export class BirthdayGreetingsComponent implements OnInit {
   }
 
   static getComponent(componentType: string) {
-    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
     switch(componentTypeValue) {
       case 'dummy' : return 'dummy';
