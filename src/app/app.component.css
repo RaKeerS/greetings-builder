@@ -2,7 +2,6 @@
 
 ::ng-deep .p-splitter-panel-nested {
   padding: 10px;
-  /* overflow: auto; */
   height: 100.4vh;
 }
 
@@ -32,15 +31,7 @@
   border-radius: 0px;
 }
 
-/* ::ng-deep
-  .p-panelmenu
-  .p-panelmenu-header:not(.p-highlight):not(.p-disabled)
-  > a:hover {
-  color: black;
-} */
-
 ::ng-deep .custom-button {
-  /* width: 5rem; */
   font-size: small;
 }
 
@@ -59,7 +50,6 @@
 /***************** Custom CSS *****************/
 
 ::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
-  /* overflow: auto !important; */
   overflow-y: auto !important;
   height: auto;
 }
@@ -96,7 +86,6 @@
 }
 
 ::ng-deep .p-confirm-dialog-reject.p-button {
-  /* color: #151515; */
   color: black !important;
   background-color: white !important;
 }

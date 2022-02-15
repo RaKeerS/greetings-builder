@@ -12,14 +12,9 @@
       </p-menubar>
       <div class="d-flex">
         <p-panelMenu [style.width]="'12%'" [model]="items" [style]="{ 'height': '100.6vh', 'background-color': '#2a323d' }"></p-panelMenu>
-        <!-- <p-splitter [style.width]="'88%'" [style.height]="'100vh'" [style.overflow]="'auto'" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal"> -->
         <p-splitter [style.width]="'88%'" [minSizes]="[10, 20]" [gutterSize]="5" [panelSizes]="[5, 80]" layout="horizontal">
-          <!-- <ng-template pTemplate>
-            <p-panelMenu [model]="items" [style]="{'width':'100%', 'height': '100vh'}"></p-panelMenu>
-          </ng-template> -->
           <ng-template pTemplate>
             <router-outlet></router-outlet>
-            <!-- <a routerLink="/greetings">Click</a> -->
           </ng-template>
         </p-splitter>
       </div>

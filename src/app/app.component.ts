@@ -60,19 +60,11 @@ export class AppComponent {
         icon:'pi pi-fw pi-power-off'
       }
     ];
-
-    // this.tempLabel = this.store.select(state => state.global.currentTemplateLabel);
-    // this.tempLabel = this.store.selectSnapshot(state => state.global.currentTemplateLabel);
   }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.store.dispatch(new SelectRouterOutlet('greetings')); // TODO: Will have to remove this later on, as it is not needed.
-  }
-
-  ngAfterViewInit() {
-    // let abc = Math.floor(this.customcontainer1.nativeElement.clientWidth / this.customcard1.nativeElement.clientWidth);
-    // let bbc = this.Cards;
   }
 
   redirectUrl(category: string): void {
@@ -95,13 +87,6 @@ export class AppComponent {
 
   get isFormEdited(): boolean {
     return this.store.selectSnapshot(state => state.global.isFormDirty);
-  }
-
-  get containerWidth(): number {
-    // return 0;
-    // return Math.floor(this.customcontainer1?.nativeElement.clientWidth / this.customcard1?.nativeElement.clientWidth);
-    return Math.floor(this.customcontainer1?.nativeElement.clientWidth / 100);
-    // return Math.floor(($('#custom-container-1')).clientWidth / (<any>$('#custom-card-1')).clientWidth);
   }
 
   get routerName(): string {
