@@ -4,7 +4,7 @@
       "id": "1",
       "category": "birthday-greetings",
       "type": "template1",
-      "label": "Template 1",
+      "label": "Birthday Invitation",
       "description": "Wish your dear ones by calling out for a huge celebration!!",
       "images": [
         "../assets/greetings/birthday-greetings/bg-template1/images/36441502442545607.jpg"
@@ -14,7 +14,7 @@
       "id": "2",
       "category": "birthday-greetings",
       "type": "template2",
-      "label": "Template 2",
+      "label": "Birthday Wishes",
       "description": "Let them all know! Invite them all for the birthday celebration of your loved ones!",
       "images": [
         "../assets/greetings/birthday-greetings/bg-template2/images/36321522405737710.gif"
@@ -24,7 +24,7 @@
       "id": "3",
       "category": "birthday-greetings",
       "type": "template3",
-      "label": "Template 3",
+      "label": "3rd Anniversay",
       "description": "Invite them all for your loved Ones, 3rd anniversary! Comon what are you waiting for!?",
       "images": [
         "../assets/greetings/birthday-greetings/bg-template3/images/1451577359453383.png"
@@ -34,18 +34,8 @@
       "id": "4",
       "category": "birthday-greetings",
       "type": "template4",
-      "label": "Template 4",
-      "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
-      "images": [
-        "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
-      ]
-    },
-    {
-      "id": "5",
-      "category": "birthday-greetings",
-      "type": "dummy",
-      "label": "Template 5",
-      "description": "The rogue ninja of the Hidden Mist, user of Samehada. Kisame Hoshigaki was an S-rank Missing-nin from Kirigakure and one of Akatsuki's most powerful members. Prior to defecting from his village, he was one of the most powerful members of the Seven Ninja Swordsmen of the Mist. His partner was none other than Itachi Uchiha of course.",
+      "label": "Birthday Celebration",
+      "description": "Wish them, throw a party, get excited!! Coz, it's their birthday!!",
       "images": [
         "../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg"
       ]
