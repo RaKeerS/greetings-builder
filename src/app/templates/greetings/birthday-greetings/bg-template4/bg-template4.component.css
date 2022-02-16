@@ -285,9 +285,12 @@ ol li {
 }
 
 .es-wrapper-color {
-  /* background-color: #EFEFEF; */
   background-color: #d3ba0a;
   background-color: #f7f6f2;
+  background: rgb(255,255,255);
+  background: -moz-radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(1,1,1,1) 80%);
+  background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(1,1,1,1) 80%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(1,1,1,1) 80%);
 }
 
 .es-header {
