@@ -63,7 +63,6 @@ export class GreetingCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscribe();
-    //  this.initializeComponent();
   }
 
   ngOnDestroy(): void {
@@ -73,12 +72,10 @@ export class GreetingCardComponent implements OnInit {
   @HostListener('keyup')
   onInputKeyDown(event: KeyboardEvent) {
     this.initializeComponent(this.componentCategory, this.componentType);
-    // console.log('this.greetingCardForm.form.dirty: ', this.greetingCardForm.form.dirty);
     this.store.dispatch(new SetFormDirtyStatus(this.greetingCardForm.form.dirty));
   }
 
   public subscribe() {
-    // this.currentTemplateLabel$.subscribe(value => this.componentLabel = this.getComponent(value));
     this.subscription = this.currentTemplateType$.subscribe(value => this.componentType = value);
     this.subscription = this.currentTemplateCategory$.subscribe(value => this.initializeComponent(value, this.componentType));
     this.subscription = this.currentTemplateId$.subscribe(value => this.componentId = value);
@@ -87,13 +84,10 @@ export class GreetingCardComponent implements OnInit {
     let urlSegment: string;
     this.subscription = this.router.firstChild?.url.subscribe(value => urlSegment = value[0].toString());
     this.subscription = this.router.firstChild?.params.subscribe((params: Params) => this.initializeComponent(urlSegment, params.id));
-    // this.refreshRouterOutlet();
   }
 
   private getComponent(componentCategory: GreetingsTemplateCategoryEnum, componentType: string) {
-    // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     switch(componentCategory) {
-      case GreetingsTemplateCategoryEnum.dummy : return TemplatedummyComponent;
       case GreetingsTemplateCategoryEnum['anime-greetings'] : {
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
@@ -110,7 +104,7 @@ export class GreetingCardComponent implements OnInit {
         this.componentType = AnimeGreetingsComponent.getComponentType(componentType);
         return AnimeGreetingsComponent.getComponent(componentType);
       };
-      case GreetingsTemplateCategoryEnum['birthday-greetings'] : { // TODO: Need to change the switch case option to 'birthday-greeting' instead of 'greeting-style1' and make new component titled BirthdayGreetings instead of GreetingStyle1Component
+      case GreetingsTemplateCategoryEnum['birthday-greetings'] : {
         (this.componentData as ModalData<GreetingData>) = {
           inputData: {
             emailSubject: this.emailSubject,
@@ -158,6 +152,7 @@ export class GreetingCardComponent implements OnInit {
         this.componentType = MiscellanousGreetingsComponent.getComponentType(componentType);
         return MiscellanousGreetingsComponent.getComponent(componentType);
       };
+      case GreetingsTemplateCategoryEnum.dummy : return TemplatedummyComponent;
       default:
         this.componentType = TemplatedummyComponent.getComponentType(componentType);
         return TemplatedummyComponent.getComponent(componentType);
@@ -166,7 +161,6 @@ export class GreetingCardComponent implements OnInit {
 
   private initializeComponent(componentCategory: string, componentType: string) {
     this.componentCategory = componentCategory;
-    // this.componentType = componentType;
     this.componentName = this.getComponent((<any>GreetingsTemplateCategoryEnum)[componentCategory], componentType);
     this.componentInjector = Injector.create({ providers: [{ provide: ModalData, useClass: ModalData, useValue: this.componentData }], parent: this.injector });
   }
@@ -177,7 +171,6 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public submitTemplateDetails() {
-    // this.initializeComponent(this.componentCategory, this.componentType);
     this.getComponent((<any>GreetingsTemplateCategoryEnum)[this.componentCategory], this.componentType);
     const requestBody = {
       params: (this.componentData as ModalData<GreetingData>).inputData,
@@ -189,11 +182,6 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public downloadTemplate() {
-    // import * as htmlToImage from 'html-to-image';
-  // let htmlToImage = require('html-to-image');
-
-    // console.log('Inside html-to-image: ', domElement);
-
     console.log('greetingTemplate: ', document.getElementById('greetingTemplate'));
 
     const tempDom: any = document.getElementById('greetingTemplate');
