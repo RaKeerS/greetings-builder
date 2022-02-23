@@ -31,10 +31,17 @@ export class HomeComponent implements OnInit {
   private getTemplateData(): any {
     const currentTemplateCategory = this.store.selectSnapshot(GreetingsState.getCurrentTemplateCategory);
     if (!!currentTemplateCategory && currentTemplateCategory.trim() != 'initial') {
-      this.modalSvc.getTemplateData(currentTemplateCategory).then(data => { this.templateData = data; });
+      this.modalSvc.getTemplateData(currentTemplateCategory)
+      .then(
+        data => { this.templateData = data; },
+        error => { // adding error handling
+          console.error('Error Here: ', error.message);
+          this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+        });
     }
     else {
-      this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+      this.modalSvc.getTemplateData('anime-greetings')
+        .then(data => { this.templateData = data; console.log('data: ', data); }, error => console.error('Error: ', error.message));
     }
   }
 
