@@ -14,9 +14,9 @@ export class ModalTemplateService {
 
   public getTemplateData(sourceDataCategory: string): Promise<any> {
     return this.http.get<any>(`assets/source-data/${sourceDataCategory}-data.json`)
-      .toPromise()
-      .then(res => <ModalTypes>res.data)
-      .then(data => data);
+      .toPromise().catch(error => error) // 'catch' needs to be added here in the pipeline, as when there is any error in the get call, it would be captured in 'catch' block
+      .then(res => <ModalTypes>res?.data) // nextly, it would forward the flow to this block, where we check if the 'response' contains data if and typecast it.
+      .then(data => data); // lastly, in this last block we get the typecasted 'res.data' value, however, if there is any api error, it would not contain the 'data' property, and it will return undefined
   }
 
   public postTemplateData(body: any): Observable<any> {
