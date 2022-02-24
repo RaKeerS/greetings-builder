@@ -33,15 +33,16 @@ export class HomeComponent implements OnInit {
     if (!!currentTemplateCategory && currentTemplateCategory.trim() != 'initial') {
       this.modalSvc.getTemplateData(currentTemplateCategory)
       .then(
-        data => { this.templateData = data; },
-        error => { // adding error handling
-          console.error('Error Here: ', error.message);
-          this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+        data => {
+          if(!!data) { // Since we send 'undefined' when we encounter an error api call, the else condition will be executed and another api-call to fetch default data will be done.
+            this.templateData = data;
+          } else {
+            this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+          }
         });
     }
     else {
-      this.modalSvc.getTemplateData('anime-greetings')
-        .then(data => { this.templateData = data; console.log('data: ', data); }, error => console.error('Error: ', error.message));
+      this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
     }
   }
 
