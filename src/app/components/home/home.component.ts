@@ -57,7 +57,6 @@ export class HomeComponent implements OnInit {
       if (!!value) {
         this.templateData = []; // This line is just for debugging, to check if the values actually do change or not. Remove it later on.
         this.modalSvc.getTemplateData(value).then(data => this.templateData = data );
-        // alert('Changed!!!!');
       }
     })
   }

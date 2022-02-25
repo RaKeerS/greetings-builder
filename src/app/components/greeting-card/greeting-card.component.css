@@ -1,21 +1,10 @@
 /**************** Predefined CSS ****************/
 
-/* ::ng-deep .p-splitter-panel.p-splitter-panel-nested {
-  overflow-x: hidden;
-  overflow-y: hidden;
-} */
-
 :host(::ng-deep .internal-splitter) .p-splitter-panel.p-splitter-panel-nested {
   overflow-x: hidden;
   overflow-y: hidden;
-  /* margin-left: 10px; */
   padding-bottom: 0px;
 }
-
-/* :host(::ng-deep .p-splitter-panel-nested) {
-  overflow-y: hidden !important;
-} */
-
 
 ::ng-deep .p-chips.p-component {
   width: 100%;
