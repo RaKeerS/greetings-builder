@@ -1,16 +1,10 @@
 :host {
-  /* height: 110%; */
   display: initial;
 }
 
 #greetingTemplate {
-  /* height: 100%; */
   padding: 5% 0%;
 }
-
-/* .background-layer {
-  background-image: "../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-1.png";
-} */
 
 /* A must add CSS */
 .es-content-body {
@@ -19,14 +13,12 @@
 }
 
 .custom-font-family {
-  /* font-family: 'Twinkle Star', cursive; */
   font-family: 'Architects Daughter', cursive;
 }
 
 .adapt-img {
   width: 100%;
   height: auto;
-  /* background-color: black; */
 }
 
 .es-desk-hidden {
