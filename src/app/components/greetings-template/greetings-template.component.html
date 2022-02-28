@@ -9,17 +9,6 @@
     </ng-template>
 </p-card>
 
-<div class="d-flex">
-  <p>{{currentTemplateLabel}}</p>
-  &nbsp;
-  <p>{{currentTemplateNumber}}</p>
-  <br>
-  <p>
-    <button class="btn btn-default" type="button" (click)="doThis()">Test Here!</button>
-  </p>
-</div>
-
-
 <p-dialog header="{{templateInfo.label}}" [(visible)]="displayDialog" [style]="{width: '50vw'}" [dismissableMask]="true" [modal]="true">
   <p-carousel [value]="templateInfo.images" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
     <ng-template let-template pTemplate="item">
