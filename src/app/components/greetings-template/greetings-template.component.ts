@@ -53,10 +53,6 @@ export class GreetingsTemplateComponent implements OnInit {
     return this.store.selectSnapshot(state => state.global.currentTemplateNumber);
   }
 
-  public doThis() {
-    this.store.dispatch(new SelectTemplate('category', 'general-type', 1));
-  }
-
   public showTemplate() {
     this.displayDialog = true;
   }
