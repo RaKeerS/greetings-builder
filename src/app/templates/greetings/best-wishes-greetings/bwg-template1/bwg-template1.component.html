@@ -39,7 +39,11 @@
                                                   class="esd-block-text es-m-txt-c es-p20t es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="textElementHandler" align="center">
                                                   <h1 class="custom-font-family" style="color: rgb(227 163 58); font-size: 32px;">
-                                                    Dear {{recipientName}},
+                                                    Dear
+                                                    <ng-container *ngIf="!recipientName">
+                                                      {{defaultRecipientName}}
+                                                    </ng-container>
+                                                    {{recipientName}},
                                                   </h1>
                                                 </td>
                                               </tr>
@@ -48,8 +52,9 @@
                                                   class="esd-block-text es-m-txt-c es-p10t es-p20b es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="textElementHandler" align="center">
                                                   <p class="custom-font-family" style="color: white; font-size: 16px; word-break: break-word;">
-                                                    For jewelry with your birthstone.
-                                                    Traditional, ancient or modern - see below.
+                                                    <ng-container *ngIf="!customMessage">
+                                                      {{defaultCustomMessage}}
+                                                    </ng-container>
                                                     {{customMessage}}
                                                   </p>
                                                 </td>
@@ -60,6 +65,9 @@
                                                   esd-handler-name="btnBlockHandler" align="center">
                                                   <span>
                                                     From, <br>
+                                                    <ng-container *ngIf="!senderName">
+                                                      {{defaultSenderName}}
+                                                    </ng-container>
                                                     {{senderName}}
                                                   </span>
                                                 </td>
