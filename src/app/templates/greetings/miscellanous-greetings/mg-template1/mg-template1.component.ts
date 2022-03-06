@@ -39,6 +39,18 @@ export class MgTemplate1Component implements OnInit {
     this.storeImageData(this.imageUrl2);
   }
 
+  get defaultCustomMessage(): string {
+    return "<< Type text in the 'Custom Message' in the left section to see the changes here! >>";
+  }
+
+  get defaultRecipientName(): string {
+    return "'Recipient Name'";
+  }
+
+  get defaultSenderName(): string {
+    return "'Sender Name'";
+  }
+
   private storeImageData(imageUrl: string) {
     this.modalSvc.toDataURL(imageUrl)
       .then(response => {
