@@ -11,6 +11,7 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 })
 export class BgTemplate4Component implements OnInit {
 
+  public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
@@ -21,6 +22,7 @@ export class BgTemplate4Component implements OnInit {
   @ViewChild('greetingTemplate') greetingTemplate!: ElementRef;
 
   constructor(public modalData: ModalData<GreetingData>, private store: Store, private modalSvc: ModalTemplateService) {
+    this.customMessage = this.modalData.inputData?.customMessage!;
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.senderName = this.modalData.inputData?.senderName || '';
   }
@@ -33,6 +35,18 @@ export class BgTemplate4Component implements OnInit {
 
     // Replace all file paths with template handlers. Call the below function multiple times in case of multiple images.
     this.storeImageData(this.imageUrl1);
+  }
+
+  get defaultCustomMessage(): string {
+    return "<< Type text in the 'Custom Message' in the left section to see the changes here! >>";
+  }
+
+  get defaultRecipientName(): string {
+    return "'Recipient Name'";
+  }
+
+  get defaultSenderName(): string {
+    return "'Sender Name'";
   }
 
   private storeImageData(imageUrl: string) {
