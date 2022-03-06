@@ -45,19 +45,27 @@
                     <table class="es-left" style="height: auto; width: 100%;" cellspacing="0" cellpadding="0" align="left">
                       <tr>
                         <td class="es-m-p20b" width="187" align="center">
-                          <table width="100%" style="height: auto; width: 80%; margin-top: 7em;" cellspacing="0" cellpadding="0" role="presentation">
+                          <table width="100%" style="height: auto; width: 80%;" cellspacing="0" cellpadding="0" role="presentation">
                             <tr>
                               <td class="es-p15t" align="center">
-                                <p style="line-height: 150%;color: #ffffff">
+                                <p style="line-height: 200%; height: 250px; color: #ffffff">
                                   <span style="font-size:16px">
                                     <span
                                       style="font-family: arial,helvetica neue,helvetica,sans-serif">
                                       <span style="line-height: 150%">
-                                        <span style="font-size: 20px;line-height: 36px"> Dear {{recipientName}}, </span>
+                                        <span style="font-size: 20px;line-height: 36px">
+                                          Dear
+                                          <ng-container *ngIf="!recipientName">
+                                            {{defaultRecipientName}}
+                                          </ng-container>
+                                          {{recipientName}}, </span>
                                         <br>
-                                        it's your birthday and we
-                                        think you deserve a little
-                                        gift
+                                        it's your birthday and we think you deserve a little gift
+                                        <br>
+                                        <ng-container *ngIf="!customMessage">
+                                          {{defaultCustomMessage}}
+                                        </ng-container>
+                                        {{customMessage}}
                                       </span>
                                     </span>
                                   </span>
@@ -68,9 +76,13 @@
                               <td class="es-p10t es-p20b" align="center">
                                 <p style="color: #ffffff;line-height: 150%">
                                   <span style="font-family: playfair display,georgia,times new roman,serif;line-height: 150%">
-                                    <span style="font-size: 24px;line-height: 98px">
-                                      <span style="line-height: 150%">From, <br>
-                                        <span style="font-size: 24px;line-height: 36px"> {{senderName}} </span>
+                                    <span style="font-size: 24px;">
+                                      <span style="line-height: 150%">
+                                        From, <br>
+                                        <ng-container *ngIf="!senderName">
+                                          {{defaultSenderName}}
+                                        </ng-container>
+                                        {{senderName}}
                                       </span>
                                     </span>
                                   </span>
