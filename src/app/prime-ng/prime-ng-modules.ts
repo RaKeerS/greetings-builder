@@ -4,6 +4,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { ChipsModule } from 'primeng/chips';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
+import { DividerModule } from 'primeng/divider';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MenubarModule } from 'primeng/menubar';
@@ -20,6 +22,8 @@ export const PrimeNGModules = [
   CardModule,
   StyleClassModule,
   DialogModule,
+  DividerModule,
+  DynamicDialogModule,
   CarouselModule,
   ChipsModule,
   InputTextareaModule,

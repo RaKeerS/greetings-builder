@@ -2,19 +2,23 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
 import { ConfirmationService, MenuItem, PrimeNGConfig } from 'primeng/api';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Observable } from 'rxjs';
 
 import { SelectCategory, SelectRouterOutlet, SetFormDirtyStatus } from './actions/greetings-actions';
+import { HelpComponent } from './components/help/help.component';
 import { GreetingsState } from './store/greetings-store';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ConfirmationService] // This is done since this service is currently needed in just one component, hence it is scoped to be provided in only this component to improve app efficiency
+  providers: [ConfirmationService, DialogService] // This is done since this service is currently needed in just one component, hence it is scoped to be provided in only this component to improve app efficiency
 })
 export class AppComponent {
   title = 'birthday-greetings';
+
+  ref!: DynamicDialogRef;
 
   public items: MenuItem[];
 
@@ -29,7 +33,7 @@ export class AppComponent {
   @ViewChild('Cards') Cards!: ElementRef;
 
   constructor(private primengConfig: PrimeNGConfig, private store: Store, private confirmationService: ConfirmationService,
-    private router: Router) {
+    private router: Router, private dialogService: DialogService) {
     this.items = [
       {
         label: 'Anime',
@@ -67,9 +71,26 @@ export class AppComponent {
     this.store.dispatch(new SelectRouterOutlet('greetings')); // TODO: Will have to remove this later on, as it is not needed.
   }
 
+  ngOnDestroy() {
+    if (this.ref) {
+        this.ref.close();
+    }
+  }
+
   redirectUrl(category: string): void {
     this.router.navigate(['/home']);
     this.store.dispatch(new SelectCategory(category))
+  }
+
+  showHelpDialog() {
+    this.ref = this.dialogService.open(
+      HelpComponent, {
+        header: 'Help Page',
+        width: '70%',
+        contentStyle: {"max-height": "500px", "overflow": "auto"},
+        baseZIndex: 10000
+      }
+    )
   }
 
   showConfirmationDialog(category: string): void {
