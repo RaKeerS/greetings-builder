@@ -5,6 +5,7 @@ import { Actions, ofActionDispatched, Select, Store } from '@ngxs/store';
 import * as download from 'downloadjs';
 import * as htmlToImage from 'html-to-image';
 import { ToastrService } from 'ngx-toastr';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Observable, Subscription } from 'rxjs';
 import { SelectRouterOutlet, SetFormDirtyStatus } from 'src/app/actions/greetings-actions';
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
@@ -20,6 +21,8 @@ import {
 } from 'src/app/templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
 import { GreetingData, ModalData } from 'src/app/types/modal-types';
+
+import { HelpComponent } from '../help/help.component';
 
 @Component({
   selector: 'app-greeting-card',
@@ -53,12 +56,14 @@ export class GreetingCardComponent implements OnInit {
   public recipientAddress!: string[];
   public recipientAddressCC: string[] = [];
   public recipientAddressBCC: string[] = [];
+  public ref!: DynamicDialogRef;
   public senderAddress!: string;
   public senderName: string = '';
 
   constructor(private injector: Injector, private actions$: Actions,
     private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService,
-    private toastr: ToastrService, private store: Store) {
+    private toastr: ToastrService, private store: Store,
+    private dialogService: DialogService) {
   }
 
   ngOnInit(): void {
@@ -195,6 +200,17 @@ export class GreetingCardComponent implements OnInit {
       this.toastr.info('Please check your browser\'s download section', 'Info');
       tempDom.style.overflow = 'auto';
     }, error => this.toastr.error(error, 'Error'));
+  }
+
+  showHelpDialog() {
+    this.ref = this.dialogService.open(
+      HelpComponent, {
+        header: 'Help Page',
+        width: '70%',
+        contentStyle: {"max-height": "500px", "overflow": "auto"},
+        baseZIndex: 10000
+      }
+    )
   }
 
 }
