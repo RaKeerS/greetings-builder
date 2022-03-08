@@ -88,7 +88,8 @@ export class AppComponent {
         header: 'Help Page',
         width: '70%',
         contentStyle: {"max-height": "500px", "overflow": "auto"},
-        baseZIndex: 10000
+        baseZIndex: 10000,
+        dismissableMask: true,
       }
     )
   }
