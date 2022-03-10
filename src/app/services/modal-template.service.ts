@@ -29,9 +29,7 @@ export class ModalTemplateService {
       xhr.onload = () => {
         var reader = new FileReader();
         reader.onloadend = () => {
-          // imageUrl = callbackFn(reader.result, 'abc');
           resolve(reader.result);
-          // console.log(this.imageUrl1);
         }
         reader.onerror = error => reject(error);
         reader.readAsDataURL(xhr.response);

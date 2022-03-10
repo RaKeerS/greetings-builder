@@ -24,11 +24,9 @@ export class TemplatedummyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('GreetingStyle1 InputData: ', this.modalData.inputData);
   }
 
   ngAfterViewInit(): void {
-    console.log('greetingTemplate: ', this.greetingTemplate.nativeElement.outerHTML);
     this.store.dispatch(new SelectTemplateDOMString(this.greetingTemplate.nativeElement.outerHTML));
   }
 

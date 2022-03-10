@@ -37,12 +37,12 @@ export class HomeComponent implements OnInit {
           if(!!data) { // Since we send 'undefined' when we encounter an error api call, the else condition will be executed and another api-call to fetch default data will be done.
             this.templateData = data;
           } else {
-            this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+            this.modalSvc.getTemplateData('anime-greetings').then(data => this.templateData = data );
           }
         });
     }
     else {
-      this.modalSvc.getTemplateData('anime-greetings').then(data => { this.templateData = data; console.log('data: ', data); });
+      this.modalSvc.getTemplateData('anime-greetings').then(data => this.templateData = data);
     }
   }
 
