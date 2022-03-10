@@ -22,7 +22,6 @@ export class GreetingsTemplateComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log('templateInfo', this.templateInfo);
   }
 
   private setResponsiveOptions() {

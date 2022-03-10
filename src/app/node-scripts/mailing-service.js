@@ -30,7 +30,6 @@ exports.sendMail = function(reqParams, fileName, filePath, template) { // TODO: 
 
   return transporter.sendMail(mailOptions).then(info => {
       if (info) {
-        console.log('Email success: ', info.response);
         return { success: 'Email Sent Successfully!' };
       }
     },

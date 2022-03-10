@@ -187,14 +187,11 @@ export class GreetingCardComponent implements OnInit {
   }
 
   public downloadTemplate() {
-    console.log('greetingTemplate: ', document.getElementById('greetingTemplate'));
-
     const tempDom: any = document.getElementById('greetingTemplate');
     tempDom.style.overflow = 'unset';
 
     htmlToImage.toPng<any>(tempDom)
     .then((dataUrl) => {
-      console.log('Inside html-to-image: ', dataUrl);
       let date = new Date();
       download(dataUrl, `output-image-${date.getTime()}.png`);
       this.toastr.info('Please check your browser\'s download section', 'Info');

@@ -13,8 +13,6 @@ http.createServer(function(req, res) {
     /** add other headers as per requirement */
   };
 
-  // console.log('req: ', req);
-
   if (req.method === 'OPTIONS') {
     res.writeHead(204, headers);
     res.end();
@@ -46,56 +44,20 @@ function convertToImage(data) {
 }
 
 function parseRequestBody(req, res, headers) {
-  // parsing request body
+    // parsing request body
     // At this point, we have the headers, method, url and body, and can now
     // do whatever we need to in order to respond to this request.
     const { reqHeaders, reqMethod, reqURL } = req;
 
-    // console.log(reqHeaders, reqMethod, reqURL);
-
     let body = [];
-    let response;
     req.on('error', (err) => {
       console.error(err);
     }).on('data', (chunk) => {
       body.push(chunk);
-      // console.log(`Data chunk available: ${chunk}`)
     }).on('end', () => {
       body = Buffer.concat(body).toString(); // at this point, `body` has the entire request body stored in it as a string
-      // console.log('body: ', JSON.parse(body).data);
-      // response = convertToImage(JSON.parse(body).data).then(response => {
-      //   console.log('Response Here: ');
-      //   console.log('Hua re Hua!!!!!');
-
-      //   headers['Content-Type'] = 'application/json'
-
-      //   if (response.success) {
-      //     res.writeHead(200, headers);
-      //   }
-      //   else {
-      //     res.writeHead(500, headers);
-      //   }
-
-      //   res.on('error', error => {
-      //     console.error('hrere: ', error)
-      //   })
-
-      //   res.write(JSON.stringify(response));
-
-      //   res.end();
-      //   return res;
-
-      //   // console.log('response: ', response);
-
-      //   // console.log('headers: ', headers);
-      //   // res.write('D Test Case');
-      //   // res.end(JSON.stringify({ data: 'D Test Case' }));
-      // });
 
       convertToImage(JSON.parse(body).data).then(response => {
-        console.log('Response Here: ');
-        console.log('Hua re Hua!!!!!');
-
         headers['Content-Type'] = 'application/json'
 
         if (response.success) {
@@ -109,10 +71,7 @@ function parseRequestBody(req, res, headers) {
           console.error('hrere: ', error)
         })
 
-        // res.write(JSON.stringify(response));
-
         res.end(JSON.stringify(response));
-
       });
     });
 }
