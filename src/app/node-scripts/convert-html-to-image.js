@@ -7,7 +7,6 @@ exports.convertToPng = function(data, imageTitle) {
   const reqParams = data.params;
   const fileName = `${imageTitle}.png`;
   const filePath = `./../template-images/${imageTitle}.png`;
-  const imageData = data.imageData;
 
   const template = `
   <html>
@@ -68,8 +67,4 @@ exports.convertToPng = function(data, imageTitle) {
   } catch (error) {
     console.log('Some Error: ', error);
   }
-}
-
-function sendEmail() {
-
 }
