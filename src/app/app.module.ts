@@ -14,39 +14,40 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GreetingCardComponent } from './components/greeting-card/greeting-card.component';
 import { GreetingsTemplateComponent } from './components/greetings-template/greetings-template.component';
+import { HelpComponent } from './components/help/help.component';
 import { HomeComponent } from './components/home/home.component';
 import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { ModalTemplateService } from './services/modal-template.service';
 import { GreetingsState } from './store/greetings-store';
 import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
+import { AgTemplate10Component } from './templates/greetings/anime-greetings/ag-template10/ag-template10.component';
 import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-template2/ag-template2.component';
 import { AgTemplate3Component } from './templates/greetings/anime-greetings/ag-template3/ag-template3.component';
 import { AgTemplate4Component } from './templates/greetings/anime-greetings/ag-template4/ag-template4.component';
-import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
-import { BestWishesGreetingsComponent } from './templates/greetings/best-wishes-greetings/best-wishes-greetings.component';
-import { BwgTemplate1Component } from './templates/greetings/best-wishes-greetings/bwg-template1/bwg-template1.component';
-import { BgTemplate1Component } from './templates/greetings/birthday-greetings/bg-template1/bg-template1.component';
-import { BgTemplate2Component } from './templates/greetings/birthday-greetings/bg-template2/bg-template2.component';
-import { BgTemplate3Component } from './templates/greetings/birthday-greetings/bg-template3/bg-template3.component';
-import { BgTemplate4Component } from './templates/greetings/birthday-greetings/bg-template4/bg-template4.component';
-import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greetings/birthday-greetings.component';
-import { GreetingStyle1Component } from './templates/greetings/greeting-style1/greeting-style1.component';
-import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 import { AgTemplate5Component } from './templates/greetings/anime-greetings/ag-template5/ag-template5.component';
 import { AgTemplate6Component } from './templates/greetings/anime-greetings/ag-template6/ag-template6.component';
 import { AgTemplate7Component } from './templates/greetings/anime-greetings/ag-template7/ag-template7.component';
 import { AgTemplate8Component } from './templates/greetings/anime-greetings/ag-template8/ag-template8.component';
 import { AgTemplate9Component } from './templates/greetings/anime-greetings/ag-template9/ag-template9.component';
-import { AgTemplate10Component } from './templates/greetings/anime-greetings/ag-template10/ag-template10.component';
+import { AnimeGreetingsComponent } from './templates/greetings/anime-greetings/anime-greetings.component';
+import { BestWishesGreetingsComponent } from './templates/greetings/best-wishes-greetings/best-wishes-greetings.component';
+import { BwgTemplate1Component } from './templates/greetings/best-wishes-greetings/bwg-template1/bwg-template1.component';
 import { BwgTemplate2Component } from './templates/greetings/best-wishes-greetings/bwg-template2/bwg-template2.component';
 import { BwgTemplate3Component } from './templates/greetings/best-wishes-greetings/bwg-template3/bwg-template3.component';
 import { BwgTemplate4Component } from './templates/greetings/best-wishes-greetings/bwg-template4/bwg-template4.component';
-import { MiscellanousGreetingsComponent } from './templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
+import { BgTemplate1Component } from './templates/greetings/birthday-greetings/bg-template1/bg-template1.component';
+import { BgTemplate2Component } from './templates/greetings/birthday-greetings/bg-template2/bg-template2.component';
+import { BgTemplate3Component } from './templates/greetings/birthday-greetings/bg-template3/bg-template3.component';
+import { BgTemplate4Component } from './templates/greetings/birthday-greetings/bg-template4/bg-template4.component';
+import { BirthdayGreetingsComponent } from './templates/greetings/birthday-greetings/birthday-greetings.component';
 import { MgTemplate1Component } from './templates/greetings/miscellanous-greetings/mg-template1/mg-template1.component';
 import { MgTemplate2Component } from './templates/greetings/miscellanous-greetings/mg-template2/mg-template2.component';
 import { MgTemplate3Component } from './templates/greetings/miscellanous-greetings/mg-template3/mg-template3.component';
 import { MgTemplate4Component } from './templates/greetings/miscellanous-greetings/mg-template4/mg-template4.component';
-import { HelpComponent } from './components/help/help.component';
+import {
+  MiscellanousGreetingsComponent,
+} from './templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
+import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,6 @@ import { HelpComponent } from './components/help/help.component';
     HomeComponent,
     GreetingCardComponent,
     TemplatedummyComponent,
-    GreetingStyle1Component,
     BirthdayGreetingsComponent,
     BgTemplate1Component,
     BgTemplate2Component,
