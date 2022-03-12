@@ -37,31 +37,32 @@ export class AppComponent {
     this.items = [
       {
         label: 'Anime',
-        icon: 'pi pi-fw pi-file',
+        icon: 'pi pi-fw pi-file fs-custom-2',
         // routerLink: this.isFormEdited ? ' ' : 'home', // removing this piece of code as, adding undefined or a whitespace would trigger it to be redirected to '/home', which in turn always triggers the routing module.
         command: () => this.isFormEdited ? this.showConfirmationDialog('anime-greetings') : this.redirectUrl('anime-greetings')
       },
       {
         label: 'Birthday',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-fw pi-pencil fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('birthday-greetings') : this.redirectUrl('birthday-greetings')
       },
       {
         label: 'Best Wishes',
-        icon: 'pi pi-fw pi-user',
+        icon: 'pi pi-fw pi-user fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('best-wishes-greetings') : this.redirectUrl('best-wishes-greetings')
       },
       {
         label:'Miscellanous',
-        icon:'pi pi-fw pi-star',
+        icon:'pi pi-fw pi-star fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('miscellanous-greetings') : this.redirectUrl('miscellanous-greetings')
       },
       {
-        label:'Quit',
-        icon:'pi pi-fw pi-power-off'
+        label:'Check my other work here!',
+        icon:'pi pi-fw pi-github fs-custom-1',
+        url: 'https://github.com/RaKeerS'
       }
     ];
   }
