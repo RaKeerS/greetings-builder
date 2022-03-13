@@ -47,6 +47,10 @@
   width: 100%;
 }
 
+::ng-deep .p-menuitem-text {
+  word-break: break-word;
+}
+
 /***************** Custom CSS *****************/
 
 ::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
@@ -96,4 +100,15 @@
 
 ::ng-deep .fs-custom-2 {
   font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+  ::ng-deep .div-custom {
+    flex-direction: column !important;
+  }
+
+  ::ng-deep .btn-custom-style {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
 }

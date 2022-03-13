@@ -70,12 +70,12 @@
               [(ngModel)]="senderAddress" required #senderAddressModel="ngModel">
             <small *ngIf="senderAddressModel.invalid" id="senderAddress-help" class="p-error"> Sender's Email Address cannot be empty! </small>
           </div>
-          <div class="form-group m-auto row p-3 justify-content-between d-flex">
-            <div class="col-md-5 p-0">
+          <div class="form-group m-auto row p-3 justify-content-between d-flex div-custom">
+            <div class="col-md-5 p-0 btn-custom-style">
               <button pButton type="button" label="Save Image" class="p-button-info p-button-raised w-100"
                 (click)="downloadTemplate()"></button>
             </div>
-            <div class="col-md-5 p-0">
+            <div class="col-md-5 p-0 btn-custom-style">
               <button pButton type="button" label="Send Email" class="p-button-success p-button-raised w-100"
                 [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (recipientNameModel.invalid) || (emailSubjectModel.invalid)"
                 (click)="submitTemplateDetails()"></button>
