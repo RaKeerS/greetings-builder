@@ -59,6 +59,8 @@ export class GreetingCardComponent implements OnInit {
   public ref!: DynamicDialogRef;
   public senderAddress!: string;
   public senderName: string = '';
+  public enableRecipientName: boolean = true;
+  public enableSenderName: boolean = true;
 
   constructor(private injector: Injector, private actions$: Actions,
     private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService,
@@ -75,7 +77,7 @@ export class GreetingCardComponent implements OnInit {
   }
 
   @HostListener('keyup')
-  onInputKeyDown(event: KeyboardEvent) {
+  onInputKeyDown() {
     this.initializeComponent(this.componentCategory, this.componentType);
     this.store.dispatch(new SetFormDirtyStatus(this.greetingCardForm.form.dirty));
   }
@@ -92,68 +94,35 @@ export class GreetingCardComponent implements OnInit {
   }
 
   private getComponent(componentCategory: GreetingsTemplateCategoryEnum, componentType: string) {
+    (this.componentData as ModalData<GreetingData>) = {
+      inputData: {
+        emailSubject: this.emailSubject,
+        recipientName: this.recipientName,
+        customMessage: this.customMessage,
+        recipientAddress: this.recipientAddress,
+        recipientAddressCC: this.recipientAddressCC,
+        recipientAddressBCC: this.recipientAddressBCC,
+        senderAddress: this.senderAddress,
+        senderName: this.senderName,
+        enableRecipientName: this.enableRecipientName,
+        enableSenderName: this.enableSenderName,
+      }
+    };
+
     switch(componentCategory) {
       case GreetingsTemplateCategoryEnum['anime-greetings'] : {
-        (this.componentData as ModalData<GreetingData>) = {
-          inputData: {
-            emailSubject: this.emailSubject,
-            recipientName: this.recipientName,
-            customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress,
-            recipientAddressCC: this.recipientAddressCC,
-            recipientAddressBCC: this.recipientAddressBCC,
-            senderAddress: this.senderAddress,
-            senderName: this.senderName
-          }
-        };
         this.componentType = AnimeGreetingsComponent.getComponentType(componentType);
         return AnimeGreetingsComponent.getComponent(componentType);
       };
       case GreetingsTemplateCategoryEnum['birthday-greetings'] : {
-        (this.componentData as ModalData<GreetingData>) = {
-          inputData: {
-            emailSubject: this.emailSubject,
-            recipientName: this.recipientName,
-            customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress,
-            recipientAddressCC: this.recipientAddressCC,
-            recipientAddressBCC: this.recipientAddressBCC,
-            senderAddress: this.senderAddress,
-            senderName: this.senderName
-          }
-        };
         this.componentType = BirthdayGreetingsComponent.getComponentType(componentType);
         return BirthdayGreetingsComponent.getComponent(componentType);
       };
       case GreetingsTemplateCategoryEnum['best-wishes-greetings'] : {
-        (this.componentData as ModalData<GreetingData>) = {
-          inputData: {
-            emailSubject: this.emailSubject,
-            recipientName: this.recipientName,
-            customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress,
-            recipientAddressCC: this.recipientAddressCC,
-            recipientAddressBCC: this.recipientAddressBCC,
-            senderAddress: this.senderAddress,
-            senderName: this.senderName
-          }
-        };
         this.componentType = BestWishesGreetingsComponent.getComponentType(componentType);
         return BestWishesGreetingsComponent.getComponent(componentType);
       };
       case GreetingsTemplateCategoryEnum['miscellanous-greetings'] : {
-        (this.componentData as ModalData<GreetingData>) = {
-          inputData: {
-            emailSubject: this.emailSubject,
-            recipientName: this.recipientName,
-            customMessage: this.customMessage,
-            recipientAddress: this.recipientAddress,
-            recipientAddressCC: this.recipientAddressCC,
-            recipientAddressBCC: this.recipientAddressBCC,
-            senderAddress: this.senderAddress,
-            senderName: this.senderName
-          }
-        };
         this.componentType = MiscellanousGreetingsComponent.getComponentType(componentType);
         return MiscellanousGreetingsComponent.getComponent(componentType);
       };
