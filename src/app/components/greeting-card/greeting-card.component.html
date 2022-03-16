@@ -23,13 +23,19 @@
             id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
             <small *ngIf="customMessage.length == 600" id="customMessage-help" class="p-error"> Max characters for message field reached! </small>
           </div>
-          <div class="form-group m-auto p-field row p-3">
-            <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
-            <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
-              name="recipientName" placeholder="Enter Name" aria-describedby="recipientName-help"
-              [(ngModel)]="recipientName" #recipientNameModel="ngModel" required>
-              <small *ngIf="recipientNameModel.invalid" id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
-          </div>
+          <p-fieldset legend="Recipient Info." [toggleable]="true">
+            <div class="form-group m-auto p-field row p-3">
+              <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
+              <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
+                name="recipientName" placeholder="Enter Name" aria-describedby="recipientName-help"
+                [(ngModel)]="recipientName" #recipientNameModel="ngModel" required>
+                <small *ngIf="recipientNameModel.invalid" id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
+            </div>
+            <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
+              <label for="enableRecipientName" class="pl-0 pb-2"> Enable Recipient Name field? </label>
+              <p-inputSwitch class="pl-0" name="enableRecipientName" [(ngModel)]="enableRecipientName" (onChange)="onInputKeyDown()"></p-inputSwitch>
+            </div>
+          </p-fieldset>
           <div class="form-group m-auto row p-3">
             <label for="recipientAddressCC" class="pl-0 pb-2"> Enter Recipient(s)'s Email Address </label>
             <p-chips class="p-0" id="recipientAddressCC" name="recipientAddress" aria-describedby="recipientAddress-help"
@@ -58,11 +64,17 @@
               </ng-template>
             </p-chips>
           </div>
-          <div class="form-group m-auto p-field row p-3">
-            <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
-            <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
-              placeholder="Enter Sender's Name" autocomplete="off" [(ngModel)]="senderName">
-          </div>
+          <p-fieldset legend="Sender Info." [toggleable]="true">
+            <div class="form-group m-auto p-field row p-3">
+              <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
+              <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
+                placeholder="Enter Sender's Name" autocomplete="off" [(ngModel)]="senderName">
+            </div>
+            <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
+              <label for="enableSenderName" class="pl-0 pb-2"> Enable Sender's Name field? </label>
+              <p-inputSwitch class="pl-0" name="enableSenderName" [(ngModel)]="enableSenderName" (onChange)="onInputKeyDown()"></p-inputSwitch>
+            </div>
+          </p-fieldset>
           <div class="form-group m-auto row p-3">
             <label for="senderAddress" class="pl-0 pb-2"> Enter Sender's Email Address </label>
             <input type="email" class="form-control p-inputtext p-component p-element" id="senderAddress" name="senderAddress"

@@ -20,5 +20,7 @@ export class GreetingData {
   recipientAddressCC?: string[];
   recipientAddressBCC?: string[];
   senderAddress!: string;
-  senderName?: string
+  senderName?: string;
+  enableRecipientName?: boolean;
+  enableSenderName?: boolean;
 }

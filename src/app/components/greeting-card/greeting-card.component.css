@@ -19,8 +19,33 @@
   padding: 0px 12px !important;
 }
 
+::ng-deep .p-inputswitch .p-inputswitch-slider, ::ng-deep .p-inputswitch .p-inputswitch-slider::before {
+  border-radius: 25px;
+}
+
 .p-button:disabled {
   cursor: not-allowed;
+}
+
+::ng-deep legend.p-fieldset-legend {
+  float: none;
+  padding: inherit;
+  width:inherit;
+  margin-left: 20px;
+}
+
+::ng-deep .p-fieldset {
+  margin: 10px;
+}
+
+::ng-deep .p-fieldset-legend a {
+  text-decoration: none;
+  font-size: 15px;
+  padding: 10px !important;
+}
+
+::ng-deep .p-fieldset-toggler {
+  font-size: 10px;
 }
 
 /**************** Custom CSS ****************/
