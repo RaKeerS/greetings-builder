@@ -53,7 +53,7 @@
                                     <span
                                       style="font-family: arial,helvetica neue,helvetica,sans-serif">
                                       <span style="line-height: 150%">
-                                        <span style="font-size: 20px;line-height: 36px">
+                                        <span *ngIf="!!enableRecipientName" style="font-size: 20px;line-height: 36px">
                                           Dear
                                           <ng-container *ngIf="!recipientName">
                                             {{defaultRecipientName}}
@@ -77,7 +77,7 @@
                                 <p style="color: #ffffff;line-height: 150%">
                                   <span style="font-family: playfair display,georgia,times new roman,serif;line-height: 150%">
                                     <span style="font-size: 24px;">
-                                      <span style="line-height: 150%">
+                                      <span *ngIf="!!enableSenderName" style="line-height: 150%">
                                         From, <br>
                                         <ng-container *ngIf="!senderName">
                                           {{defaultSenderName}}

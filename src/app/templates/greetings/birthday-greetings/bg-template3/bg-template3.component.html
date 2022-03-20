@@ -36,7 +36,7 @@
                                         <td
                                           class="esd-block-text es-m-txt-c es-p40t es-p30r es-p30l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                           esd-handler-name="textElementHandler" align="center">
-                                          <h3 style="color: #666666;">
+                                          <h3 *ngIf="!!enableRecipientName" style="color: #666666;">
                                             Dear
                                             <ng-container *ngIf="!recipientName">
                                               {{defaultRecipientName}}
@@ -80,11 +80,14 @@
                       <tr class="ui-draggable">
                         <td style="padding: 10px;"
                           class="esd-block-text es-m-txt-c esd-frame esd-hover esdev-disable-select esd-draggable esd-block" align="center">
-                          <p>Sincerely,</p>
-                          <ng-container *ngIf="!senderName">
-                            {{defaultSenderName}}
-                          </ng-container>
-                          <p><strong>{{senderName}}</strong></p>
+                          <p *ngIf="!!enableSenderName">
+                            Sincerely,
+                            <br>
+                            <ng-container *ngIf="!senderName">
+                              {{defaultSenderName}}
+                            </ng-container>
+                            <strong>{{senderName}}</strong>
+                          </p>
                         </td>
                       </tr>
                     </tbody>

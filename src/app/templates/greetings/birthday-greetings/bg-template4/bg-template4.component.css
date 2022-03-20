@@ -27,6 +27,10 @@
   width: 85%;
 }
 
+.custom-font-family {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .es-desk-hidden {
   display: none;
   float: left;
