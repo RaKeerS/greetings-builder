@@ -182,7 +182,7 @@
                                                 <td style="padding: 10px;"
                                                   class="esd-block-text es-m-txt-c es-p20t es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="textElementHandler" align="center">
-                                                  <h1 class="custom-font-family"
+                                                  <h1 *ngIf="!!enableRecipientName" class="custom-font-family"
                                                     style="color: rgb(131, 96, 39); font-size: 32px;">
                                                     Dear
                                                     <ng-container *ngIf="!recipientName">
@@ -209,7 +209,7 @@
                                                 <td style="padding: 10px; color: black; font-size: 20px;"
                                                   class="custom-font-family esd-block-button es-p10t es-p30b es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="btnBlockHandler" align="center">
-                                                  <span>
+                                                  <span *ngIf="!!enableSenderName">
                                                     From, <br>
                                                     <ng-container *ngIf="!senderName">
                                                       {{defaultSenderName}}
