@@ -15,6 +15,9 @@ export class MgTemplate1Component implements OnInit {
   public recipientName: string;
   public senderName: string;
 
+  public enableRecipientName: boolean = true;
+  public enableSenderName: boolean = true;
+
   public imageUrl1: string = '../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-1.png';
   public imageUrl2: string = '../../../../../assets/greetings/miscellanous-greetings/mg-template1/images/world-environment-day-image-2.png';
 
@@ -26,6 +29,8 @@ export class MgTemplate1Component implements OnInit {
     this.customMessage = this.modalData.inputData?.customMessage!;
     this.recipientName = this.modalData.inputData?.recipientName!;
     this.senderName = this.modalData.inputData?.senderName || '';
+    this.enableRecipientName = this.modalData.inputData?.enableRecipientName!;
+    this.enableSenderName = this.modalData.inputData?.enableSenderName!;
    }
 
   ngOnInit(): void {
@@ -39,17 +44,26 @@ export class MgTemplate1Component implements OnInit {
     this.storeImageData(this.imageUrl2);
   }
 
+  get leftQuote(): string {
+    return '‘';
+  }
+
+  get rightQuote(): string {
+    return '’';
+  }
+
   get defaultCustomMessage(): string {
     return "<< Type text in the 'Custom Message' in the left section to see the changes here! >>";
   }
 
   get defaultRecipientName(): string {
-    return "'Recipient Name'";
+    return `${this.leftQuote}Recipient Name${this.rightQuote}`;
   }
 
   get defaultSenderName(): string {
-    return "'Sender Name'";
+    return `${this.leftQuote}Sender Name${this.rightQuote}`;
   }
+
 
   private storeImageData(imageUrl: string) {
     this.modalSvc.toDataURL(imageUrl)
