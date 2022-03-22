@@ -27,7 +27,7 @@
             <div class="form-group m-auto p-field row p-3">
               <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
               <input type="username" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="recipientName"
-                name="recipientName" placeholder="Enter Name" aria-describedby="recipientName-help"
+                name="recipientName" placeholder="Enter Name" aria-describedby="recipientName-help" [disabled]="!enableRecipientName"
                 [(ngModel)]="recipientName" #recipientNameModel="ngModel" required>
                 <small *ngIf="recipientNameModel.invalid" id="recipientName-help" class="p-error"> Recipient's Name cannot be empty! </small>
             </div>
@@ -68,7 +68,7 @@
             <div class="form-group m-auto p-field row p-3">
               <label for="senderName" class="pl-0 pb-2"> Enter Sender's Name </label>
               <input type="username" class="form-control p-inputtext p-component p-element" id="senderName" name="senderName"
-                placeholder="Enter Sender's Name" autocomplete="off" [(ngModel)]="senderName">
+                placeholder="Enter Sender's Name" autocomplete="off" [disabled]="!enableSenderName" [(ngModel)]="senderName">
             </div>
             <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
               <label for="enableSenderName" class="pl-0 pb-2"> Enable Sender's Name field? </label>
@@ -89,7 +89,7 @@
             </div>
             <div class="col-md-5 p-0 btn-custom-style">
               <button pButton type="button" label="Send Email" class="p-button-success p-button-raised w-100"
-                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (recipientNameModel.invalid) || (emailSubjectModel.invalid)"
+                [disabled]="(!recipientAddress || recipientAddress.length == 0) || (!senderAddress || senderAddress.length == 0) || (enableRecipientName && (recipientNameModel.invalid)) || (emailSubjectModel.invalid)"
                 (click)="submitTemplateDetails()"></button>
             </div>
           </div>
