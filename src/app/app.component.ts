@@ -60,7 +60,7 @@ export class AppComponent {
         command: () => this.isFormEdited ? this.showConfirmationDialog('miscellanous-greetings') : this.redirectUrl('miscellanous-greetings')
       },
       {
-        label:'Check my other work here!',
+        label:'Check my other projects here!',
         icon:'pi pi-fw pi-github fs-custom-1',
         url: 'https://github.com/RaKeerS'
       }
