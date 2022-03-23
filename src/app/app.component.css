@@ -51,6 +51,10 @@
   word-break: break-word;
 }
 
+::ng-deep .p-dialog-mask {
+  pointer-events: auto !important;
+}
+
 /***************** Custom CSS *****************/
 
 ::ng-deep .internal-splitter .p-splitter-panel.p-splitter-panel-nested {
