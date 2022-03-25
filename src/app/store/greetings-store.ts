@@ -7,16 +7,17 @@ import { GreetingsModel } from '../model/greetings-model';
 @State<GreetingsModel>({
   name: 'global',
   defaults: {
-    currentTemplateCategory: 'initial ',
-    currentTemplateType: 'type ',
+    currentTemplateCategory: '',
+    currentTemplateType: '',
     currentTemplateId: 0,
-    currentRouterOutletName: ' ',
-    currentTemplateDOMString: ' ',
+    currentRouterOutletName: '',
+    currentTemplateDOMString: '',
     isEdit: false,
     isSaved: false,
     isFormDirty: false
   }
 })
+
 @Injectable() // 'BirthdayGreetingsState' class should be decorated with @Injectable() right after the @State() decorator
 export class GreetingsState extends GreetingsActionsModel {
 

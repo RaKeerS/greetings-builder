@@ -49,6 +49,10 @@
   font-size: 10px;
 }
 
+::ng-deep .p-fieldset .p-fieldset-content {
+  padding: 0.25rem;
+}
+
 /**************** Custom CSS ****************/
 
 .pl-0 {

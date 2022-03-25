@@ -17,12 +17,18 @@
               [(ngModel)]="emailSubject" #emailSubjectModel="ngModel" required>
             <small *ngIf="emailSubjectModel.invalid" id="emailSubject-help" class="p-error"> Email Subject cannot be empty! </small>
           </div>
-          <div class="form-group m-auto row p-3">
-            <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
-            <textarea maxlength="600" rows="5" cols="30" class="p-inputtextarea p-inputtext resize-none p-component p-element form-control" aria-describedby="customMessage-help"
-            id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
-            <small *ngIf="customMessage.length == 600" id="customMessage-help" class="p-error"> Max characters for message field reached! </small>
-          </div>
+          <p-fieldset legend="Custom Message Info." [toggleable]="true">
+            <div class="form-group m-auto row p-3">
+              <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
+              <textarea maxlength="600" rows="5" cols="30" class="p-inputtextarea p-inputtext resize-none p-component p-element form-control" aria-describedby="customMessage-help"
+              id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
+              <small *ngIf="customMessage.length == 600" id="customMessage-help" class="p-error"> Max characters for message field reached! </small>
+            </div>
+            <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
+              <label for="enableCustomMessage" class="pl-0 pb-2"> Enable Custom Message Name field? </label>
+              <p-inputSwitch class="pl-0" name="enableCustomMessage" [(ngModel)]="enableCustomMessage" (onChange)="onInputKeyDown()"></p-inputSwitch>
+            </div>
+          </p-fieldset>
           <p-fieldset legend="Recipient Info." [toggleable]="true">
             <div class="form-group m-auto p-field row p-3">
               <label for="recipientName" class="pl-0 pb-2"> Recipient's Name </label>
