@@ -1,9 +1,12 @@
+import { TemplatePresetMessageType } from '../types/modal-types';
+
 export interface GreetingsModel {
   currentTemplateCategory: string;
-  currentTemplateType: string;
-  currentTemplateId: number;
-  currentRouterOutletName: string,
   currentTemplateDOMString: string,
+  currentTemplateId: number;
+  currentTemplatePresetMessages: TemplatePresetMessageType[],
+  currentTemplateType: string;
+  currentRouterOutletName: string,
   isEdit: boolean;
   isSaved: boolean;
   isFormDirty: boolean;
