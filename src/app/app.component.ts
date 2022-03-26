@@ -5,7 +5,7 @@ import { ConfirmationService, MenuItem, PrimeNGConfig } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Observable } from 'rxjs';
 
-import { SelectCategory, SelectRouterOutlet, SetFormDirtyStatus } from './actions/greetings-actions';
+import { SelectCategory, SetFormDirtyStatus } from './actions/greetings-actions';
 import { HelpComponent } from './components/help/help.component';
 import { GreetingsState } from './store/greetings-store';
 
@@ -69,7 +69,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
-    this.store.dispatch(new SelectRouterOutlet('greetings')); // TODO: Will have to remove this later on, as it is not needed.
+    // this.store.dispatch(new SelectRouterOutlet('greetings')); // TODO: Will have to remove this later on, as it is not needed.
   }
 
   ngOnDestroy() {

@@ -20,7 +20,7 @@ import {
   MiscellanousGreetingsComponent,
 } from 'src/app/templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
 import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
-import { GreetingData, ModalData } from 'src/app/types/modal-types';
+import { GreetingData, ModalData, TemplatePresetMessageType } from 'src/app/types/modal-types';
 
 import { HelpComponent } from '../help/help.component';
 
@@ -35,6 +35,7 @@ export class GreetingCardComponent implements OnInit {
   @Select(GreetingsState.getCurrentTemplateType) currentTemplateType$!: Observable<string>;
   @Select(GreetingsState.getCurrentTemplateId) currentTemplateId$!: Observable<string>;
   @Select(GreetingsState.getCurrentTemplateDOMString) currentTemplateDOMString$!: Observable<string>;
+  @Select(GreetingsState.getCurrentTemplatePresetMessages) currentTemplatePresetMessages$!: Observable<TemplatePresetMessageType[]>;
 
   @ViewChild('greetingCardForm') greetingCardForm!: NgForm;
 
@@ -47,6 +48,7 @@ export class GreetingCardComponent implements OnInit {
   public componentType!: string;
   public componentId!: string;
   public componentDOMString!: string;
+  public componentTemplatePresetMessages!: TemplatePresetMessageType[];
 
   private componentData: unknown;
 
@@ -59,6 +61,7 @@ export class GreetingCardComponent implements OnInit {
   public ref!: DynamicDialogRef;
   public senderAddress!: string;
   public senderName: string = '';
+  public selectedTemplatePresetMessage!: TemplatePresetMessageType;
   public enableRecipientName: boolean = true;
   public enableSenderName: boolean = true;
   public enableCustomMessage: boolean = true;
@@ -88,6 +91,7 @@ export class GreetingCardComponent implements OnInit {
     this.subscription = this.currentTemplateCategory$.subscribe(value => this.initializeComponent(value, this.componentType));
     this.subscription = this.currentTemplateId$.subscribe(value => this.componentId = value);
     this.subscription = this.currentTemplateDOMString$.subscribe(value => this.componentDOMString = value);
+    this.subscription = this.currentTemplatePresetMessages$.subscribe(value => this.componentTemplatePresetMessages = value);
 
     let urlSegment: string;
     this.subscription = this.router.firstChild?.url.subscribe(value => urlSegment = value[0].toString());
@@ -105,6 +109,7 @@ export class GreetingCardComponent implements OnInit {
         recipientAddressBCC: this.recipientAddressBCC,
         senderAddress: this.senderAddress,
         senderName: this.senderName,
+        selectedTemplatePresetMessage: this.selectedTemplatePresetMessage,
         enableRecipientName: this.enableRecipientName,
         enableSenderName: this.enableSenderName,
         enableCustomMessage: this.enableCustomMessage,

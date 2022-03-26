@@ -6,6 +6,7 @@ import {
   SelectTemplate,
   SelectTemplateDOMString,
   SetFormDirtyStatus,
+  SetTemplatePresetMessages,
 } from '../actions/greetings-actions';
 import { GreetingsModel } from './greetings-model';
 
@@ -55,6 +56,15 @@ export class GreetingsActionsModel {
     ctx.setState({
       ...state,
       isFormDirty: payload.setFormDirtyStatus
+    })
+  }
+
+  @Action(SetTemplatePresetMessages)
+    public setTemplatePresetMessages(ctx: StateContext<GreetingsModel>, payload: SetTemplatePresetMessages) {
+      const state = ctx.getState();
+      ctx.setState({
+        ...state,
+        currentTemplatePresetMessages: payload.setTemplatePresetMessages
     })
   }
 

@@ -3,15 +3,17 @@ import { Selector, State } from '@ngxs/store';
 
 import { GreetingsActionsModel } from '../model/greetings-actions-model';
 import { GreetingsModel } from '../model/greetings-model';
+import { TemplatePresetMessageType } from '../types/modal-types';
 
 @State<GreetingsModel>({
   name: 'global',
   defaults: {
     currentTemplateCategory: '',
-    currentTemplateType: '',
-    currentTemplateId: 0,
-    currentRouterOutletName: '',
     currentTemplateDOMString: '',
+    currentTemplateId: 0,
+    currentTemplatePresetMessages: [],
+    currentTemplateType: '',
+    currentRouterOutletName: '',
     isEdit: false,
     isSaved: false,
     isFormDirty: false
@@ -44,6 +46,11 @@ export class GreetingsState extends GreetingsActionsModel {
   @Selector()
   static getCurrentTemplateDOMString(state: GreetingsModel): string {
     return state.currentTemplateDOMString;
+  }
+
+  @Selector()
+  static getCurrentTemplatePresetMessages(state: GreetingsModel): TemplatePresetMessageType[] {
+    return state.currentTemplatePresetMessages;
   }
 
   // @Action(SelectTemplate)

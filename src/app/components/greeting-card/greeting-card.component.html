@@ -14,19 +14,24 @@
             <label for="emailSubject" class="pl-0 pb-2"> Enter Email Subject </label>
             <input type="text" class="form-control ng-invalid ng-dirty p-inputtext p-component p-element" id="emailSubject"
               name="emailSubject" placeholder="Enter Email's Subject" aria-describedby="emailSubject-help" autocomplete="off"
-              [(ngModel)]="emailSubject" #emailSubjectModel="ngModel" required>
+                [(ngModel)]="emailSubject" #emailSubjectModel="ngModel" required>
             <small *ngIf="emailSubjectModel.invalid" id="emailSubject-help" class="p-error"> Email Subject cannot be empty! </small>
           </div>
           <p-fieldset legend="Custom Message Info." [toggleable]="true">
             <div class="form-group m-auto row p-3">
               <label for="customMessage" class="pl-0 pb-2"> Enter Custom Message </label>
               <textarea maxlength="600" rows="5" cols="30" class="p-inputtextarea p-inputtext resize-none p-component p-element form-control" aria-describedby="customMessage-help"
-              id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
+                id="customMessage" name="customMessage" placeholder="Enter Message" [(ngModel)]="customMessage"></textarea>
               <small *ngIf="customMessage.length == 600" id="customMessage-help" class="p-error"> Max characters for message field reached! </small>
             </div>
             <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
               <label for="enableCustomMessage" class="pl-0 pb-2"> Enable Custom Message Name field? </label>
               <p-inputSwitch class="pl-0" name="enableCustomMessage" [(ngModel)]="enableCustomMessage" (onChange)="onInputKeyDown()"></p-inputSwitch>
+            </div>
+            <div class="form-group m-auto p-field row px-3 pt-1 pb-3">
+              <label for="templateCustomMessage" class="pl-0 pb-2"> Select a Template Message from the Preset </label>
+              <p-dropdown name="templateCustomMessage" class="p-0" placeholder="Select a Message" optionLabel="name" [showClear]="true"
+                [options]="componentTemplatePresetMessages" [(ngModel)]="selectedTemplatePresetMessage" (onChange)="onInputKeyDown()"></p-dropdown>
             </div>
           </p-fieldset>
           <p-fieldset legend="Recipient Info." [toggleable]="true">
