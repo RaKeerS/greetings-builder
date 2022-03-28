@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PrimeNGModules } from './prime-ng/prime-ng-modules';
 import { ModalTemplateService } from './services/modal-template.service';
 import { GreetingsState } from './store/greetings-store';
+import { TemplatedummyComponent } from './templates/dummy/templatedummy/templatedummy.component';
 import { AgTemplate1Component } from './templates/greetings/anime-greetings/ag-template1/ag-template1.component';
 import { AgTemplate10Component } from './templates/greetings/anime-greetings/ag-template10/ag-template10.component';
 import { AgTemplate2Component } from './templates/greetings/anime-greetings/ag-template2/ag-template2.component';
@@ -47,7 +48,6 @@ import { MgTemplate4Component } from './templates/greetings/miscellanous-greetin
 import {
   MiscellanousGreetingsComponent,
 } from './templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
-import { TemplatedummyComponent } from './templates/miscellaneous/templatedummy/templatedummy.component';
 
 @NgModule({
   declarations: [

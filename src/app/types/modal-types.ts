@@ -21,6 +21,14 @@ export class GreetingData {
   recipientAddressBCC?: string[];
   senderAddress!: string;
   senderName?: string;
+  selectedTemplatePresetMessage?: TemplatePresetMessageType;
   enableRecipientName?: boolean;
   enableSenderName?: boolean;
+  enableCustomMessage?: boolean;
+}
+
+export interface TemplatePresetMessageType {
+  name: string;
+  message: string;
+  code: number
 }

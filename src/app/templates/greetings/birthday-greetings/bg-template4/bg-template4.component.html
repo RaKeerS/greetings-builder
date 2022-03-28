@@ -53,7 +53,7 @@
                                                 <td style="padding: 10px;"
                                                   class="esd-block-text es-m-txt-c es-p10t es-p20b es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="textElementHandler" align="center">
-                                                  <p class="custom-font-family" style="color: #333333; font-size: 16px; word-break: break-word;">
+                                                  <p *ngIf="!!enableCustomMessage" class="custom-font-family" style="color: #333333; font-size: 16px; word-break: break-word;">
                                                     <ng-container *ngIf="!customMessage">
                                                       {{defaultCustomMessage}}
                                                     </ng-container>

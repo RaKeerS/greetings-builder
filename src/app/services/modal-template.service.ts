@@ -40,4 +40,11 @@ export class ModalTemplateService {
     });
   }
 
+  public async fetchTemplatePresetMessages(url: string): Promise<any> {
+    return await this.http.get<any>(url)
+    .toPromise()
+    .then(res => res?.data)
+    .then(data => data);
+  }
+
 }

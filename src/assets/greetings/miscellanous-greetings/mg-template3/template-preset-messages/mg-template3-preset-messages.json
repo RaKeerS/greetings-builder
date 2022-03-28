@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "name": "Template1",
+      "message": "Hola!",
+      "code": 0
+    },
+    { "name": "Template2",
+      "message": "Gola!",
+      "code": 1
+    },
+    { "name" : "Template3",
+      "message": "Lola!",
+      "code": 2
+    },
+    { "name": "Template4",
+      "message": "Hajmola!",
+      "code": 3
+    }
+  ]
+}
