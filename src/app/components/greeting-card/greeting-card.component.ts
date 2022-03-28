@@ -11,6 +11,7 @@ import { SelectRouterOutlet, SetFormDirtyStatus } from 'src/app/actions/greeting
 import { GreetingsTemplateCategoryEnum } from 'src/app/enums/greetings-template-enum';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
 import { GreetingsState } from 'src/app/store/greetings-store';
+import { TemplatedummyComponent } from 'src/app/templates/dummy/templatedummy/templatedummy.component';
 import { AnimeGreetingsComponent } from 'src/app/templates/greetings/anime-greetings/anime-greetings.component';
 import {
   BestWishesGreetingsComponent,
@@ -19,7 +20,6 @@ import { BirthdayGreetingsComponent } from 'src/app/templates/greetings/birthday
 import {
   MiscellanousGreetingsComponent,
 } from 'src/app/templates/greetings/miscellanous-greetings/miscellanous-greetings.component';
-import { TemplatedummyComponent } from 'src/app/templates/miscellaneous/templatedummy/templatedummy.component';
 import { GreetingData, ModalData, TemplatePresetMessageType } from 'src/app/types/modal-types';
 
 import { HelpComponent } from '../help/help.component';

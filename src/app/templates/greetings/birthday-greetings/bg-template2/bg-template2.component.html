@@ -63,7 +63,7 @@
                                   </ng-container>
                                   {{recipientName}},
                                 </p>
-                                <p style="color: #999999; padding: 10px;">
+                                <p *ngIf="!!enableCustomMessage" style="color: #999999; padding: 10px;">
                                   Yes, it’s a special day, because the kindest and beautiful hearted person was born on this special day.
                                   <br>
                                   Happy birthday, thanks for joining to our life.

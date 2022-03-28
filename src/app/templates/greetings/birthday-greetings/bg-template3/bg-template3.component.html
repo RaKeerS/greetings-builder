@@ -14,12 +14,12 @@
                       <tr class="ui-draggable">
                         <td class="esd-structure es-p10r es-p10l esd-frame esdev-disable-select esd-activated esd-hover"
                           esd-handler-name="structureBlockHandler" align="left">
-                          <table width="100%" cellspacing="0" cellpadding="0">
+                          <table style="height: 100%;" width="100%" cellspacing="0" cellpadding="0">
                             <tbody class="ui-droppable">
                               <tr class="ui-draggable">
                                 <td class="esd-container-frame esd-frame esd-hover esdev-disable-select"
                                   esd-handler-name="containerHandler" width="580" valign="top" align="center">
-                                  <table width="100%" cellspacing="0" cellpadding="0">
+                                  <table style="height: 100%;" width="100%" cellspacing="0" cellpadding="0">
                                     <tbody class="ui-droppable">
                                       <tr class="ui-draggable">
                                         <td
@@ -32,27 +32,6 @@
                                             alt="Happy Birthday!" title="Happy Birthday!" style="display: block; height: 100%; width: 100%;" width="580">
                                         </td>
                                       </tr>
-                                      <tr class="ui-draggable">
-                                        <td
-                                          class="esd-block-text es-m-txt-c es-p40t es-p30r es-p30l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                                          esd-handler-name="textElementHandler" align="center">
-                                          <h3 *ngIf="!!enableRecipientName" style="color: #666666;">
-                                            Dear
-                                            <ng-container *ngIf="!recipientName">
-                                              {{defaultRecipientName}}
-                                            </ng-container>
-                                            {{recipientName}},
-                                          </h3>
-                                        </td>
-                                      </tr>
-                                      <tr class="ui-draggable">
-                                        <td
-                                          class="esd-block-text es-m-txt-c es-p5t es-p15b es-p30r es-p30l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
-                                          esdev-links-color="#ffffff" esd-handler-name="textElementHandler"
-                                          align="center">
-                                          <h2 style="color: #50b948;">Happy Birthday to Us! We are 3 years!</h2>
-                                        </td>
-                                      </tr>
                                     </tbody>
                                   </table>
                                 </td>
@@ -62,19 +41,35 @@
                         </td>
                       </tr>
                       <tr class="ui-draggable">
+                        <td
+                          class="esd-block-text es-m-txt-c es-p40t es-p30r es-p30l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
+                          esd-handler-name="textElementHandler" align="center">
+                          <h3 *ngIf="!!enableRecipientName" style="color: #666666;">
+                            Dear
+                            <ng-container *ngIf="!recipientName">
+                              {{defaultRecipientName}}
+                            </ng-container>
+                            {{recipientName}},
+                          </h3>
+                        </td>
+                      </tr>
+                      <tr *ngIf="!!enableCustomMessage" class="ui-draggable">
                         <td style="padding: 10px;"
                           class="esd-block-text es-m-txt-c esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                           align="center">
-                          <p>Thank you for choosing us among a wide range of financial companies. We
-                            appreciate your trust and support.</p>
-                          <p>Your honest feedbacks help us improve and get better for you.</p>
-                          <p>Without you we would not be there where we are now.</p>
-                          <p style="color: #999999;">May your company grow. I wish you success.</p>
-                          <br>
-                          <ng-container *ngIf="!customMessage">
-                            <p>{{defaultCustomMessage}}</p>
-                          </ng-container>
-                          <p>{{customMessage}}</p>
+                          <span>
+                            <h2 style="color: #50b948;">Happy Birthday to Us! We are 3 years!</h2>
+                            <p>Thank you for choosing us among a wide range of financial companies. We
+                              appreciate your trust and support.</p>
+                            <p>Your honest feedbacks help us improve and get better for you.</p>
+                            <p>Without you we would not be there where we are now.</p>
+                            <p style="color: #999999;">May your company grow. I wish you success.</p>
+                            <br>
+                            <ng-container *ngIf="!customMessage">
+                              <p>{{defaultCustomMessage}}</p>
+                            </ng-container>
+                            <p>{{customMessage}}</p>
+                          </span>
                         </td>
                       </tr>
                       <tr class="ui-draggable">

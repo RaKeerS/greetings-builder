@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { SelectTemplateDOMString } from 'src/app/actions/greetings-actions';
+import { SelectTemplateDOMString, SetTemplatePresetMessages } from 'src/app/actions/greetings-actions';
 import { ModalTemplateService } from 'src/app/services/modal-template.service';
-import { GreetingData, ModalData } from 'src/app/types/modal-types';
+import { GreetingData, ModalData, TemplatePresetMessageType } from 'src/app/types/modal-types';
 
 @Component({
   selector: 'app-bg-template4',
@@ -11,14 +11,18 @@ import { GreetingData, ModalData } from 'src/app/types/modal-types';
 })
 export class BgTemplate4Component implements OnInit {
 
+  private imageUrl1: string = '../../../../../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg';
+  private templatePresetMessagesUrl: string = '../../../assets/greetings/birthday-greetings/bg-template4/template-preset-messages/bg-template4-preset-messages.json';
+
   public customMessage: string;
   public recipientName: string;
   public senderName: string;
 
   public enableRecipientName: boolean = true;
   public enableSenderName: boolean = true;
+  public enableCustomMessage: boolean = true;
 
-  public imageUrl1: string = '../../../../../assets/greetings/birthday-greetings/bg-template4/images/87611522748975988.jpg';
+  public templatePresetMessage: TemplatePresetMessageType;
 
   public domTemplateString: string = '';
 
@@ -30,9 +34,12 @@ export class BgTemplate4Component implements OnInit {
     this.senderName = this.modalData.inputData?.senderName || '';
     this.enableRecipientName = this.modalData.inputData?.enableRecipientName!;
     this.enableSenderName = this.modalData.inputData?.enableSenderName!;
+    this.enableCustomMessage = this.modalData.inputData?.enableCustomMessage!;
+    this.templatePresetMessage = this.modalData.inputData?.selectedTemplatePresetMessage!;
   }
 
   ngOnInit(): void {
+    this.fetchTemplatePresetMessages();
   }
 
   ngAfterViewInit() {
@@ -51,7 +58,7 @@ export class BgTemplate4Component implements OnInit {
   }
 
   get defaultCustomMessage(): string {
-    return "<< Type text in the 'Custom Message' in the left section to see the changes here! >>";
+    return this.templatePresetMessage?.message ?? "<< Type text in the 'Custom Message' in the left section to see the changes here! >>";
   }
 
   get defaultRecipientName(): string {
@@ -62,7 +69,7 @@ export class BgTemplate4Component implements OnInit {
     return `${this.leftQuote}Sender Name${this.rightQuote}`;
   }
 
-  private storeImageData(imageUrl: string) {
+  private storeImageData(imageUrl: string): void {
     this.modalSvc.toDataURL(imageUrl)
       .then(response => {
         const imageBase64String = response?.toString() ?? '';
@@ -71,6 +78,11 @@ export class BgTemplate4Component implements OnInit {
 
         this.store.dispatch(new SelectTemplateDOMString(this.domTemplateString));
     });
+  }
+
+  private fetchTemplatePresetMessages(): void {
+    this.modalSvc.fetchTemplatePresetMessages(this.templatePresetMessagesUrl)
+      .then(data => this.store.dispatch(new SetTemplatePresetMessages(data)));
   }
 
 }
