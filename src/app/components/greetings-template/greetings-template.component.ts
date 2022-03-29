@@ -58,7 +58,7 @@ export class GreetingsTemplateComponent implements OnInit {
 
   public selectTemplate() {
     this.store.dispatch(new SelectTemplate(this.templateInfo.category, this.templateInfo.type, this.templateInfo.id));
-    this.store.dispatch(new SelectRouterOutlet(`${'greeting' + this.templateInfo.category}`, this.templateInfo.id));
+    this.store.dispatch(new SelectRouterOutlet(`${'greeting/' + this.templateInfo.category}`, this.templateInfo.id));
   }
 
 }
