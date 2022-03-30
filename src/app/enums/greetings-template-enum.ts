@@ -12,6 +12,24 @@ export enum GreetingsTemplateCategoryEnum {
   'dummy' = 'dummy'
 }
 
+// interface IGreetingsTemplateType {
+//   [id: string]: string
+// }
+
+// export const GreetingsTemplateTypeList: IGreetingsTemplateType = {
+//   '1': 'template1',
+//   '2': 'template2',
+//   '3': 'template3',
+//   '4': 'template4',
+//   '5': 'template5',
+//   '6': 'template6',
+//   '7': 'template7',
+//   '8': 'template8',
+//   '9': 'template9',
+//   '10': 'template10',
+//   'dummy': 'dummy',
+// }
+
 export enum GreetingsTemplateTypeEnum {
   'template1' = '1',
   'template2' = '2',

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GreetingsTemplateTypeEnum } from 'src/app/enums/greetings-template-enum';
 
-import { TemplatedummyComponent } from '../../miscellaneous/templatedummy/templatedummy.component';
+import { TemplatedummyComponent } from '../../dummy/templatedummy/templatedummy.component';
 import { AgTemplate1Component } from './ag-template1/ag-template1.component';
 import { AgTemplate10Component } from './ag-template10/ag-template10.component';
 import { AgTemplate2Component } from './ag-template2/ag-template2.component';
@@ -25,38 +24,42 @@ export class AnimeGreetingsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  static getComponentType(componentType: string) {
-    const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
-    switch(componentTypeValue) {
-      case 'dummy' : return 'dummy';
-      case '1' : return 'template1';
-      case '2' : return 'template2';
-      case '3' : return 'template3';
-      case '4' : return 'template4';
-      case '5' : return 'template5';
-      case '6' : return 'template6';
-      case '7' : return 'template7';
-      case '8' : return 'template8';
-      case '9' : return 'template9';
-      case '10' : return 'template10';
-      default: return 'dummy';
-    }
+  static getComponentType(componentType: string): string {
+    return !isNaN(Number(componentType)) ? 'template'+componentType : componentType;
+
+    // return !isNaN(Number(componentType)) ? GreetingsTemplateTypeList[componentType] : componentType;
+
+    // const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
+    // switch(componentTypeValue) {
+    //   case 'dummy' : return 'dummy';
+    //   case '1' : return 'template1';
+    //   case '2' : return 'template2';
+    //   case '3' : return 'template3';
+    //   case '4' : return 'template4';
+    //   case '5' : return 'template5';
+    //   case '6' : return 'template6';
+    //   case '7' : return 'template7';
+    //   case '8' : return 'template8';
+    //   case '9' : return 'template9';
+    //   case '10' : return 'template10';
+    //   default: return 'dummy';
+    // }
   }
 
   static getComponent(componentType: string) {
-    const componentTypeValue = isNaN(Number(componentType)) ? (<any>GreetingsTemplateTypeEnum)[componentType] : componentType;
+    const componentTypeValue = !isNaN(Number(componentType)) ? 'template'+componentType : componentType;
     switch(componentTypeValue) {
+      case 'template1' : return AgTemplate1Component;
+      case 'template2' : return AgTemplate2Component;
+      case 'template3' : return AgTemplate3Component;
+      case 'template4' : return AgTemplate4Component;
+      case 'template5' : return AgTemplate5Component;
+      case 'template6' : return AgTemplate6Component;
+      case 'template7' : return AgTemplate7Component;
+      case 'template8' : return AgTemplate8Component;
+      case 'template9' : return AgTemplate9Component;
+      case 'template10' : return AgTemplate10Component;
       case 'dummy' : return TemplatedummyComponent;
-      case '1' : return AgTemplate1Component;
-      case '2' : return AgTemplate2Component;
-      case '3' : return AgTemplate3Component;
-      case '4' : return AgTemplate4Component;
-      case '5' : return AgTemplate5Component;
-      case '6' : return AgTemplate6Component;
-      case '7' : return AgTemplate7Component;
-      case '8' : return AgTemplate8Component;
-      case '9' : return AgTemplate9Component;
-      case '10' : return AgTemplate10Component;
       default: return TemplatedummyComponent;
     }
   }
