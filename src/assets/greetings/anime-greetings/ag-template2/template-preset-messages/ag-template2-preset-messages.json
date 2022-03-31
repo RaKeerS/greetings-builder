@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Sometimes You Must Hurt In Order To Know, Fall In Order To Grow, Lose In Order To Gain, Because Life’s Greatest Lessons Are Learned Through Pain.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Religion, Ideology, Resources, Land, Spite, Love Or Just Because. No Matter How Pathetic The Reason, It’s Enough To Start A War.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Just By Living, People Hurt Others Without Even Realizing It. So Long As Humanity Exists, Hate Will Also Exist. There Is No Peace In This Accursed World. War Is Just A Crime Paid For By The Pain Of The Defeated.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“We Are Just Ordinary People Driven To Revenge In The Name Of Justice. But If Revenge Is Called Justice, Then That Justice Breeds Yet More Revenge And Becomes A Chain Of Hatred.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Love Breeds Sacrifice, Which In Turn Breeds Hatred. Then You Can Know Pain.”",
+      "code": 4
     }
   ]
 }

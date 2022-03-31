@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“I get stronger in direct proportion to how strong my opponent is. I do not tire, and cannot be defeated.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“I Knew From The First Time I Had To Kill My Comrades... Kill A Mist Ninja As A Mist Ninja. What Does That Make Me? Am I A Friend Or Foe? What Is My Purpose And My Position? Where Do I Go? Where Can I Go? I'm Well Aware That My Entire Life Has Been One Giant Lie.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“You really have a talent of getting on people's nerves. I suppose I'll toy with you until you remember.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Sharks start out as eggs, but incubate and hatch in the womb. Sometimes the number of pups is less than the number of eggs that were fertilized. Do you know why? Cannibalism. The pups start eating each other within the mother's womb the moment they hatch. They start killing their siblings the moment they enter the world, viewing everything they see as nothing more than prey. As of today you and I are fellow members of Akatsuki. So be careful... of me.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Look, I'm not sure what you're thinking, and given how ruthless you are, it's strange to say this... But from here, it looks like you're crying.”",
+      "code": 4
     }
   ]
 }

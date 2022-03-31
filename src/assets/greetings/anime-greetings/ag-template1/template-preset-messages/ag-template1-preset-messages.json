@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“I’m no one. I don’t want to be anyone. All I care about is completing the moon’s eye plan. This world is completely worthless. There is nothing left in it but misery.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“In the ninja world, those who don’t follow the rules are trash. But, those who abandon their friends are even worse than trash.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“The moment people come to know love, they run the risk of carrying hate.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“I get it now. I’m in hell.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Look at me! There is nothing in my heart! I don’t feel pain any longer.”",
+      "code": 4
     }
   ]
 }
