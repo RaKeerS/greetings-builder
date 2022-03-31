@@ -1,21 +1,34 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“It is not wise to judge others based on your own preconceptions and by their apperances.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“You don't become the Hokage to be acknowledged by everyone. The one who is acknowledged by everyone becomes the Hokage.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“People's lives don't end when they die. It ends when they lose faith.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“If you want to know who you are, you have to look at your real self and acknowledge what you see.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Even the strongest of opponents always has a weakness.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“I Am Always Going To Be There For You, Even If It Is Only As An Obstacle For You To Overcome. You And I Must Live Together, Even If It Means Hating Each Other. That... Is What Big Brothers Are For.”",
+      "code": 5
     }
   ]
 }

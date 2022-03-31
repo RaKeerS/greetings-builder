@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Art is an explosion!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Look at those fools. They have no appreciation for art. You have to feel art. And true art... is an EXPLOSION!”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Cower in awe! Cry your heart out! Because my art ... is an EXPLOSION!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Fine art is the beauty of that single fleeting moment of explosion.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Even a Buddha loses patience when insulted a third time… One more word and there'll be no doubt about the cause of your death.”",
+      "code": 4
     }
   ]
 }

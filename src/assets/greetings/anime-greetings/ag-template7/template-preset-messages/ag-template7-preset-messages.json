@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“You actually think… unlike my idiot partner.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Even Hell runs on money. I'd be just fine.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“If you let your guard down… you're dead.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Heh… No one is immortal.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“It's only fitting that I take your heart to replace the one you've destroyed!”",
+      "code": 4
     }
   ]
 }

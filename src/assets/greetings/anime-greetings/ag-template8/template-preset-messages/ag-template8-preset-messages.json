@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“How do you feel, knowing that you are fighting an immortal guy?”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Now! Let's savour the utmost of suffering together!”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Every damn time… That's not something you say to me… If they can kill me, I couldn't be happier. Although… I don't think they can!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“How do you feel, knowing that you are fighting an immortal guy?”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“How do you feel, knowing that you are fighting an immortal guy?”",
+      "code": 4
     }
   ]
 }

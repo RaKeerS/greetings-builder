@@ -1,21 +1,34 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Great puppet masters think alike, I suppose.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Art is something that lasts for all posterity. Art is eternal.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“True beauty lies in things that last forever, never rotting or fading.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“The spider needs to be swifter than the fly.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“For my name to be known all the way down to a kid like you… is an honour.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“Since I don't like to wait or make people wait… I'll end this quickly.”",
+      "code": 5
     }
   ]
 }

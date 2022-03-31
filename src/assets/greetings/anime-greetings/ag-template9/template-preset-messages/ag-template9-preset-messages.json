@@ -1,21 +1,39 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Maybe, just maybe, there is no purpose in life… but if you linger a while longer in this world, you might discover something of value in it.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“The body ages, but the mind is immortal.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“It’s human nature not to realize the true value of something unless they lose it.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“I want to master all techniques to understand the truth of this world.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Hate only gives birth to even more hate.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“The best medicines always taste bitter.”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“When there is a true desire in the heart and that desire is strong… That is when he finds real strength that even he did not know he had!”",
+      "code": 6
     }
   ]
 }

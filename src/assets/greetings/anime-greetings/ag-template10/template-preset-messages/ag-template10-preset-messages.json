@@ -1,20 +1,23 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“When you're sad and alone… The only one you can count on is yourself.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“A weapon's strength or weakness is dependent on the user's ability to use it. An expert with a pebble can still beat a novice with a shuriken.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Well to say it simply… He wants to get rid of all the bad things in the world and run away to a dreamland full of good things! In a dream you can do whatever you want… even revive the dead.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“This entire world exists for the sake of one conquering another.”",
       "code": 3
     }
   ]
