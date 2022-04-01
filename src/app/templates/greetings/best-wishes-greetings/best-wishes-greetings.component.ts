@@ -34,10 +34,10 @@ export class BestWishesGreetingsComponent implements OnInit {
   static getComponent(componentType: string) {
     const componentTypeValue = !isNaN(Number(componentType)) ? 'template'+componentType : componentType;
     switch(componentTypeValue) {
-      case '1' : return BwgTemplate1Component;
-      case '2' : return BwgTemplate2Component;
-      case '3' : return BwgTemplate3Component;
-      case '4' : return BwgTemplate4Component;
+      case 'template1' : return BwgTemplate1Component;
+      case 'template2' : return BwgTemplate2Component;
+      case 'template3' : return BwgTemplate3Component;
+      case 'template4' : return BwgTemplate4Component;
       case 'dummy' : return TemplatedummyComponent;
       default: return TemplatedummyComponent;
     }
