@@ -32,10 +32,10 @@ export class BirthdayGreetingsComponent implements OnInit {
   static getComponent(componentType: string) {
     const componentTypeValue = !isNaN(Number(componentType)) ? 'template'+componentType : componentType;
     switch(componentTypeValue) {
-      case '1' : return BgTemplate1Component;
-      case '2' : return BgTemplate2Component;
-      case '3' : return BgTemplate3Component;
-      case '4' : return BgTemplate4Component;
+      case 'template1' : return BgTemplate1Component;
+      case 'template2' : return BgTemplate2Component;
+      case 'template3' : return BgTemplate3Component;
+      case 'template4' : return BgTemplate4Component;
       case 'dummy' : return TemplatedummyComponent;
       default: return TemplatedummyComponent;
       }

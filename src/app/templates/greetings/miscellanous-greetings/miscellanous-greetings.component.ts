@@ -37,10 +37,10 @@ export class MiscellanousGreetingsComponent implements OnInit {
     // const componentCategoryValue = isNaN(Number(componentCategory)) ? (<any>GreetingsTemplateEnum)[componentCategory] : componentCategory;
     const componentTypeValue = !isNaN(Number(componentType)) ? 'template'+componentType : componentType;
     switch(componentTypeValue) {
-      case '1' : return MgTemplate1Component;
-      case '2' : return MgTemplate2Component;
-      case '3' : return MgTemplate3Component;
-      case '4' : return MgTemplate4Component;
+      case 'template1' : return MgTemplate1Component;
+      case 'template2' : return MgTemplate2Component;
+      case 'template3' : return MgTemplate3Component;
+      case 'template4' : return MgTemplate4Component;
       case 'dummy' : return TemplatedummyComponent;
       default: return TemplatedummyComponent;
       }
