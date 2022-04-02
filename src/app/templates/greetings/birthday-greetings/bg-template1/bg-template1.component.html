@@ -53,17 +53,20 @@
                                     <span
                                       style="font-family: arial,helvetica neue,helvetica,sans-serif">
                                       <span style="line-height: 150%">
-                                        <span *ngIf="!!enableRecipientName" style="font-size: 20px;line-height: 36px">
-                                          Dear
-                                          <ng-container *ngIf="!recipientName">
-                                            {{defaultRecipientName}}
-                                          </ng-container>
-                                          {{recipientName}},
+                                        <span *ngIf="!!enableRecipientName">
+                                          <span style="font-size: 20px;line-height: 36px">
+                                            Dear
+                                            <ng-container *ngIf="!recipientName">
+                                              {{defaultRecipientName}}
+                                            </ng-container>
+                                            {{recipientName}},
+                                          </span>
+                                          <br>
+                                          it's your birthday and we think you deserve a little gift!
                                         </span>
+
                                         <br>
                                         <span *ngIf="!!enableCustomMessage">
-                                          it's your birthday and we think you deserve a little gift
-                                          <br>
                                           <ng-container *ngIf="!customMessage">
                                             {{defaultCustomMessage}}
                                           </ng-container>
