@@ -56,18 +56,23 @@
                           <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
                             <tr>
                               <td align="center">
-                                <p *ngIf="!!enableRecipientName">
-                                  Dear
-                                  <ng-container *ngIf="!recipientName">
-                                    {{defaultRecipientName}}
-                                  </ng-container>
-                                  {{recipientName}},
-                                </p>
+                                <span *ngIf="!!enableRecipientName">
+                                  <p  style="font-size: 18px;">
+                                    <b>
+                                      Dear
+                                      <ng-container *ngIf="!recipientName">
+                                        {{defaultRecipientName}}
+                                      </ng-container>
+                                      {{recipientName}},
+                                    </b>
+                                  </p>
+                                  <p>
+                                    Yes, it’s a special day, because the kindest and beautiful hearted person was born on this special day.
+                                    <br>
+                                    Happy birthday, thanks for joining to our life.
+                                  </p>
+                                </span>
                                 <p *ngIf="!!enableCustomMessage" style="color: #999999; padding: 10px;">
-                                  Yes, it’s a special day, because the kindest and beautiful hearted person was born on this special day.
-                                  <br>
-                                  Happy birthday, thanks for joining to our life.
-                                  <br><br>
                                   <ng-container *ngIf="!customMessage">
                                     {{defaultCustomMessage}}
                                   </ng-container>
