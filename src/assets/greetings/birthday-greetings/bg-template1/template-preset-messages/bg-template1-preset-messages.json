@@ -1,21 +1,29 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Another adventure filled year awaits you. Welcome it by celebrating your birthday with pomp and splendor. Wishing you a very happy and fun-filled birthday!”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“This birthday, I wish you abundant happiness and love. May all your dreams turn into reality and may lady luck visit your home today. Happy birthday to one of the sweetest people I’ve ever known.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Be happy! Today is the day you were brought into this world to be a blessing and inspiration to the people around you! You are a wonderful person! May you be given more birthdays to fulfill all of your dreams!”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Happy birthday! I hope this is the beginning of your greatest, most wonderful year ever!”",
+      "code": 4
     }
   ]
 }
