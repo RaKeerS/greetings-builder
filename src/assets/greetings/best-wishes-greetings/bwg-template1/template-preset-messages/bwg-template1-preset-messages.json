@@ -1,21 +1,39 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“There were times in my life when I didn't understand but you always took the time to help me and be there for me. Thank you!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Wishing you a Happy Fathers Day on this day, and wishing you happiness and sunshine for the coming year. Thanks for all you are and all you do.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“You always worked so hard to provide for us.\n You always made the time for us.\n You have always encouraged and supported us.\n And you are the best DAD to us!\n Happy Father's Day!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Thank you for your encouragement, for your love and support. I am so fortunate to have a Dad like you.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Dad, there is a saying that goes like this: \"Any man can be a father, but it takes a special man to be a Dad!\"\n You are that special man in my life, thanks Dad.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“Dad growing up I know there were times that I was a pain, and now that I have children I find that I am a pain to them, but the wisdom and the knowledge you gave me makes me appreciate the pain in a very happy way! Thanks Dad”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“We don't get to choose who our Fathers will be. But Dad let me tell you if I could choose you would be my Number 1 choice!”",
+      "code": 6
     }
   ]
 }

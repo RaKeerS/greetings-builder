@@ -1,21 +1,44 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Happy Mother’s Day to my very own superhero and the No. 1 problem-solver in my life. I hope you have a great day!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Mom, thank you for being my anchor in this stormy sea of life. I love you and don’t know where I’d be without you. Have a great day today.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“It’s my time to tell you how fortunate and special I am to be blessed with a mother as caring, loving as you. Wish you a happy Mother’s Day, Mom!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“I’m glad that you’re my mother because I’m not sure anyone else could have put up with me this long! Love you, Mom.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“I feel so lucky to have you as my mom. Thanks for always believing in me and doing so much for me each day. Have a great Mother’s Day!”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“We might not be blood, but you've shown me love just like any mother would. Being a family is what's in your heart that matters, which is why you're my forever family!”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“Happy first Mother's Day to a wonderful first-time Mom! Wishing you a day filled with love, joy, and relaxation.”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 8",
+      "message": "“It seems like yesterday I was holding you in my arms. Seeing you with your own children fills my heart with so much love. Happy Mother's Day to my daughter, thank you for making me such a happy grandparent!”",
+      "code": 7
     }
   ]
 }
