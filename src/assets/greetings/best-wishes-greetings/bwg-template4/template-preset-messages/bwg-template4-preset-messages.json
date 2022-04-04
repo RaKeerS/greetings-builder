@@ -1,21 +1,54 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“This life has no existence without a strong ally in ‘Woman’ in every stage of life starting from motherhood to wife, from sister and finally a daughter. Happy Women’s Day!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“You are the creator, the destroyer of evil, you are the saint and you are the guide. Life without you would have been impossible. This is the day to celebrate God’s best and most beautiful creation.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Everything that I know is all because of you….. You are the mother every kid wishes to have….. With all my heart, wish you Happy International Women’s Day mom.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Had women not been there, life would have never been so beautiful and blessed…. Wishing a very Happy Women’s Day to one such woman who makes life so wonderful for me!!!!” ”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Our world would mean nothing without women. Their courage that exists in perfect harmony with amazing tenderness saves our world every day. Happy Women's Day!”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“To all the incredible women in the world, shine on, not just today but every single day. Happy Women's Day.”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“She is a Dreamer, she is a believer, she is a doer, she is an achiever, and that she is “You”. Happy Women’s Day.”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 8",
+      "message": "“A woman is so much more than just a human being. She has the power to create a life, to cope up with so much pain and somehow always end up being the strongest one in the room. Happy Women’s Day to all Goddesses out there!”",
+      "code": 7
+    },
+    {
+      "name": "Preset Message 9",
+      "message": "“Happy Women's Day to strong, intelligent, talented and simply wonderful women! Don't ever forget that you are loved and appreciated.”",
+      "code": 8
+    },
+    {
+      "name": "Preset Message 10",
+      "message": "“You are the creator, the destroyer of evil, you are the saint and you are the guide. Life without you would have been impossible. This is the day to celebrate God’s best and most beautiful creation. Happy Women’s day.”",
+      "code": 9
     }
   ]
 }
