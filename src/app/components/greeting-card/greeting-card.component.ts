@@ -65,6 +65,8 @@ export class GreetingCardComponent implements OnInit {
   public enableRecipientName: boolean = true;
   public enableSenderName: boolean = true;
   public enableCustomMessage: boolean = true;
+  public recipientSalutation: string = 'Dear';
+  public senderSalutation: string = 'From';
 
   constructor(private injector: Injector, private actions$: Actions,
     private router: ActivatedRoute, private modalTemplateSvc: ModalTemplateService,
@@ -113,6 +115,8 @@ export class GreetingCardComponent implements OnInit {
         enableRecipientName: this.enableRecipientName,
         enableSenderName: this.enableSenderName,
         enableCustomMessage: this.enableCustomMessage,
+        recipientSalutation: this.recipientSalutation,
+        senderSalutation: this.senderSalutation,
       }
     };
 

@@ -25,6 +25,8 @@ export class GreetingData {
   enableRecipientName?: boolean;
   enableSenderName?: boolean;
   enableCustomMessage?: boolean;
+  recipientSalutation?: string;
+  senderSalutation?: string;
 }
 
 export interface TemplatePresetMessageType {
