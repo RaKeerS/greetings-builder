@@ -23,6 +23,9 @@ export class AgTemplate1Component implements OnInit {
   public enableSenderName: boolean = true;
   public enableCustomMessage: boolean = true;
 
+  public recipientSalutation: string;
+  public senderSalutation: string;
+
   public templatePresetMessage: TemplatePresetMessageType;
 
   public domTemplateString: string = '';
@@ -38,6 +41,8 @@ export class AgTemplate1Component implements OnInit {
     this.enableSenderName = this.modalData.inputData?.enableSenderName!;
     this.enableCustomMessage = this.modalData.inputData?.enableCustomMessage!;
     this.templatePresetMessage = this.modalData.inputData?.selectedTemplatePresetMessage!;
+    this.recipientSalutation = this.modalData.inputData?.recipientSalutation!;
+    this.senderSalutation = this.modalData.inputData?.senderSalutation!;
    }
 
   ngOnInit(): void {

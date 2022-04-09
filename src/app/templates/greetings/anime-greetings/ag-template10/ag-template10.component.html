@@ -40,7 +40,10 @@
                                                   class="esd-block-text es-m-txt-c es-p20t es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="textElementHandler" align="center">
                                                   <h1 *ngIf="!!enableRecipientName" class="custom-font-family" style="color: rgb(131, 96, 39); font-size: 32px;">
-                                                    Dear
+                                                    <ng-container *ngIf="!!recipientSalutation && recipientSalutation.length > 0">
+                                                      {{recipientSalutation}}
+                                                    </ng-container>
+
                                                     <ng-container *ngIf="!recipientName">
                                                       {{defaultRecipientName}}
                                                     </ng-container>
@@ -65,7 +68,12 @@
                                                   class="custom-font-family esd-block-button es-p10t es-p30b es-p20r es-p20l esd-frame esd-hover esdev-disable-select esd-draggable esd-block"
                                                   esd-handler-name="btnBlockHandler" align="center">
                                                   <span *ngIf="!!enableSenderName">
-                                                    From, <br>
+                                                    <ng-container *ngIf="!!senderSalutation && senderSalutation.length > 0">
+                                                      {{senderSalutation}},
+                                                    </ng-container>
+
+                                                    <br>
+
                                                     <ng-container *ngIf="!senderName">
                                                       {{defaultSenderName}}
                                                     </ng-container>
