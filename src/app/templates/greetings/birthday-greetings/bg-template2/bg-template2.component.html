@@ -59,7 +59,10 @@
                                 <span *ngIf="!!enableRecipientName">
                                   <p  style="font-size: 18px;">
                                     <b>
-                                      Dear
+                                      <ng-container *ngIf="!!recipientSalutation && recipientSalutation.length > 0">
+                                        {{recipientSalutation}}
+                                      </ng-container>
+
                                       <ng-container *ngIf="!recipientName">
                                         {{defaultRecipientName}}
                                       </ng-container>
@@ -84,7 +87,12 @@
                               <td class="es-p15t" align="center">
                                 <p *ngIf="!!enableSenderName" style="color: #999999; padding-bottom: 2%;">
                                   <em>
-                                    Best regards, <br>
+                                    <ng-container *ngIf="!!senderSalutation && senderSalutation.length > 0">
+                                      {{senderSalutation}},
+                                    </ng-container>
+
+                                    <br>
+
                                     <ng-container *ngIf="!senderName">
                                       {{defaultSenderName}}
                                     </ng-container>
