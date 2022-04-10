@@ -1,21 +1,74 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Happy valentine’s day to you and your family. Hold closer to the ones you love the most. Have a wonderful celebration of the day!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Love is the sweetest fragrance of life. Feel the love in the air with this valentine and welcome it to your heart. Happy valentine’s day!”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“You’ve been there for me in good times and bad. Today I just want to say thank you for always being there. I love you. Happy Valentine’s Day!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“I’m glad that you’re my mother because I’m not sure anyone else could have put up with me this long! Love you, Mom.Life without love is like the world without any sunshine. May your life never run out of love that you deserve. Happy Valentine’s Day.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“You’re an addiction I never want to get over. I hope to spend every Valentine’s day of our life together.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“We might not be blood, but you've shown me love just like any mother would. Being a family is what's in your heart that matters, which is why you're my forever family!”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“With you, the world feels like the most beautiful place to me, as if I am in heaven. Happy Valentine’s Day to my love.”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 9",
+      "message": "“If my heart were a kingdom, you would be the king of it. Happy Valentine’s day, my precious!”",
+      "code": 7
+    },
+    {
+      "name": "Preset Message 10",
+      "message": "“May you find true love and true friends to keep forever on this valentine. Sending warm wishes and good thoughts on your way!”",
+      "code": 8
+    },
+    {
+      "name": "Preset Message 11",
+      "message": "“Happy Valentine’s Day, My Love! This lifetime is worth it because of you. You are pretty much everything to me.”",
+      "code": 9
+    },
+    {
+      "name": "Preset Message 12",
+      "message": "“Everyday is Valentines Day since I met you. Thank you for making every single day so special.”",
+      "code": 10
+    },
+    {
+      "name": "Preset Message 13",
+      "message": "“Nothing is more important and precious than you in my life. I love you forever. Happy Valentine’s Day my love!”",
+      "code": 11
+    },
+    {
+      "name": "Preset Message 14",
+      "message": "“Every beat of my heart tells me how much I love you. It is impossible to live without you. Happy Valentine’s Day my sweetheart.”",
+      "code": 12
+    },
+    {
+      "name": "Preset Message 15",
+      "message": "“My love for you is never-ending and never-fading. It will only increase as days and years pass by. Wishing you a Happy Valentine’s Day!”",
+      "code": 13
     }
   ]
 }

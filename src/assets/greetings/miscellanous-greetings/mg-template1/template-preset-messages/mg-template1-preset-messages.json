@@ -1,21 +1,54 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Let us give our coming generations a healthier and happier environment to have a beautiful life… Best wishes on World Environment Day.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“On World Environment Day, let us stop harming the nature, let us stop polluting it… Let us join hands to bring a positive change to make Planet Earth a much healthier, greener and happier place to live.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Save the trees our ancestors planted and plant new ones as a gift to our coming generations…. This is the best way to have a greener environment….. Make World Environment Day more successful by planting more trees!!!”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Earth is like our home and we must make efforts to keep it clean and green…. On the occasion of World Environment Day, let us promise to make it a better place to live!!!”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“We cannot imagine life without environment…. We cannot imagine success, money, prosperity without environment….  It always comes first and we must take charge of making it our priority…. Wishing a very Happy World Environment Day!!!”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“World Environment Day is a reminder that we must take good care of our surroundings. Let us make a promise to make our planet greener and healthier place for us to live and enjoy life!!”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“God has gifted us with Mother Nature who nourishes us at every point…. And the responsibility of saving Her lies on all of our shoulders….. On World Environment Day, let us promise to fulfill this responsibility!!!”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 8",
+      "message": "“Let us take a pledge to make our environment healthier and greener on World Environment Day.”",
+      "code": 7
+    },
+    {
+      "name": "Preset Message 9",
+      "message": "“On the occasion of World Environment Day, let us pledge to work hard in making Earth a greener and healthier place to live. Let us come together to plant more trees and spread greenery.”",
+      "code": 8
+    },
+    {
+      "name": "Preset Message 10",
+      "message": "“'Mother Nature' has always been kind to us and now it is time to return all the favors by showing a responsible attitude towards the environment. Warm wishes on World Environment Day to you.”",
+      "code": 9
     }
   ]
 }
