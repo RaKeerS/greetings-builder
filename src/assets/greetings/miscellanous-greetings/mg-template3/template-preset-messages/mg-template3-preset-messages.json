@@ -1,21 +1,79 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Man cannot discover new oceans unless he has the courage to lose sight of the shore.”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Man cannot discover new oceans unless he has the courage to lose sight of the shore.”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“The world is a book, and those who do not travel read only one page.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“Life is meant for good friends and great adventures.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“Two roads diverged in a wood, and I – I took the one less traveled by.”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“Wherever you go becomes a part of you somehow.”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 8",
+      "message": "“Don’t listen to what they say. Go see.”",
+      "code": 7
+    },
+    {
+      "name": "Preset Message 9",
+      "message": "“Take only memories, leave only footprints.”",
+      "code": 8
+    },
+    {
+      "name": "Preset Message 10",
+      "message": "“We wander for distraction, but we travel for fulfilment.”",
+      "code": 9
+    },
+    {
+      "name": "Preset Message 11",
+      "message": "“Once the travel bug bites there is no known antidote, and I know that I shall be happily infected until the end of my life.”",
+      "code": 10
+    },
+    {
+      "name": "Preset Message 12",
+      "message": "“We travel for romance, we travel for architecture, and we travel to be lost.”",
+      "code": 11
+    },
+    {
+      "name": "Preset Message 13",
+      "message": "“I travel because it makes me realize how much I haven’t seen, how much I’m not going to see, and how much I still need to see.”",
+      "code": 12
+    },
+    {
+      "name": "Preset Message 14",
+      "message": "“Jobs fill your pocket, but adventures fill your soul.”",
+      "code": 13
+    },
+    {
+      "name": "Preset Message 15",
+      "message": "“Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.”",
+      "code": 14
     }
   ]
 }

@@ -1,21 +1,54 @@
 {
   "data": [
     {
-      "name": "Template1",
-      "message": "Hola!",
+      "name": "Preset Message 1",
+      "message": "“Only engineers have the power to do the impossible because they have the tool of science to create something new…. Happy Engineer's Day to you!”",
       "code": 0
     },
-    { "name": "Template2",
-      "message": "Gola!",
+    {
+      "name": "Preset Message 2",
+      "message": "“Engineers are the ones who bring technology to make our lives simpler, to bring comforts, to bring ease and today is the day to thank them…. Happy Engineer's Day!”",
       "code": 1
     },
-    { "name" : "Template3",
-      "message": "Lola!",
+    {
+      "name": "Preset Message 3",
+      "message": "“You are the one who can create anything with your brains and creativity because you are an engineer…. Wishing you a very Happy Engineer's Day.”",
       "code": 2
     },
-    { "name": "Template4",
-      "message": "Hajmola!",
+    {
+      "name": "Preset Message 4",
+      "message": "“Science is about knowing; engineering is about doing.”",
       "code": 3
+    },
+    {
+      "name": "Preset Message 5",
+      "message": "“The engineer has been, and is, a maker of history.”",
+      "code": 4
+    },
+    {
+      "name": "Preset Message 6",
+      "message": "“Engineering is the art of directing the great sources of power in nature for the use and convenience of man.”",
+      "code": 5
+    },
+    {
+      "name": "Preset Message 7",
+      "message": "“Science can amuse and fascinate us all, but it is engineering that changes the world.”",
+      "code": 6
+    },
+    {
+      "name": "Preset Message 8",
+      "message": "“Let us take a pledge to make our environment healthier and greener on World Environment Day.”",
+      "code": 7
+    },
+    {
+      "name": "Preset Message 9",
+      "message": "“Normal people believe that if it ain’t broke, don’t fix it. Engineers believe that if it ain’t broke, it doesn’t have enough features yet.”",
+      "code": 8
+    },
+    {
+      "name": "Preset Message 10",
+      "message": "“Math is my Passion. Engineering is my Profession.”",
+      "code": 9
     }
   ]
 }
