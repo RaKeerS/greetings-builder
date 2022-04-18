@@ -27,7 +27,7 @@ http.createServer(function(req, res) {
     }
     else {
       res.writeHead(200, headers);
-      res.end('Hello World');
+      res.end('Request Parsed');
       return;
     }
 
@@ -68,7 +68,7 @@ function parseRequestBody(req, res, headers) {
         }
 
         res.on('error', error => {
-          console.error('hrere: ', error)
+          console.error('Error: ', error)
         })
 
         res.end(JSON.stringify(response));

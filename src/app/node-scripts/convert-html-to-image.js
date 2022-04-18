@@ -2,6 +2,8 @@ const mailService = require('./mailing-service');
 
 const nodeHtmlToImage = require('node-html-to-image');
 
+const { unlink } = require('fs');
+
 exports.convertToPng = function(data, imageTitle) {
   const domElement = data.payload;
   const reqParams = data.params;
@@ -62,9 +64,17 @@ exports.convertToPng = function(data, imageTitle) {
       transparent: true,
     })
     .then(() => {
-      return mailService.sendMail(reqParams, fileName, filePath, template); // TODO: remove the template argument being passed to the function since, it is used only for debugging.
-    }, error => console.log('Error while creating Image: ', error));
+      return mailService.sendMail(reqParams, fileName, filePath, template) // TODO: remove the template argument being passed to the function since, it is used only for debugging.
+      .then(success => success, error => { throw error }).finally(() => {
+        unlink(filePath, (err) => {
+          if (err)
+            throw err;
+          console.debug('Successfully Deleted ', filePath);
+        });
+      });
+
+    }, error => console.error('Error while creating Image: ', error));
   } catch (error) {
-    console.log('Some Error: ', error);
+    console.error('Some Error: ', error);
   }
 }
