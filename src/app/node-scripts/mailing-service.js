@@ -29,8 +29,6 @@ exports.sendMail = function(reqParams, fileName, filePath, template) { // TODO: 
     );
   }
 
-  console.log(emailBody);
-
   let mailOptions = {
     from: reqParams?.senderAddress,
     to: reqParams?.recipientAddress,
