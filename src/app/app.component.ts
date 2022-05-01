@@ -16,7 +16,7 @@ import { GreetingsState } from './store/greetings-store';
   providers: [ConfirmationService, DialogService] // This is done since this service is currently needed in just one component, hence it is scoped to be provided in only this component to improve app efficiency
 })
 export class AppComponent {
-  title = 'birthday-greetings';
+  title = 'greetings-builder';
 
   ref!: DynamicDialogRef;
 
@@ -36,30 +36,35 @@ export class AppComponent {
     private router: Router, private dialogService: DialogService) {
     this.items = [
       {
+        id: '01',
         label: 'Anime',
         icon: 'pi pi-fw pi-file fs-custom-2',
         // routerLink: this.isFormEdited ? ' ' : 'home', // removing this piece of code as, adding undefined or a whitespace would trigger it to be redirected to '/home', which in turn always triggers the routing module.
         command: () => this.isFormEdited ? this.showConfirmationDialog('anime-greetings') : this.redirectUrl('anime-greetings')
       },
       {
+        id: '02',
         label: 'Birthday',
         icon: 'pi pi-fw pi-pencil fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('birthday-greetings') : this.redirectUrl('birthday-greetings')
       },
       {
+        id: '03',
         label: 'Best Wishes',
         icon: 'pi pi-fw pi-user fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('best-wishes-greetings') : this.redirectUrl('best-wishes-greetings')
       },
       {
+        id: '04',
         label:'Miscellanous',
         icon:'pi pi-fw pi-star fs-custom-2',
         // routerLink: this.isFormEdited ? undefined : 'home',
         command: () => this.isFormEdited ? this.showConfirmationDialog('miscellanous-greetings') : this.redirectUrl('miscellanous-greetings')
       },
       {
+        id: '05',
         label:'Check my other projects here!',
         icon:'pi pi-fw pi-github fs-custom-1',
         url: 'https://github.com/RaKeerS'
