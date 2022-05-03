@@ -4,11 +4,13 @@ const nodeHtmlToImage = require('node-html-to-image');
 
 const { unlink } = require('fs');
 
+const path = require('path');
+
 exports.convertToPng = function(data, imageTitle) {
   const domElement = data.payload;
   const reqParams = data.params;
   const fileName = `${imageTitle}.png`;
-  const filePath = `./../template-images/${imageTitle}.png`;
+  const filePath =  path.join(__dirname, '..', 'template-images', fileName);
 
   const template = `
   <html>
