@@ -1,5 +1,5 @@
 {
-  "name": "birthday-greetings",
+  "name": "greetings-builder",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

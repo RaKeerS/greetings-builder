@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/birthday-greetings'),
+      dir: require('path').join(__dirname, './coverage/greetings-builder'),
       subdir: '.',
       reporters: [
         { type: 'html' },
