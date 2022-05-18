@@ -43,6 +43,14 @@ Well I heard ya! Here's the link to the website to use your creativity to build 
 
 ****
 
+## Sequence Diagram 
+
+![Object Creation and Deletion](https://user-images.githubusercontent.com/22376097/169105009-e9676b16-e9ca-4292-b1b2-3e48224ce94a.jpg)
+
+<br>
+
+****
+
 ## Technologies used
 
 
